@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <attr name="appCardBackgroundColor" format="reference|color" />
-    <attr name="appTextColorPrimary" format="reference|color" />
-    <attr name="appTextColorSecondary" format="reference|color" />
-    <attr name="defaultButtonColorFilter" format="reference|color" />
-    <attr name="iconSeen" format="reference" />
-
-</resources>

@@ -9,12 +9,12 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:background="@color/colorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintDimensionRatio="H,22:9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="#000000">
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/poster"
@@ -40,36 +40,77 @@
 
             <ImageView
                 android:id="@+id/background"
+                style="@style/BackGroundImageView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:contentDescription="background"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@android:color/background_light"
-                style="@style/BackGroundImageView"/>
+                app:srcCompat="@android:color/background_light" />
 
-            <TextView
-                android:id="@+id/title"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+            <LinearLayout
+                android:id="@+id/shortInfo"
+                android:layout_width="0dp"
+                android:layout_height="49dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                android:fontFamily="@font/medium"
-                android:text="titlename"
-                android:textAlignment="center"
-                android:textColor="@color/cardview_light_background"
-                android:textSize="18sp"
+                android:layout_marginEnd="8dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintDimensionRatio="H,3:16"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-            <TextView
-                android:id="@+id/releaseDate"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="18dp"
-                android:textAlignment="center"
-                android:textColor="@color/cardview_light_background"
-                app:layout_constraintEnd_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@id/title" />
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="61dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/ic_iconmonstr_star_2" />
+
+                <TextView
+                    android:id="@+id/rating"
+                    android:layout_width="77dp"
+                    android:layout_height="49dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/fontfamily"
+                    android:gravity="center"
+                    android:text="9.9"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorAccent" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/medium"
+                        android:maxLines="1"
+                        android:text="titlename"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/releaseDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:text="00-00-0000"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorAccent" />
+                </LinearLayout>
+
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/overview"
@@ -77,22 +118,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:layout_marginEnd="4dp"
-                android:layout_marginStart="4dp"
-                android:maxLines="5"
                 android:ellipsize="end"
+                android:maxLines="5"
                 android:text="TextView"
-                android:textColor="@color/cardview_light_background"
+                android:textAlignment="center"
+                android:textColor="@color/colorAccent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/releaseDate" />
+                app:layout_constraintTop_toBottomOf="@id/shortInfo" />
 
-            <TextView
-                android:id="@+id/rating"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="TextView"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@id/overview" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 

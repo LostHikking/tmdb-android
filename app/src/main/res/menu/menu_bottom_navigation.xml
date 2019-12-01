@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_popular"
+        android:icon="@android:drawable/ic_dialog_map"
+        android:title="@string/popular"/>
+    <item
+        android:id="@+id/action_toprated"
+        android:icon="@android:drawable/ic_dialog_dialer"
+        android:title="@string/toprated" />
+    <item
+        android:id="@+id/action_upcoming"
+        android:icon="@android:drawable/ic_dialog_email"
+        android:title="@string/upcoming" />
+</menu>
