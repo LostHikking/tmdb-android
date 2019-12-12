@@ -1,5 +1,7 @@
 package ru.omsu.themoviedb;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,12 +20,19 @@ import java.util.Objects;
 
 import retrofit2.Call;
 import retrofit2.Callback;
+import ru.omsu.themoviedb.Activities.MovieActivity;
 
 public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHolder> {
 
     private List<Result> resultList = new ArrayList<Result>();
     private String api_key = "f0fc35f5ec87f52edeb0d917655e056f";
     private int page = 1;
+    private int category = 0;
+    private Context context;
+
+    public MovieAdapter(Context context) {
+        this.context = context;
+    }
 
     public int getCategory() {
         return category;
@@ -33,12 +42,8 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
         this.category = category;
     }
 
-    private int category = 0;
-
-
     @Override
     public void onBindViewHolder(MovieViewHolder holder, int position) {
-        //Log.e("Position", Integer.toString(position));
         if ((resultList.size() - position) <= 5) {
             getMovies();
         }
@@ -113,6 +118,13 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
                 Glide.with(itemView.getContext()).load("https://image.tmdb.org/t/p/original" + result.getPosterPath()).fitCenter().into(posterView);
             if (!Objects.equals(result.getBackdropPath(), null))
                Glide.with(itemView.getContext()).load("https://image.tmdb.org/t/p/original" + result.getBackdropPath()).fitCenter().into(backgroundView);
+            posterView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(context, MovieActivity.class);
+                    context.startActivity(intent);
+                }
+            });
         }
 
 

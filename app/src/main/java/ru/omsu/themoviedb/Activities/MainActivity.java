@@ -64,9 +64,6 @@ public class MainActivity extends AppCompatActivity {
                 });
     }
 
-
-
-
     private void initRecyclerView() {
         recyclerView = findViewById(R.id.list);
         recyclerView.setHasFixedSize(true);
@@ -75,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setDrawingCacheQuality(View.DRAWING_CACHE_QUALITY_HIGH);
         final LinearLayoutManager mLayoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(mLayoutManager);
-        movieAdapter = new MovieAdapter();
+        movieAdapter = new MovieAdapter(this);
         recyclerView.setAdapter(movieAdapter);
         movieAdapter.getMovies();
     }
