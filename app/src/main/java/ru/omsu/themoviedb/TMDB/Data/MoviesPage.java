@@ -1,9 +1,11 @@
-package ru.omsu.themoviedb;
-import java.util.List;
+package ru.omsu.themoviedb.TMDB.Data;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class ResultsFromTMDB {
+import java.util.List;
+
+public class MoviesPage {
     @SerializedName("page")
     @Expose
     public long page;
@@ -15,7 +17,7 @@ public class ResultsFromTMDB {
     public long totalPages;
     @SerializedName("results")
     @Expose
-    public List<Result> results;
+    public List<Movie> results;
 
     public long getPage() {
         return page;
@@ -41,11 +43,11 @@ public class ResultsFromTMDB {
         this.totalPages = totalPages;
     }
 
-    public List<Result> getResults() {
+    public List<Movie> getResults() {
         return results;
     }
 
-    public void setResults(List<Result> results) {
+    public void setResults(List<Movie> results) {
         this.results = results;
     }
 }
