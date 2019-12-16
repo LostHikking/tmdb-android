@@ -63,7 +63,6 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
                     android:fontFamily="@font/light"
-                    android:text="Холодное сердце 2"
                     android:textColor="@color/colorAccent"
                     android:textSize="36sp" />
 
@@ -73,7 +72,6 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:fontFamily="@font/light"
-                    android:text="8.3/10"
                     android:textColor="@color/colorAccent"
                     android:textSize="36sp" />
             </RelativeLayout>
@@ -84,7 +82,6 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/thin"
                 android:padding="10dp"
-                android:text="Криминал | US | 03.10.2019"
                 android:textColor="@color/colorAccent"
                 android:textSize="24sp" />
 
@@ -94,7 +91,6 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/light"
                 android:padding="10dp"
-                android:text="Готэм, начало 1980-х годов. Комик Артур Флек живет с больной матерью, которая с детства учит его «ходить с улыбкой». Пытаясь нести в мир хорошее и дарить людям радость, Артур сталкивается с человеческой жестокостью и постепенно приходит к выводу, что этот мир получит от него не добрую улыбку, а ухмылку злодея Джокера.  "
                 android:textColor="@color/white"
                 android:textSize="24sp" />
 
@@ -114,7 +110,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/thin"
                 android:padding="10dp"
-                android:text="В ролях"
+                android:text="@string/cast"
                 android:textColor="@color/white"
                 android:textSize="36sp" />
 
@@ -138,7 +134,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/thin"
                 android:padding="10dp"
-                android:text="Создатели"
+                android:text="@string/crew"
                 android:textColor="@color/white"
                 android:textSize="36sp" />
 
@@ -155,6 +151,31 @@
                     android:orientation="horizontal"
                     android:padding="5dp" />
             </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/thin"
+                android:padding="10dp"
+                android:text="@string/collection"
+                android:textColor="@color/white"
+                android:textSize="36sp" />
+
+            <HorizontalScrollView
+
+                android:id="@+id/collection_scroll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/collection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp" />
+            </HorizontalScrollView>
+
         </LinearLayout>
     </RelativeLayout>
 </ScrollView>

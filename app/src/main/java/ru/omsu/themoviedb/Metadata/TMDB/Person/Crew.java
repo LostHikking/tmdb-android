@@ -1,4 +1,4 @@
-package ru.omsu.themoviedb.TMDB.Data;
+package ru.omsu.themoviedb.Metadata.TMDB.Person;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
@@ -25,7 +25,8 @@ public class Crew {
     private String name;
     @SerializedName("profile_path")
     @Expose
-    private Object profilePath;
+    private String profilePath;
+
 
     public String getCreditId() {
         return creditId;
@@ -75,11 +76,11 @@ public class Crew {
         this.name = name;
     }
 
-    public Object getProfilePath() {
+    public String getProfilePath() {
         return profilePath;
     }
 
-    public void setProfilePath(Object profilePath) {
+    public void setProfilePath(String profilePath) {
         this.profilePath = profilePath;
     }
 

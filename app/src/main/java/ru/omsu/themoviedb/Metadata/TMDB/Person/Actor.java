@@ -1,9 +1,9 @@
-package ru.omsu.themoviedb.TMDB.Data;
+package ru.omsu.themoviedb.Metadata.TMDB.Person;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Cast {
+public class Actor {
 
     @SerializedName("cast_id")
     @Expose
@@ -29,6 +29,7 @@ public class Cast {
     @SerializedName("profile_path")
     @Expose
     private String profilePath;
+
 
     public Integer getCastId() {
         return castId;

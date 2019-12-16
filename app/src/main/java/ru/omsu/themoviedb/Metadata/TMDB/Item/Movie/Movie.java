@@ -1,9 +1,14 @@
-package ru.omsu.themoviedb.TMDB.Data;
+package ru.omsu.themoviedb.Metadata.TMDB.Item.Movie;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
+
+import ru.omsu.themoviedb.Metadata.TMDB.Company;
+import ru.omsu.themoviedb.Metadata.TMDB.Country;
+import ru.omsu.themoviedb.Metadata.TMDB.Genre;
+import ru.omsu.themoviedb.Metadata.TMDB.SpokenLanguage;
 
 public class Movie {
 
@@ -15,7 +20,7 @@ public class Movie {
     private String backdropPath;
     @SerializedName("belongs_to_collection")
     @Expose
-    private BelongsToCollection belongsToCollection;
+    private Collection collection;
     @SerializedName("budget")
     @Expose
     private Integer budget;
@@ -48,10 +53,10 @@ public class Movie {
     private String posterPath;
     @SerializedName("production_companies")
     @Expose
-    private List<ProductionCompany> productionCompanies = null;
+    private List<Company> productionCompanies = null;
     @SerializedName("production_countries")
     @Expose
-    private List<ProductionCountry> productionCountries = null;
+    private List<Country> productionCountries = null;
     @SerializedName("release_date")
     @Expose
     private String releaseDate;
@@ -99,12 +104,12 @@ public class Movie {
         this.backdropPath = backdropPath;
     }
 
-    public BelongsToCollection getBelongsToCollection() {
-        return belongsToCollection;
+    public Collection getCollection() {
+        return collection;
     }
 
-    public void setBelongsToCollection(BelongsToCollection belongsToCollection) {
-        this.belongsToCollection = belongsToCollection;
+    public void setCollection(Collection collection) {
+        this.collection = collection;
     }
 
     public Integer getBudget() {
@@ -187,19 +192,19 @@ public class Movie {
         this.posterPath = posterPath;
     }
 
-    public List<ProductionCompany> getProductionCompanies() {
+    public List<Company> getProductionCompanies() {
         return productionCompanies;
     }
 
-    public void setProductionCompanies(List<ProductionCompany> productionCompanies) {
+    public void setProductionCompanies(List<Company> productionCompanies) {
         this.productionCompanies = productionCompanies;
     }
 
-    public List<ProductionCountry> getProductionCountries() {
+    public List<Country> getProductionCountries() {
         return productionCountries;
     }
 
-    public void setProductionCountries(List<ProductionCountry> productionCountries) {
+    public void setProductionCountries(List<Country> productionCountries) {
         this.productionCountries = productionCountries;
     }
 

@@ -1,4 +1,4 @@
-package ru.omsu.themoviedb.TMDB;
+package ru.omsu.themoviedb.Metadata.TMDB;
 
 import retrofit2.Call;
 import retrofit2.Retrofit;
@@ -6,10 +6,10 @@ import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
-import ru.omsu.themoviedb.TMDB.Data.Movie;
-import ru.omsu.themoviedb.TMDB.Data.MovieCredits;
-import ru.omsu.themoviedb.TMDB.Data.MoviesPage;
-import ru.omsu.themoviedb.TMDB.Data.VideoResult;
+import ru.omsu.themoviedb.Metadata.TMDB.Item.Movie.Collection;
+import ru.omsu.themoviedb.Metadata.TMDB.Item.Movie.Movie;
+import ru.omsu.themoviedb.Metadata.TMDB.Item.Movie.MoviesPage;
+import ru.omsu.themoviedb.Metadata.TMDB.Item.TVShow.TVShowsPage;
 
 public class TMDBService {
     private static TMDBService mInstance;
@@ -51,19 +51,39 @@ public class TMDBService {
                                            @Query("page") int page,
                                            @Query("region") String region);
 
-        @GET("movie/{id}")
-        Call<Movie> getDetails(@Path("id") int id,
-                               @Query("api_key") String api_key,
-                               @Query("language") String language);
-
-        @GET("movie/{id}/videos")
-        Call<VideoResult> getVideos(@Path("id") int id,
+        @GET("movie/{movie_id}")
+        Call<Movie> getMovieDetails(@Path("movie_id") int movie_id,
                                     @Query("api_key") String api_key,
                                     @Query("language") String language);
 
-        @GET("movie/{id}/credits")
-        Call<MovieCredits> getCredits(@Path("id") int id,
+        @GET("movie/{movie_id}/videos")
+        Call<Videos> getVideos(@Path("movie_id") int movie_id,
+                               @Query("api_key") String api_key,
+                               @Query("language") String language);
+
+        @GET("movie/{movie_id}/credits")
+        Call<MovieCredits> getCredits(@Path("movie_id") int movie_id,
                                       @Query("api_key") String api_key);
+
+        @GET("tv/popular")
+        Call<TVShowsPage> getPopularTV(@Query("api_key") String api_key,
+                                       @Query("language") String language,
+                                       @Query("page") int page);
+
+        @GET("tv/top_rated")
+        Call<TVShowsPage> getTopRatedTV(@Query("api_key") String api_key,
+                                        @Query("language") String language,
+                                        @Query("page") int page);
+
+        @GET("tv/latest")
+        Call<TVShowsPage> getLatestTV(@Query("api_key") String api_key,
+                                      @Query("language") String language,
+                                      @Query("page") int page);
+
+        @GET("collection/{collection_id}")
+        Call<Collection> getCollectionDetails(@Path("collection_id") int collection_id,
+                                              @Query("api_key") String api_key,
+                                              @Query("language") String language);
     }
 
 }

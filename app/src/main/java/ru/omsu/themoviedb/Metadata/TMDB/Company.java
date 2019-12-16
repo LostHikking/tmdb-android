@@ -1,9 +1,9 @@
-package ru.omsu.themoviedb.TMDB.Data;
+package ru.omsu.themoviedb.Metadata.TMDB;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class ProductionCompany {
+public class Company {
 
     @SerializedName("id")
     @Expose

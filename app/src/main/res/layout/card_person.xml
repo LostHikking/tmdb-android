@@ -19,7 +19,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:fontFamily="@font/bold"
-        android:text="Joaquin Phoenix"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="12sp" />
@@ -30,7 +29,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:fontFamily="@font/regular"
-        android:text="Arthur Fleck / Joker"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="12sp" />

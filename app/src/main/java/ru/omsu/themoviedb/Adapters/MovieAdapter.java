@@ -1,4 +1,4 @@
-package ru.omsu.themoviedb;
+package ru.omsu.themoviedb.Adapters;
 
 import android.content.Context;
 import android.content.Intent;
@@ -21,19 +21,24 @@ import java.util.Objects;
 
 import retrofit2.Call;
 import retrofit2.Callback;
-import ru.omsu.themoviedb.Activities.MovieActivity;
-import ru.omsu.themoviedb.TMDB.Data.Movie;
-import ru.omsu.themoviedb.TMDB.Data.MoviesPage;
-import ru.omsu.themoviedb.TMDB.TMDBService;
+import ru.omsu.themoviedb.Metadata.TMDB.Item.Movie.Movie;
+import ru.omsu.themoviedb.Metadata.TMDB.Item.Movie.MoviesPage;
+import ru.omsu.themoviedb.Metadata.TMDB.TMDBService;
+import ru.omsu.themoviedb.R;
+import ru.omsu.themoviedb.UI.Activities.ItemInfoActivity;
+
+import static ru.omsu.themoviedb.Settings.API_KEY;
+import static ru.omsu.themoviedb.Settings.POPULAR;
+import static ru.omsu.themoviedb.Settings.TOP_RATED;
+import static ru.omsu.themoviedb.Settings.UPCOMING;
+import static ru.omsu.themoviedb.Settings.URL_TMDB_COMPRESSED_IMAGE;
 
 public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHolder> {
-    public final int UPCOMING = 2;
-    private String api_key = "f0fc35f5ec87f52edeb0d917655e056f";
+
     private int page = 1;
-    private int category = 0;
+    private int category = POPULAR;
     private Context context;
-    public final int POPULAR = 0;
-    public final int TOP_RATED = 1;
+
     private List<Movie> movieList = Collections.synchronizedList(new ArrayList<Movie>());
 
 
@@ -45,13 +50,13 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
         return category;
     }
 
-    public void setCategory(int category) {
+    private void setCategory(int category) {
         this.category = category;
     }
 
     @Override
     public void onBindViewHolder(MovieViewHolder holder, int position) {
-        if ((movieList.size() - position) <= 5) {
+        if ((movieList.size() - position) <= 10) {
             getMovies();
         }
         holder.bind(movieList.get(position));
@@ -61,7 +66,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
     public MovieViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater
                 .from(parent.getContext())
-                .inflate(R.layout.movie_card, parent, false);
+                .inflate(R.layout.card_item, parent, false);
         return new MovieViewHolder(view);
     }
 
@@ -101,18 +106,18 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
         notifyDataSetChanged();
     }
 
-    public void clearItems() {
+    private void clearItems() {
         movieList.clear();
         notifyDataSetChanged();
     }
 
     public void getMovies(){
         switch (category) {
-            case 0:
+            case POPULAR:
                 TMDBService
                         .getInstance()
                         .getJSONApi()
-                        .getPopularMovies(api_key, Locale.getDefault().toString().replace("_", "-"), page, Locale.getDefault().getCountry())
+                        .getPopularMovies(API_KEY, Locale.getDefault().toString().replace("_", "-"), page, Locale.getDefault().getCountry())
                         .enqueue(new Callback<MoviesPage>() {
                             @Override
                             public void onResponse(Call<MoviesPage> call, retrofit2.Response<MoviesPage> response) {
@@ -127,11 +132,11 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
                             }
                         });
                 break;
-            case 1:
+            case TOP_RATED:
                 TMDBService
                         .getInstance()
                         .getJSONApi()
-                        .getTopRatedMovies(api_key, Locale.getDefault().toString().replace("_", "-"), page, Locale.getDefault().getCountry())
+                        .getTopRatedMovies(API_KEY, Locale.getDefault().toString().replace("_", "-"), page, Locale.getDefault().getCountry())
                         .enqueue(new Callback<MoviesPage>() {
                             @Override
                             public void onResponse(Call<MoviesPage> call, retrofit2.Response<MoviesPage> response) {
@@ -140,17 +145,16 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
                                 movieList.addAll(moviesPage.results);
                                 notifyDataSetChanged();
                             }
-
                             @Override
                             public void onFailure(Call<MoviesPage> call, Throwable t) {
                             }
                         });
                 break;
-            case 2:
+            case UPCOMING:
                 TMDBService
                         .getInstance()
                         .getJSONApi()
-                        .getUpcomingMovies(api_key, Locale.getDefault().toString().replace("_", "-"), page, Locale.getDefault().getCountry())
+                        .getUpcomingMovies(API_KEY, Locale.getDefault().toString().replace("_", "-"), page, Locale.getDefault().getCountry())
                         .enqueue(new Callback<MoviesPage>() {
                             @Override
                             public void onResponse(Call<MoviesPage> call, retrofit2.Response<MoviesPage> response) {
@@ -178,37 +182,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
         private TextView overviewView;
         private TextView ratingView;
 
-        public void bind(final Movie movie) {
-            titleView.setText(movie.getTitle());
-            overviewView.setText(movie.getOverview());
-            if (movie.getVoteAverage() != 0)
-                ratingView.setText(Double.toString(movie.getVoteAverage()));
-            else ratingView.setText("-");
-            releaseDateView.setText(movie.getReleaseDate());
-            if (!Objects.equals(movie.getPosterPath(), null))
-                Glide.with(itemView.getContext()).load("https://image.tmdb.org/t/p/w500" + movie.getPosterPath()).fitCenter().into(posterView);
-            if (!Objects.equals(movie.getBackdropPath(), null))
-                Glide.with(itemView.getContext()).load("https://image.tmdb.org/t/p/w500" + movie.getBackdropPath()).fitCenter().into(backgroundView);
-            posterView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(context, MovieActivity.class);
-                    intent.putExtra("MOVIE_ID", movie.getId());
-                    context.startActivity(intent);
-                }
-            });
-            backgroundView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(context, MovieActivity.class);
-                    intent.putExtra("MOVIE_ID", movie.getId());
-                    context.startActivity(intent);
-                }
-            });
-        }
-
-
-        public MovieViewHolder(View itemView) {
+        MovieViewHolder(View itemView) {
             super(itemView);
             posterView = itemView.findViewById(R.id.poster);
             backgroundView = itemView.findViewById(R.id.background);
@@ -216,6 +190,35 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
             releaseDateView = itemView.findViewById(R.id.releaseDate);
             overviewView = itemView.findViewById(R.id.overview);
             ratingView = itemView.findViewById(R.id.rating);
+        }
+
+        void bind(final Movie movie) {
+            titleView.setText(movie.getTitle());
+            overviewView.setText(movie.getOverview());
+            if (movie.getVoteAverage() != 0)
+                ratingView.setText(movie.getVoteAverage().toString());
+            else ratingView.setText("-");
+            releaseDateView.setText(movie.getReleaseDate());
+            if (!Objects.equals(movie.getPosterPath(), null))
+                Glide.with(itemView.getContext()).load(URL_TMDB_COMPRESSED_IMAGE + movie.getPosterPath()).fitCenter().dontTransform().into(posterView);
+            if (!Objects.equals(movie.getBackdropPath(), null))
+                Glide.with(itemView.getContext()).load(URL_TMDB_COMPRESSED_IMAGE + movie.getBackdropPath()).fitCenter().dontTransform().into(backgroundView);
+            posterView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(context, ItemInfoActivity.class);
+                    intent.putExtra("MOVIE_ID", movie.getId());
+                    context.startActivity(intent);
+                }
+            });
+            backgroundView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(context, ItemInfoActivity.class);
+                    intent.putExtra("MOVIE_ID", movie.getId());
+                    context.startActivity(intent);
+                }
+            });
         }
     }
 }

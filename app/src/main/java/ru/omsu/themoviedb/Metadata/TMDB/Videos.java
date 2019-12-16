@@ -1,18 +1,18 @@
-package ru.omsu.themoviedb.TMDB.Data;
+package ru.omsu.themoviedb.Metadata.TMDB;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-public class VideoResult {
+public class Videos {
 
     @SerializedName("id")
     @Expose
     private Integer id;
     @SerializedName("results")
     @Expose
-    private List<Result_> results = null;
+    private List<Video> results = null;
 
     public Integer getId() {
         return id;
@@ -22,15 +22,15 @@ public class VideoResult {
         this.id = id;
     }
 
-    public List<Result_> getResults() {
+    public List<Video> getResults() {
         return results;
     }
 
-    public void setResults(List<Result_> results) {
+    public void setResults(List<Video> results) {
         this.results = results;
     }
 
-    public class Result_ {
+    public class Video {
 
         @SerializedName("id")
         @Expose

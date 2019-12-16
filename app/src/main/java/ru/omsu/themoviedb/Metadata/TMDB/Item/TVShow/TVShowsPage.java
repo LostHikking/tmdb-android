@@ -1,53 +1,55 @@
-package ru.omsu.themoviedb.TMDB.Data;
+package ru.omsu.themoviedb.Metadata.TMDB.Item.TVShow;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-public class MoviesPage {
+public class TVShowsPage {
+
     @SerializedName("page")
     @Expose
-    public long page;
+    private Integer page;
     @SerializedName("total_results")
     @Expose
-    public long totalResults;
+    private Integer totalResults;
     @SerializedName("total_pages")
     @Expose
-    public long totalPages;
+    private Integer totalPages;
     @SerializedName("results")
     @Expose
-    public List<Movie> results;
+    private List<TVShow> results = null;
 
-    public long getPage() {
+    public Integer getPage() {
         return page;
     }
 
-    public void setPage(long page) {
+    public void setPage(Integer page) {
         this.page = page;
     }
 
-    public long getTotalResults() {
+    public Integer getTotalResults() {
         return totalResults;
     }
 
-    public void setTotalResults(long totalResults) {
+    public void setTotalResults(Integer totalResults) {
         this.totalResults = totalResults;
     }
 
-    public long getTotalPages() {
+    public Integer getTotalPages() {
         return totalPages;
     }
 
-    public void setTotalPages(long totalPages) {
+    public void setTotalPages(Integer totalPages) {
         this.totalPages = totalPages;
     }
 
-    public List<Movie> getResults() {
+    public List<TVShow> getResults() {
         return results;
     }
 
-    public void setResults(List<Movie> results) {
+    public void setResults(List<TVShow> results) {
         this.results = results;
     }
+
 }

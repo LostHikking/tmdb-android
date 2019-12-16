@@ -19,7 +19,6 @@
             android:id="@+id/poster"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:contentDescription="poster"
             android:scaleType="centerCrop"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintDimensionRatio="H,3:2"
@@ -42,7 +41,6 @@
                 style="@style/BackGroundImageView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:contentDescription="background"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@android:color/background_light" />
@@ -75,7 +73,6 @@
                     android:layout_weight="1"
                     android:fontFamily="@font/fontfamily"
                     android:gravity="center"
-                    android:text="9.9"
                     android:textAlignment="center"
                     android:textColor="@color/colorAccent" />
 
@@ -94,7 +91,6 @@
                         android:ellipsize="end"
                         android:fontFamily="@font/medium"
                         android:maxLines="1"
-                        android:text="titlename"
                         android:textAlignment="center"
                         android:textColor="@color/colorAccent"
                         android:textSize="18sp" />
@@ -104,7 +100,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="0dp"
-                        android:text="00-00-0000"
                         android:textAlignment="center"
                         android:textColor="@color/colorAccent" />
                 </LinearLayout>
@@ -119,7 +114,6 @@
                 android:layout_marginEnd="4dp"
                 android:ellipsize="end"
                 android:maxLines="5"
-                android:text="TextView"
                 android:textAlignment="center"
                 android:textColor="@color/colorAccent"
                 app:layout_constraintEnd_toEndOf="parent"
