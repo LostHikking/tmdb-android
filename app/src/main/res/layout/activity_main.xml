@@ -7,7 +7,6 @@
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
     tools:context=".UI.Activities.MainActivity">
-
     <FrameLayout
         android:id="@+id/fragment_container"
         android:layout_width="match_parent"
@@ -24,6 +23,4 @@
         app:itemTextColor="@color/bottom_navigation_item_background_colors"
         app:labelVisibilityMode="labeled"
         app:menu="@menu/menu_bottom_navigation" />
-
-
 </RelativeLayout>
