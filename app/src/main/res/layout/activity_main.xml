@@ -6,21 +6,44 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
-    tools:context=".UI.Activities.MainActivity">
+    tools:context = ".ui.activities.MainActivity">
+
+    <SearchView
+        android:layout_width = "match_parent"
+        android:layout_height = "match_parent"/>
+
     <FrameLayout
         android:id="@+id/fragment_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/bottom_navigation" />
+        android:layout_above = "@+id/bottom_navigation">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id = "@+id/floatingActionButton2"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:layout_gravity = "bottom|end"
+            android:layout_marginStart = "28dp"
+            android:layout_marginTop = "28dp"
+            android:layout_marginEnd = "28dp"
+            android:layout_marginBottom = "28dp"
+            android:clickable = "true"
+            app:borderWidth = "0dp"
+            app:elevation = "6dp"
+            app:pressedTranslationZ = "12dp"
+            app:srcCompat = "@drawable/ic_magnifying_glass"/>
+    </FrameLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        app:itemBackground="@color/colorExtraDark"
-        app:itemIconTint="@color/bottom_navigation_item_background_colors"
-        app:itemTextColor="@color/bottom_navigation_item_background_colors"
-        app:labelVisibilityMode="labeled"
-        app:menu="@menu/menu_bottom_navigation" />
+        android:id = "@+id/bottom_navigation"
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:layout_alignParentBottom = "true"
+        android:background = "@color/black"
+        app:itemBackground = "@color/black"
+        app:itemIconTint = "@color/bottom_navigation_item_background_colors"
+        app:itemTextColor = "@color/bottom_navigation_item_background_colors"
+        app:menu = "@menu/menu_bottom_navigation">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 </RelativeLayout>

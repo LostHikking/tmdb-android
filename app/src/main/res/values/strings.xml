@@ -10,4 +10,6 @@
     <string name="collection">Коллекция</string>
     <string name="crew">Создатели</string>
     <string name="cast">В ролях</string>
+    <string name = "season">Сезоны</string>
+    <string name = "main">Главная</string>
 </resources>

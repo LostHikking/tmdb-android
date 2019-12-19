@@ -26,6 +26,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <LinearLayout
+            android:id = "@+id/item_info_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
@@ -104,79 +105,6 @@
                 android:gravity="center"
                 android:text="▶  Трейлер"
                 android:textColor="@color/white" />
-
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/thin"
-                android:padding="10dp"
-                android:text="@string/cast"
-                android:textColor="@color/white"
-                android:textSize="36sp" />
-
-            <HorizontalScrollView
-
-                android:id="@+id/cast_scroll"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <LinearLayout
-                    android:id="@+id/cast"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:padding="5dp" />
-            </HorizontalScrollView>
-
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/thin"
-                android:padding="10dp"
-                android:text="@string/crew"
-                android:textColor="@color/white"
-                android:textSize="36sp" />
-
-            <HorizontalScrollView
-
-                android:id="@+id/crew_scroll"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <LinearLayout
-                    android:id="@+id/crew"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:padding="5dp" />
-            </HorizontalScrollView>
-
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/thin"
-                android:padding="10dp"
-                android:text="@string/collection"
-                android:textColor="@color/white"
-                android:textSize="36sp" />
-
-            <HorizontalScrollView
-
-                android:id="@+id/collection_scroll"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <LinearLayout
-                    android:id="@+id/collection"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:padding="5dp" />
-            </HorizontalScrollView>
-
         </LinearLayout>
     </RelativeLayout>
 </ScrollView>

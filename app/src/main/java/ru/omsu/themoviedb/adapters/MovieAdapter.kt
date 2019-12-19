@@ -16,18 +16,17 @@ import ru.omsu.themoviedb.Settings.API_KEY
 import ru.omsu.themoviedb.Settings.BACKDROP_SIZE_W780
 import ru.omsu.themoviedb.Settings.POSTER_SIZE_W500
 import ru.omsu.themoviedb.Settings.URL_TMDB_BASE
-import ru.omsu.themoviedb.UI.Activities.ItemInfoActivity
 import ru.omsu.themoviedb.enums.ItemType
 import ru.omsu.themoviedb.enums.RequestTypeMovies
 import ru.omsu.themoviedb.metadata.tmdb.TMDBService
 import ru.omsu.themoviedb.metadata.tmdb.movie.Movie
+import ru.omsu.themoviedb.ui.activities.ItemInfoActivity
 import java.util.*
 
 class MovieAdapter(private val context: Context) : RecyclerView.Adapter<MovieAdapter.MovieViewHolder>() {
 
     private var page = 1
-    var category = RequestTypeMovies.POPULAR
-        private set
+    private var category = RequestTypeMovies.POPULAR
 
     private val movieList = Collections.synchronizedList(ArrayList<Movie>())
 

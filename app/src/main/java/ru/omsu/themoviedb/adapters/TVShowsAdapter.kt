@@ -16,19 +16,18 @@ import ru.omsu.themoviedb.Settings.API_KEY
 import ru.omsu.themoviedb.Settings.BACKDROP_SIZE_W780
 import ru.omsu.themoviedb.Settings.POSTER_SIZE_W500
 import ru.omsu.themoviedb.Settings.URL_TMDB_BASE
-import ru.omsu.themoviedb.UI.Activities.ItemInfoActivity
 import ru.omsu.themoviedb.adapters.TVShowsAdapter.TVShowViewHolder
 import ru.omsu.themoviedb.enums.ItemType
 import ru.omsu.themoviedb.enums.RequestTypeTVShows
 import ru.omsu.themoviedb.metadata.tmdb.TMDBService
 import ru.omsu.themoviedb.metadata.tmdb.tvshow.TVShow
+import ru.omsu.themoviedb.ui.activities.ItemInfoActivity
 import java.util.*
 
 class TVShowsAdapter(private val context: Context) : RecyclerView.Adapter<TVShowViewHolder>() {
 
     private var page = 1
-    var category = RequestTypeTVShows.POPULAR
-        private set
+    private var category = RequestTypeTVShows.POPULAR
 
     private val tvShowList = Collections.synchronizedList(ArrayList<TVShow>())
 
@@ -102,7 +101,7 @@ class TVShowsAdapter(private val context: Context) : RecyclerView.Adapter<TVShow
         fun bind(tvShow: TVShow) {
             titleView.text = tvShow.name
             overviewView.text = tvShow.overview
-            if (tvShow.vote_average != 0.0) ratingView.text = java.lang.Double.toString(tvShow.vote_average!!) else ratingView.text = "-"
+            if (tvShow.vote_average != 0.0) ratingView.text = tvShow.vote_average!!.toString() else ratingView.text = "-"
             releaseDateView.text = tvShow.first_air_date
             if (tvShow.poster_path != null) Glide.with(itemView.context).load(URL_TMDB_BASE + POSTER_SIZE_W500 + tvShow.poster_path).fitCenter().into(posterView)
             if (tvShow.backdrop_path != null) Glide.with(itemView.context).load(URL_TMDB_BASE + BACKDROP_SIZE_W780 + tvShow.backdrop_path).fitCenter().into(backgroundView)

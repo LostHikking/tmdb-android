@@ -1,4 +1,4 @@
-package ru.omsu.themoviedb.UI.Fragments
+package ru.omsu.themoviedb.ui.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater

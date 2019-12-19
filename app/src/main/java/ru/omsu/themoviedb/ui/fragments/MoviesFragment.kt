@@ -1,4 +1,4 @@
-package ru.omsu.themoviedb.UI.Fragments
+package ru.omsu.themoviedb.ui.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,9 +8,9 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import ru.omsu.themoviedb.R
-import ru.omsu.themoviedb.adapters.TVShowsAdapter
+import ru.omsu.themoviedb.adapters.MovieAdapter
 
-class TVFragment : Fragment() {
+class MoviesFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_list, container, false)
@@ -26,8 +26,8 @@ class TVFragment : Fragment() {
         recyclerView.drawingCacheQuality = View.DRAWING_CACHE_QUALITY_HIGH
         val mLayoutManager = LinearLayoutManager(context)
         recyclerView.layoutManager = mLayoutManager
-        val tvShowsAdapter = TVShowsAdapter(context!!)
-        recyclerView.adapter = tvShowsAdapter
-        tvShowsAdapter.getTVShows()
+        val movieAdapter = MovieAdapter(context!!)
+        recyclerView.adapter = movieAdapter
+        movieAdapter.getMovies()
     }
 }

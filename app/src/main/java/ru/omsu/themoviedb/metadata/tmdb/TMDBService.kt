@@ -10,6 +10,7 @@ import retrofit2.http.Query
 import ru.omsu.themoviedb.metadata.tmdb.movie.Collection
 import ru.omsu.themoviedb.metadata.tmdb.movie.Movie
 import ru.omsu.themoviedb.metadata.tmdb.movie.MoviePage
+import ru.omsu.themoviedb.metadata.tmdb.tvshow.TVShow
 import ru.omsu.themoviedb.metadata.tmdb.tvshow.TVShowPage
 
 interface TMDBService {
@@ -38,13 +39,13 @@ interface TMDBService {
                         @Query("language") language: String?): Observable<Movie>
 
     @GET("movie/{movie_id}/videos")
-    fun getVideos(@Path("movie_id") movie_id: Int,
-                  @Query("api_key") api_key: String,
-                  @Query("language") language: String?): Observable<Videos>
+    fun getVideosMovie(@Path("movie_id") movie_id: Int,
+                       @Query("api_key") api_key: String,
+                       @Query("language") language: String?): Observable<Videos>
 
     @GET("movie/{movie_id}/credits")
-    fun getCredits(@Path("movie_id") movie_id: Int,
-                   @Query("api_key") api_key: String): Observable<Credits>
+    fun getCreditsMovie(@Path("movie_id") movie_id: Int,
+                        @Query("api_key") api_key: String): Observable<Credits>
 
     @GET("tv/popular")
     fun getPopularTV(@Query("api_key") api_key: String,
@@ -60,6 +61,25 @@ interface TMDBService {
     fun getLatestTV(@Query("api_key") api_key: String,
                     @Query("language") language: String?,
                     @Query("page") page: Int): Observable<TVShowPage>
+
+    @GET("tv/{tvshow_id}")
+    fun getTVshowDetails(@Path("tvshow_id") tvshow_id: Int,
+                         @Query("api_key") api_key: String,
+                         @Query("language") language: String?): Observable<TVShow>
+
+    @GET("tv/{tvshow_id}/videos")
+    fun getVideosTVShow(@Path("tvshow_id") tvshow_id: Int,
+                        @Query("api_key") api_key: String,
+                        @Query("language") language: String?): Observable<Videos>
+
+    @GET("person/{person_id}")
+    fun getPersonDetails(@Path("person_id") person_id: Int,
+                         @Query("api_key") api_key: String,
+                         @Query("language") language: String?): Observable<Person>
+
+    @GET("tv/{tvshow_id}/credits")
+    fun getCreditsTVShow(@Path("tvshow_id") tvshow_id: Int,
+                         @Query("api_key") api_key: String): Observable<Credits>
 
     @GET("collection/{collection_id}")
     fun getCollectionDetails(@Path("collection_id") collection_id: Int,

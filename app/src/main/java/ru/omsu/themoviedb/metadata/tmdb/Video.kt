@@ -1,6 +1,6 @@
-package ru.omsu.themoviedb.adapters
+package ru.omsu.themoviedb.metadata.tmdb
 
-data class Result(
+data class Video(
         val id: String? = null,
         val iso_3166_1: String? = null,
         val iso_639_1: String? = null,

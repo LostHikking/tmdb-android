@@ -1,14 +1,14 @@
-package ru.omsu.themoviedb.UI.Activities
+package ru.omsu.themoviedb.ui.activities
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import ru.omsu.themoviedb.R
-import ru.omsu.themoviedb.UI.Fragments.MoviesFragment
-import ru.omsu.themoviedb.UI.Fragments.PersonsFragment
-import ru.omsu.themoviedb.UI.Fragments.SearchFragment
-import ru.omsu.themoviedb.UI.Fragments.TVFragment
+import ru.omsu.themoviedb.ui.fragments.MoviesFragment
+import ru.omsu.themoviedb.ui.fragments.PersonsFragment
+import ru.omsu.themoviedb.ui.fragments.SearchFragment
+import ru.omsu.themoviedb.ui.fragments.TVFragment
 
 class MainActivity : AppCompatActivity() {
     private val navListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
