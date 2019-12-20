@@ -10,6 +10,8 @@ import retrofit2.http.Query
 import ru.omsu.themoviedb.metadata.tmdb.movie.Collection
 import ru.omsu.themoviedb.metadata.tmdb.movie.Movie
 import ru.omsu.themoviedb.metadata.tmdb.movie.MoviePage
+import ru.omsu.themoviedb.metadata.tmdb.tvshow.Episode
+import ru.omsu.themoviedb.metadata.tmdb.tvshow.Season
 import ru.omsu.themoviedb.metadata.tmdb.tvshow.TVShow
 import ru.omsu.themoviedb.metadata.tmdb.tvshow.TVShowPage
 
@@ -66,6 +68,19 @@ interface TMDBService {
     fun getTVshowDetails(@Path("tvshow_id") tvshow_id: Int,
                          @Query("api_key") api_key: String,
                          @Query("language") language: String?): Observable<TVShow>
+
+    @GET("tv/{tvshow_id}/season/{season_number}")
+    fun getSeasonDetails(@Path("tvshow_id") tvshow_id: Int,
+                         @Path("season_number") season_number: Int,
+                         @Query("api_key") api_key: String,
+                         @Query("language") language: String?): Observable<Season>
+
+    @GET("tv/{tvshow_id}/season/{season_number}/episode/{episode_number}")
+    fun getEpisodeDetails(@Path("tvshow_id") tvshow_id: Int,
+                          @Path("season_number") season_number: Int,
+                          @Path("episode_number") episode_number: Int,
+                          @Query("api_key") api_key: String,
+                          @Query("language") language: String?): Observable<Episode>
 
     @GET("tv/{tvshow_id}/videos")
     fun getVideosTVShow(@Path("tvshow_id") tvshow_id: Int,

@@ -27,8 +27,10 @@ object Settings {
     const val PROFILE_SIZE_ORIGINAL = "original"
     const val STILL_SIZE_W92 = "w92"
     const val STILL_SIZE_W185 = "w185"
-    const val STILL_SIZE_H300 = "w300"
+    const val STILL_SIZE_W300 = "w300"
     const val STILL_SIZE_ORIGINAL = "original"
     const val URL_YOUTUBE_VIDEO = "http://www.youtube.com/watch?v="
-    const val PATH_IMAGE_PERSON_NO_PHOTO = "file:///android_asset/nophoto.jpg"
+    const val PATH_IMAGE_PERSON_NO_PHOTO = "file:///android_asset/nophoto.wepb"
+    const val PATH_IMAGE_PERSON_NO_POSTER = "file:///android_asset/noposter.wepb"
+    const val PATH_IMAGE_PERSON_NO_STILL = "file:///android_asset/nostill.wepb"
 }

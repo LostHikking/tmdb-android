@@ -1,49 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/listView"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
-    tools:context = ".ui.activities.MainActivity">
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+	xmlns:app = "http://schemas.android.com/apk/res-auto"
+	xmlns:tools = "http://schemas.android.com/tools"
+	android:id = "@+id/listView"
+	android:layout_width = "match_parent"
+	android:layout_height = "match_parent"
+	android:background = "@color/black"
+	tools:context = ".ui.activities.MainActivity">
 
-    <SearchView
-        android:layout_width = "match_parent"
-        android:layout_height = "match_parent"/>
+	<com.google.android.material.appbar.AppBarLayout
+		android:id = "@+id/appBar"
+		android:layout_width = "match_parent"
+		android:layout_height = "wrap_content"
+		android:theme = "@style/AppTheme">
 
-    <FrameLayout
-        android:id="@+id/fragment_container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above = "@+id/bottom_navigation">
+		<androidx.appcompat.widget.Toolbar
+			android:id = "@+id/toolbar"
+			android:layout_width = "match_parent"
+			android:layout_height = "?attr/actionBarSize"
+			android:theme = "@style/ToolbarTheme"
+			app:contentInsetLeft = "0dp"
+			app:contentInsetStart = "0dp"
+			app:layout_scrollFlags = "scroll|enterAlways"
+			app:popupTheme = "@style/AppTheme">
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id = "@+id/floatingActionButton2"
-            android:layout_width = "wrap_content"
-            android:layout_height = "wrap_content"
-            android:layout_gravity = "bottom|end"
-            android:layout_marginStart = "28dp"
-            android:layout_marginTop = "28dp"
-            android:layout_marginEnd = "28dp"
-            android:layout_marginBottom = "28dp"
-            android:clickable = "true"
-            app:borderWidth = "0dp"
-            app:elevation = "6dp"
-            app:pressedTranslationZ = "12dp"
-            app:srcCompat = "@drawable/ic_magnifying_glass"/>
-    </FrameLayout>
+			<TextView
+				android:id = "@+id/toolbar_title"
+				style = "@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+				android:layout_width = "wrap_content"
+				android:layout_height = "wrap_content"
+				android:layout_gravity = "center_vertical"
+				android:layout_marginStart = "20dp"
+				android:fontFamily = "@font/regular"
+				android:text = "@string/popular"
+				android:textColor = "@android:color/white"/>
+		</androidx.appcompat.widget.Toolbar>
+	</com.google.android.material.appbar.AppBarLayout>
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id = "@+id/bottom_navigation"
-        android:layout_width = "match_parent"
-        android:layout_height = "wrap_content"
-        android:layout_alignParentBottom = "true"
-        android:background = "@color/black"
-        app:itemBackground = "@color/black"
-        app:itemIconTint = "@color/bottom_navigation_item_background_colors"
-        app:itemTextColor = "@color/bottom_navigation_item_background_colors"
-        app:menu = "@menu/menu_bottom_navigation">
+	<FrameLayout
+		android:id = "@+id/fragment_container"
+		android:layout_width = "match_parent"
+		android:layout_height = "match_parent"
+		android:layout_above = "@+id/bottom_navigation"
+		app:layout_behavior = "@string/appbar_scrolling_view_behavior"/>
 
-    </com.google.android.material.bottomnavigation.BottomNavigationView>
-</RelativeLayout>
+	<com.google.android.material.bottomnavigation.BottomNavigationView
+		android:id = "@+id/bottom_navigation"
+		android:layout_width = "match_parent"
+		android:layout_height = "wrap_content"
+		android:layout_alignParentBottom = "true"
+		android:layout_gravity = "bottom"
+		android:background = "@color/colorPrimary"
+		app:itemBackground = "@color/colorPrimary"
+		app:itemIconTint = "@color/colorPrimaryDark"
+		app:itemTextColor = "@color/colorPrimaryDark"
+		app:menu = "@menu/menu_bottom_navigation">
+
+	</com.google.android.material.bottomnavigation.BottomNavigationView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

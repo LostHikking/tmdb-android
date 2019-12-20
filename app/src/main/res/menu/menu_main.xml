@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android = "http://schemas.android.com/apk/res/android"
+	xmlns:app = "http://schemas.android.com/apk/res-auto">
+	<item
+		android:id = "@+id/miCompose"
+		android:icon = "@drawable/ic_magnifying_glass"
+		android:iconTint = "@color/colorPrimaryDark"
+		android:title = "Compose"
+		app:showAsAction = "ifRoom"/>
+	<item
+		android:id = "@+id/miProfile"
+		android:icon = "@drawable/ic_home_24px"
+		android:iconTint = "@color/colorPrimaryDark"
+		android:title = "Profile"
+		app:showAsAction = "ifRoom|withText"/>
+</menu>

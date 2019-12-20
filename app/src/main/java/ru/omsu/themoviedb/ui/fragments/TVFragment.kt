@@ -22,8 +22,6 @@ class TVFragment : Fragment() {
         val recyclerView: RecyclerView = view.findViewById(R.id.list)
         recyclerView.setHasFixedSize(true)
         recyclerView.setItemViewCacheSize(20)
-        recyclerView.isDrawingCacheEnabled = true
-        recyclerView.drawingCacheQuality = View.DRAWING_CACHE_QUALITY_HIGH
         val mLayoutManager = LinearLayoutManager(context)
         recyclerView.layoutManager = mLayoutManager
         val tvShowsAdapter = TVShowsAdapter(context!!)
