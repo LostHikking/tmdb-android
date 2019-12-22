@@ -1,1 +1,1 @@
-# TMDB Client for Android
+# Unofficial TMDB Client for Android
