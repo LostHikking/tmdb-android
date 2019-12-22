@@ -1,7 +1,7 @@
 package ru.omsu.themoviedb
 
-object Settings {
-    const val API_KEY = "f0fc35f5ec87f52edeb0d917655e056f"
+
+const val API_KEY = "f0fc35f5ec87f52edeb0d917655e056f"
     const val URL_TMDB_BASE = "https://image.tmdb.org/t/p/"
     const val BACKDROP_SIZE_W300 = "w300"
     const val BACKDROP_SIZE_W780 = "w780"
@@ -33,4 +33,3 @@ object Settings {
     const val PATH_IMAGE_PERSON_NO_PHOTO = "file:///android_asset/nophoto.png"
     const val PATH_IMAGE_PERSON_NO_POSTER = "file:///android_asset/noposter.png"
     const val PATH_IMAGE_PERSON_NO_STILL = "file:///android_asset/nostill.png"
-}

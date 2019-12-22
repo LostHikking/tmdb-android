@@ -1,7 +1,6 @@
 package ru.omsu.themoviedb.ui.activities
 
 import android.os.Bundle
-import android.view.Menu
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -36,15 +35,10 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.setLogo(R.drawable.ic_logo_tmdb)
         supportActionBar?.setDisplayUseLogoEnabled(true)
         supportActionBar?.setDisplayShowTitleEnabled(false)
-        //supportActionBar?.setTitle(R.string.popular)
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
-        if (savedInstanceState == null) supportFragmentManager.beginTransaction().replace(R.id.fragment_container, MoviesFragment()).commit()
+        if (savedInstanceState == null) supportFragmentManager.beginTransaction().replace(R.id.fragment_container, TVFragment()).commit()
         bottomNavigationView.setOnNavigationItemSelectedListener(navListener)
     }
-
-
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.menu_main, menu)
-        return true
-    }
+    
+    
 }

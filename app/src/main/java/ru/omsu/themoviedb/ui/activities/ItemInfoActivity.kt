@@ -6,34 +6,23 @@ import android.content.Intent
 import android.graphics.drawable.Drawable
 import android.net.Uri
 import android.os.Bundle
-import android.text.Html
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.text.HtmlCompat
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.bumptech.glide.request.RequestOptions
-import com.bumptech.glide.request.target.SimpleTarget
+import com.bumptech.glide.request.target.CustomTarget
 import com.bumptech.glide.request.transition.Transition
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import jp.wasabeef.glide.transformations.BlurTransformation
 import kotlinx.android.synthetic.main.activity_item.*
-import ru.omsu.themoviedb.R
-import ru.omsu.themoviedb.Settings.API_KEY
-import ru.omsu.themoviedb.Settings.PATH_IMAGE_PERSON_NO_PHOTO
-import ru.omsu.themoviedb.Settings.PATH_IMAGE_PERSON_NO_POSTER
-import ru.omsu.themoviedb.Settings.PATH_IMAGE_PERSON_NO_STILL
-import ru.omsu.themoviedb.Settings.POSTER_SIZE_ORIGINAL
-import ru.omsu.themoviedb.Settings.POSTER_SIZE_W300
-import ru.omsu.themoviedb.Settings.PROFILE_SIZE_ORIGINAL
-import ru.omsu.themoviedb.Settings.PROFILE_SIZE_W185
-import ru.omsu.themoviedb.Settings.STILL_SIZE_ORIGINAL
-import ru.omsu.themoviedb.Settings.STILL_SIZE_W300
-import ru.omsu.themoviedb.Settings.URL_TMDB_BASE
-import ru.omsu.themoviedb.Settings.URL_YOUTUBE_VIDEO
+import ru.omsu.themoviedb.*
 import ru.omsu.themoviedb.enums.ItemType
 import ru.omsu.themoviedb.metadata.tmdb.TMDBService
 import java.util.*
@@ -71,6 +60,7 @@ class ItemInfoActivity : AppCompatActivity() {
                     if (episode.still_path != null)
                         Glide.with(this).load(URL_TMDB_BASE + STILL_SIZE_ORIGINAL + episode.still_path)
                                 .fitCenter()
+                                .transition(DrawableTransitionOptions.withCrossFade())
                                 .into(item_poster)
                     else
                         Glide.with(this).asBitmap().load(Uri.parse(PATH_IMAGE_PERSON_NO_STILL)).fitCenter().into(item_poster)
@@ -85,7 +75,9 @@ class ItemInfoActivity : AppCompatActivity() {
                                     val episodeView = inflater.inflate(R.layout.card_episode_small, episodesLayout.findViewById(R.id.list_inner_layout), false)
                                     episodeView.findViewById<TextView>(R.id.title).text = season.episodes[i]?.name
                                     episodeView.findViewById<TextView>(R.id.release_date).text = season.episodes[i]?.air_date
-                                    Glide.with(this).load(URL_TMDB_BASE + STILL_SIZE_W300 + season.episodes[i]?.still_path).into(episodeView.findViewById(R.id.poster))
+                                    Glide.with(this).load(URL_TMDB_BASE + STILL_SIZE_W300 + season.episodes[i]?.still_path)
+                                            .transition(DrawableTransitionOptions.withCrossFade())
+                                            .into(episodeView.findViewById(R.id.poster))
                                     episodeView.setOnClickListener { openItem(this, itemID, ItemType.EPISODE, seasonID, season.episodes[i]?.episode_number) }
                                     episodesLayout.findViewById<LinearLayout>(R.id.list_inner_layout).addView(episodeView)
                                 }
@@ -100,9 +92,12 @@ class ItemInfoActivity : AppCompatActivity() {
                         castView.findViewById<TextView>(R.id.name).text = episode.guest_stars[i]?.name
                         castView.findViewById<TextView>(R.id.role).text = episode.guest_stars[i]?.character
                         if (episode.guest_stars[i]?.profile_path == null)
-                            Glide.with(this).asBitmap().load(Uri.parse(PATH_IMAGE_PERSON_NO_PHOTO)).fitCenter().into(castView.findViewById(R.id.person_image))
+                            Glide.with(this).asBitmap().load(Uri.parse(PATH_IMAGE_PERSON_NO_PHOTO)).fitCenter()
+                                    .into(castView.findViewById(R.id.person_image))
                         else
-                            Glide.with(this).load(URL_TMDB_BASE + PROFILE_SIZE_W185 + episode.guest_stars[i]?.profile_path).fitCenter().into(castView.findViewById(R.id.person_image))
+                            Glide.with(this).load(URL_TMDB_BASE + PROFILE_SIZE_W185 + episode.guest_stars[i]?.profile_path).fitCenter()
+                                    .transition(DrawableTransitionOptions.withCrossFade())
+                                    .into(castView.findViewById(R.id.person_image))
                         castView.setOnClickListener { openItem(this, episode.guest_stars[i]?.id!!, ItemType.PERSON) }
                         castLayout.findViewById<LinearLayout>(R.id.list_inner_layout).addView(castView)
                     }
@@ -117,7 +112,9 @@ class ItemInfoActivity : AppCompatActivity() {
                         if (episode.crew?.get(i)?.profile_path == null)
                             Glide.with(this).asBitmap().load(Uri.parse(PATH_IMAGE_PERSON_NO_PHOTO)).fitCenter().into(castView.findViewById(R.id.person_image))
                         else
-                            Glide.with(this).load(URL_TMDB_BASE + PROFILE_SIZE_W185 + episode.crew[i]?.profile_path).fitCenter().into(castView.findViewById(R.id.person_image))
+                            Glide.with(this).load(URL_TMDB_BASE + PROFILE_SIZE_W185 + episode.crew[i]?.profile_path).fitCenter()
+                                    .transition(DrawableTransitionOptions.withCrossFade())
+                                    .into(castView.findViewById(R.id.person_image))
                         castView.setOnClickListener { openItem(this, episode.crew?.get(i)?.id!!, ItemType.PERSON) }
                         castLayout.findViewById<LinearLayout>(R.id.list_inner_layout).addView(castView)
                     }
@@ -137,12 +134,16 @@ class ItemInfoActivity : AppCompatActivity() {
                     if (season.poster_path != null) {
                         Glide.with(this).load(URL_TMDB_BASE + POSTER_SIZE_ORIGINAL + season.poster_path)
                                 .fitCenter()
+                                .transition(DrawableTransitionOptions.withCrossFade())
                                 .into(item_poster)
                         Glide.with(this).load(URL_TMDB_BASE + POSTER_SIZE_ORIGINAL + season.poster_path)
-                                .apply(RequestOptions.bitmapTransform(BlurTransformation(40, 10))).into(object : SimpleTarget<Drawable>() {
+                                .apply(RequestOptions.bitmapTransform(BlurTransformation(40, 10))).into(object : CustomTarget<Drawable>() {
                                     override fun onResourceReady(resource: Drawable, transition: Transition<in Drawable>?) {
                                         resource.alpha = 70
                                         item_layout.background = resource
+                                    }
+            
+                                    override fun onLoadCleared(placeholder: Drawable?) {
                                     }
                                 })
                     } else
@@ -154,9 +155,12 @@ class ItemInfoActivity : AppCompatActivity() {
                         episodeView.findViewById<TextView>(R.id.title).text = season.episodes[i]?.name
                         episodeView.findViewById<TextView>(R.id.release_date).text = season.episodes[i]?.air_date
                         if (season.episodes[i]?.still_path == null)
-                            Glide.with(this).asBitmap().load(Uri.parse(PATH_IMAGE_PERSON_NO_POSTER)).fitCenter().into(episodeView.findViewById(R.id.poster))
+                            Glide.with(this).asBitmap().load(Uri.parse(PATH_IMAGE_PERSON_NO_POSTER)).fitCenter()
+                                    .into(episodeView.findViewById(R.id.poster))
                         else
-                            Glide.with(this).load(URL_TMDB_BASE + STILL_SIZE_W300 + season.episodes[i]?.still_path).into(episodeView.findViewById(R.id.poster))
+                            Glide.with(this).load(URL_TMDB_BASE + STILL_SIZE_W300 + season.episodes[i]?.still_path)
+                                    .transition(DrawableTransitionOptions.withCrossFade())
+                                    .into(episodeView.findViewById(R.id.poster))
                         episodeView.setOnClickListener { openItem(this, itemID, ItemType.EPISODE, seasonNumber, season.episodes[i]?.episode_number) }
                         episodesLayout.findViewById<LinearLayout>(R.id.list_inner_layout).addView(episodeView)
                     }
@@ -184,6 +188,7 @@ class ItemInfoActivity : AppCompatActivity() {
                     overview.text = person.biography
                     info_line.text = person.known_for_department
                     Glide.with(this).load(URL_TMDB_BASE + PROFILE_SIZE_ORIGINAL + person.profile_path)
+                            .transition(DrawableTransitionOptions.withCrossFade())
                             .fitCenter()
                             .into(item_poster)
 
@@ -201,15 +206,21 @@ class ItemInfoActivity : AppCompatActivity() {
                     title_name.text = tvShow.name
                     overview.text = tvShow.overview
                     info_line.text = tvShow.genres?.get(0)?.name + " | " + tvShow.origin_country?.get(0) + " | " + tvShow.first_air_date
-                    item_rating.text = Html.fromHtml("<b>" + tvShow.vote_average + "</b>/10")
+                    item_rating.text = HtmlCompat.fromHtml("<b>" + tvShow.vote_average + "</b>/10", HtmlCompat.FROM_HTML_MODE_LEGACY)
                     Glide.with(this).load(URL_TMDB_BASE + POSTER_SIZE_ORIGINAL + tvShow.poster_path)
+                            .transition(DrawableTransitionOptions.withCrossFade())
                             .fitCenter()
                             .into(item_poster)
                     Glide.with(this).load(URL_TMDB_BASE + POSTER_SIZE_ORIGINAL + tvShow.poster_path)
-                            .apply(RequestOptions.bitmapTransform(BlurTransformation(40, 10))).into(object : SimpleTarget<Drawable>() {
+                            .apply(RequestOptions.bitmapTransform(BlurTransformation(40, 10)))
+                            .transition(DrawableTransitionOptions.withCrossFade())
+                            .into(object : CustomTarget<Drawable>() {
                                 override fun onResourceReady(resource: Drawable, transition: Transition<in Drawable>?) {
                                     resource.alpha = 70
                                     item_layout.background = resource
+                                }
+            
+                                override fun onLoadCleared(placeholder: Drawable?) {
                                 }
                             })
                     val seasonLayout: LinearLayout = inflater.inflate(R.layout.list, item_info_layout, false) as LinearLayout
@@ -219,9 +230,12 @@ class ItemInfoActivity : AppCompatActivity() {
                         seasonView.findViewById<TextView>(R.id.title).text = tvShow.seasons[i]?.name
                         seasonView.findViewById<TextView>(R.id.release_date).text = tvShow.seasons[i]?.air_date
                         if (tvShow.seasons[i]?.poster_path != null)
-                            Glide.with(this).load(URL_TMDB_BASE + POSTER_SIZE_W300 + tvShow.seasons[i]?.poster_path).into(seasonView.findViewById(R.id.poster))
+                            Glide.with(this).load(URL_TMDB_BASE + POSTER_SIZE_W300 + tvShow.seasons[i]?.poster_path)
+                                    .transition(DrawableTransitionOptions.withCrossFade())
+                                    .into(seasonView.findViewById(R.id.poster))
                         else
-                            Glide.with(this).asBitmap().load(Uri.parse(PATH_IMAGE_PERSON_NO_POSTER)).fitCenter().into(seasonView.findViewById(R.id.poster))
+                            Glide.with(this).asBitmap().load(Uri.parse(PATH_IMAGE_PERSON_NO_POSTER)).fitCenter()
+                                    .into(seasonView.findViewById(R.id.poster))
                         seasonView.setOnClickListener { openItem(this, tvShow.id!!, ItemType.SEASON, tvShow.seasons[i]?.season_number!!) }
                         seasonLayout.findViewById<LinearLayout>(R.id.list_inner_layout).addView(seasonView)
                     }
@@ -273,7 +287,9 @@ class ItemInfoActivity : AppCompatActivity() {
                                     if (credits.cast[i]?.profile_path == null)
                                         Glide.with(this).asBitmap().load(Uri.parse(PATH_IMAGE_PERSON_NO_PHOTO)).fitCenter().into(castView.findViewById(R.id.person_image))
                                     else
-                                        Glide.with(this).load(URL_TMDB_BASE + PROFILE_SIZE_W185 + credits.cast[i]?.profile_path).fitCenter().into(castView.findViewById(R.id.person_image))
+                                        Glide.with(this).load(URL_TMDB_BASE + PROFILE_SIZE_W185 + credits.cast[i]?.profile_path).fitCenter()
+                                                .transition(DrawableTransitionOptions.withCrossFade())
+                                                .into(castView.findViewById(R.id.person_image))
                                     castView.setOnClickListener { openItem(this, credits.cast[i]?.id!!, ItemType.PERSON) }
                                     castLayout.findViewById<LinearLayout>(R.id.list_inner_layout).addView(castView)
                                 }
@@ -289,7 +305,9 @@ class ItemInfoActivity : AppCompatActivity() {
                                     if (credits.crew[i]?.profile_path == null)
                                         Glide.with(this).asBitmap().load(Uri.parse(PATH_IMAGE_PERSON_NO_PHOTO)).fitCenter().into(crewView.findViewById(R.id.person_image))
                                     else
-                                        Glide.with(this).load(URL_TMDB_BASE + PROFILE_SIZE_W185 + credits.crew[i]?.profile_path).fitCenter().into(crewView.findViewById(R.id.person_image))
+                                        Glide.with(this).load(URL_TMDB_BASE + PROFILE_SIZE_W185 + credits.crew[i]?.profile_path).fitCenter()
+                                                .transition(DrawableTransitionOptions.withCrossFade())
+                                                .into(crewView.findViewById(R.id.person_image))
                                     crewView.setOnClickListener { openItem(this, credits.crew[i]?.id!!, ItemType.PERSON) }
                                     crewLayout.findViewById<LinearLayout>(R.id.list_inner_layout).addView(crewView)
                                 }
@@ -315,7 +333,9 @@ class ItemInfoActivity : AppCompatActivity() {
                                     if (credits.cast[i]?.profile_path == null)
                                         Glide.with(this).asBitmap().load(Uri.parse(PATH_IMAGE_PERSON_NO_PHOTO)).fitCenter().into(castView.findViewById(R.id.person_image))
                                     else
-                                        Glide.with(this).load(URL_TMDB_BASE + PROFILE_SIZE_W185 + credits.cast[i]?.profile_path).fitCenter().into(castView.findViewById(R.id.person_image))
+                                        Glide.with(this).load(URL_TMDB_BASE + PROFILE_SIZE_W185 + credits.cast[i]?.profile_path).fitCenter()
+                                                .transition(DrawableTransitionOptions.withCrossFade())
+                                                .into(castView.findViewById(R.id.person_image))
                                     castView.setOnClickListener { openItem(this, credits.cast[i]?.id!!, ItemType.PERSON) }
                                     castLayout.findViewById<LinearLayout>(R.id.list_inner_layout).addView(castView)
                                 }
@@ -329,9 +349,12 @@ class ItemInfoActivity : AppCompatActivity() {
                                     crewView.findViewById<TextView>(R.id.name).text = credits.crew[i]?.name
                                     crewView.findViewById<TextView>(R.id.role).text = credits.crew[i]?.job
                                     if (credits.crew[i]?.profile_path == null)
-                                        Glide.with(this).asBitmap().load(Uri.parse(PATH_IMAGE_PERSON_NO_PHOTO)).fitCenter().into(crewView.findViewById(R.id.person_image))
+                                        Glide.with(this).asBitmap().load(Uri.parse(PATH_IMAGE_PERSON_NO_PHOTO)).fitCenter()
+                                                .into(crewView.findViewById(R.id.person_image))
                                     else
-                                        Glide.with(this).load(URL_TMDB_BASE + PROFILE_SIZE_W185 + credits.crew[i]?.profile_path).fitCenter().into(crewView.findViewById(R.id.person_image))
+                                        Glide.with(this).load(URL_TMDB_BASE + PROFILE_SIZE_W185 + credits.crew[i]?.profile_path).fitCenter()
+                                                .transition(DrawableTransitionOptions.withCrossFade())
+                                                .into(crewView.findViewById(R.id.person_image))
                                     crewView.setOnClickListener { openItem(this, credits.crew[i]?.id!!, ItemType.PERSON) }
                                     crewLayout.findViewById<LinearLayout>(R.id.list_inner_layout).addView(crewView)
                                 }
@@ -355,16 +378,22 @@ class ItemInfoActivity : AppCompatActivity() {
                             title_name.text = movie.title
                             overview.text = movie.overview
                             info_line.text = movie.genres?.get(0)?.name + " | " + movie.production_countries?.get(0)?.iso_3166_1 + " | " + movie.release_date
-                            item_rating.text = Html.fromHtml("<b>" + movie.vote_average + "</b>/10")
+                            item_rating.text = HtmlCompat.fromHtml("<b>" + movie.vote_average + "</b>/10", HtmlCompat.FROM_HTML_MODE_LEGACY)
                             if (movie.poster_path != null) {
                                 Glide.with(this).load(URL_TMDB_BASE + POSTER_SIZE_ORIGINAL + movie.poster_path)
+                                        .transition(DrawableTransitionOptions.withCrossFade())
                                         .fitCenter()
                                         .into(item_poster)
                                 Glide.with(this).load(URL_TMDB_BASE + POSTER_SIZE_ORIGINAL + movie.poster_path)
-                                        .apply(RequestOptions.bitmapTransform(BlurTransformation(40, 10))).into(object : SimpleTarget<Drawable>() {
+                                        .apply(RequestOptions.bitmapTransform(BlurTransformation(40, 10)))
+                                        .transition(DrawableTransitionOptions.withCrossFade())
+                                        .into(object : CustomTarget<Drawable>() {
                                             override fun onResourceReady(resource: Drawable, transition: Transition<in Drawable>?) {
                                                 resource.alpha = 70
                                                 item_layout.background = resource
+                                            }
+            
+                                            override fun onLoadCleared(placeholder: Drawable?) {
                                             }
                                         })
                             } else
@@ -382,9 +411,12 @@ class ItemInfoActivity : AppCompatActivity() {
                                                 collectionView.findViewById<TextView>(R.id.title).text = collection.parts[i]?.title
                                                 collectionView.findViewById<TextView>(R.id.release_date).text = collection.parts[i]?.release_date
                                                 if (collection.parts[i]?.poster_path == null)
-                                                    Glide.with(this).asBitmap().load(Uri.parse(PATH_IMAGE_PERSON_NO_POSTER)).fitCenter().into(collectionView.findViewById(R.id.poster))
+                                                    Glide.with(this).asBitmap().load(Uri.parse(PATH_IMAGE_PERSON_NO_POSTER)).fitCenter()
+                                                            .into(collectionView.findViewById(R.id.poster))
                                                 else
-                                                    Glide.with(this).load(URL_TMDB_BASE + POSTER_SIZE_W300 + collection.parts[i]?.poster_path).into(collectionView.findViewById(R.id.poster))
+                                                    Glide.with(this).load(URL_TMDB_BASE + POSTER_SIZE_W300 + collection.parts[i]?.poster_path)
+                                                            .transition(DrawableTransitionOptions.withCrossFade())
+                                                            .into(collectionView.findViewById(R.id.poster))
                                                 collectionView.setOnClickListener { openItem(this, collection.parts[i]?.id!!, ItemType.MOVIE) }
                                                 collectionLayout.findViewById<LinearLayout>(R.id.list_inner_layout).addView(collectionView)
                                             }

@@ -14,4 +14,14 @@
 	<string name = "main">Главная</string>
 	<string name = "episodes_list">Список серий</string>
 	<string name = "episodes_list_other">Другие серии</string>
+	<string-array name = "list_type_movies">
+		<item>Популярные</item>
+		<item>Лучшие</item>
+		<item>Ожидаемые</item>
+	</string-array>
+	<string-array name = "list_type_tvshows">
+		<item>Популярные</item>
+		<item>Лучшие</item>
+		<item>Последние</item>
+	</string-array>
 </resources>

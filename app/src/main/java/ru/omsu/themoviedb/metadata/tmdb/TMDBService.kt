@@ -39,6 +39,13 @@ interface TMDBService {
     fun getMovieDetails(@Path("movie_id") movie_id: Int,
                         @Query("api_key") api_key: String,
                         @Query("language") language: String?): Observable<Movie>
+	
+	@GET("search/movie")
+	fun getSearchMovies(@Query("api_key") api_key: String,
+	                    @Query("language") language: String?,
+	                    @Query("query") query: String,
+	                    @Query("include_adult") include_adult: Boolean = true,
+	                    @Query("page") page: Int): Observable<MoviePage>
 
     @GET("movie/{movie_id}/videos")
     fun getVideosMovie(@Path("movie_id") movie_id: Int,
@@ -63,7 +70,14 @@ interface TMDBService {
     fun getLatestTV(@Query("api_key") api_key: String,
                     @Query("language") language: String?,
                     @Query("page") page: Int): Observable<TVShowPage>
-
+	
+	
+	@GET("search/tv")
+	fun getSearchTVShows(@Query("api_key") api_key: String,
+	                     @Query("language") language: String?,
+	                     @Query("query") query: String,
+	                     @Query("page") page: Int): Observable<TVShowPage>
+    
     @GET("tv/{tvshow_id}")
     fun getTVshowDetails(@Path("tvshow_id") tvshow_id: Int,
                          @Query("api_key") api_key: String,

@@ -3,6 +3,7 @@
 	<color name = "colorPrimary">#081C24</color>
 	<color name = "colorPrimaryDark">#01D277</color>
 	<color name = "colorAccent">#FFFFFF</color>
+	<color name = "colorAdditionalDark">#010C11</color>
 	<color name = "white">#FFFFFF</color>
 	<color name = "black">#000000</color>
 </resources>
