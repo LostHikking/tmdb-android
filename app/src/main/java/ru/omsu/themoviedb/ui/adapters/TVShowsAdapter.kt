@@ -96,7 +96,7 @@ class TVShowsAdapter(private val context: Context? = null) : RecyclerView.Adapte
 		notifyDataSetChanged()
 	}
 	
-	fun getTVShows() {
+	private fun getTVShows() {
 		
 		when (category) {
 			RequestTypeTVShows.POPULAR -> {
@@ -104,8 +104,8 @@ class TVShowsAdapter(private val context: Context? = null) : RecyclerView.Adapte
 						.subscribeOn(Schedulers.io())
 						.observeOn(AndroidSchedulers.mainThread())
 						.subscribe({ result ->
-							tvShowList.addAll(result.results!!)
-							maxPage = result.total_pages!!
+							tvShowList.addAll(result.results)
+							maxPage = result.total_pages
 							notifyDataSetChanged()
 						}, { error ->
 							error.printStackTrace()
@@ -116,8 +116,8 @@ class TVShowsAdapter(private val context: Context? = null) : RecyclerView.Adapte
 						.subscribeOn(Schedulers.io())
 						.observeOn(AndroidSchedulers.mainThread())
 						.subscribe({ result ->
-							tvShowList.addAll(result.results!!)
-							maxPage = result.total_pages!!
+							tvShowList.addAll(result.results)
+							maxPage = result.total_pages
 							notifyDataSetChanged()
 						}, { error ->
 							error.printStackTrace()
@@ -128,8 +128,8 @@ class TVShowsAdapter(private val context: Context? = null) : RecyclerView.Adapte
 						.subscribeOn(Schedulers.io())
 						.observeOn(AndroidSchedulers.mainThread())
 						.subscribe({ result ->
-							tvShowList.addAll(result.results!!)
-							maxPage = result.total_pages!!
+							tvShowList.addAll(result.results)
+							maxPage = result.total_pages
 							notifyDataSetChanged()
 						}, { error ->
 							error.printStackTrace()
@@ -141,8 +141,8 @@ class TVShowsAdapter(private val context: Context? = null) : RecyclerView.Adapte
 						.observeOn(AndroidSchedulers.mainThread())
 						.subscribe({ result ->
 							if (result.total_results != 0) {
-								tvShowList.addAll(result.results!!)
-								maxPage = result.total_pages!!
+								tvShowList.addAll(result.results)
+								maxPage = result.total_pages
 								notifyDataSetChanged()
 							} else
 								Toast.makeText(context, "Ничего не найдено", Toast.LENGTH_SHORT).show()
@@ -164,7 +164,7 @@ class TVShowsAdapter(private val context: Context? = null) : RecyclerView.Adapte
 		fun bind(tvShow: TVShow) {
 			titleView.text = tvShow.name
 			overviewView.text = tvShow.overview
-			if (tvShow.vote_average != 0.0) ratingView.text = tvShow.vote_average!!.toString() else ratingView.text = "-"
+			if (tvShow.vote_average != 0.0) ratingView.text = tvShow.vote_average.toString() else ratingView.text = "-"
 			releaseDateView.text = tvShow.first_air_date
 			if (tvShow.poster_path != null) GlideApp.with(posterView.context).load(URL_TMDB_BASE + POSTER_SIZE_W500 + tvShow.poster_path)
 					.diskCacheStrategy(DiskCacheStrategy.NONE)

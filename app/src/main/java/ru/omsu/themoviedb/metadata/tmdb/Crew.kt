@@ -1,11 +1,11 @@
 package ru.omsu.themoviedb.metadata.tmdb
 
 data class Crew(
-        val credit_id: String? = null,
-        val department: String? = null,
-        val gender: Int? = null,
-        val id: Int? = null,
-        val job: String? = null,
-        val name: String? = null,
-        val profile_path: String? = null
+        val credit_id: String?,
+        val department: String?,
+        val gender: Int?,
+        val id: Int,
+        val job: String?,
+        val name: String?,
+        val profile_path: String?
 )

@@ -96,8 +96,8 @@ class MovieAdapter(private val context: Context? = null) : RecyclerView.Adapter<
 						.subscribeOn(Schedulers.io())
 						.observeOn(AndroidSchedulers.mainThread())
 						.subscribe({ moviePage ->
-							movieList.addAll(moviePage.results!!)
-							maxPage = moviePage.total_pages!!
+							movieList.addAll(moviePage.results)
+							maxPage = moviePage.total_pages
 							notifyDataSetChanged()
 						}, { error ->
 							error.printStackTrace()
@@ -108,8 +108,8 @@ class MovieAdapter(private val context: Context? = null) : RecyclerView.Adapter<
 						.subscribeOn(Schedulers.io())
 						.observeOn(AndroidSchedulers.mainThread())
 						.subscribe({ moviePage ->
-							movieList.addAll(moviePage.results!!)
-							maxPage = moviePage.total_pages!!
+							movieList.addAll(moviePage.results)
+							maxPage = moviePage.total_pages
 							notifyDataSetChanged()
 						}, { error ->
 							error.printStackTrace()
@@ -120,8 +120,8 @@ class MovieAdapter(private val context: Context? = null) : RecyclerView.Adapter<
 						.subscribeOn(Schedulers.io())
 						.observeOn(AndroidSchedulers.mainThread())
 						.subscribe({ result ->
-							movieList.addAll(result.results!!)
-							maxPage = result.total_pages!!
+							movieList.addAll(result.results)
+							maxPage = result.total_pages
 							notifyDataSetChanged()
 						}, { error ->
 							error.printStackTrace()
@@ -132,8 +132,8 @@ class MovieAdapter(private val context: Context? = null) : RecyclerView.Adapter<
 						.subscribeOn(Schedulers.io())
 						.observeOn(AndroidSchedulers.mainThread())
 						.subscribe({ result ->
-							movieList.addAll(result.results!!)
-							maxPage = result.total_pages!!
+							movieList.addAll(result.results)
+							maxPage = result.total_pages
 							notifyDataSetChanged()
 						}, { error ->
 							error.printStackTrace()

@@ -1,8 +1,8 @@
 package ru.omsu.themoviedb.metadata.tmdb
 
 data class ProductionCompany(
-        val id: Int? = null,
-        val logo_path: String? = null,
-        val name: String? = null,
-        val origin_country: String? = null
+        val id: Int,
+        val logo_path: String?,
+        val name: String?,
+        val origin_country: String?
 )

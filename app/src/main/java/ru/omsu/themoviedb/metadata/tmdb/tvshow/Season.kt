@@ -2,14 +2,14 @@ package ru.omsu.themoviedb.metadata.tmdb.tvshow
 
 
 data class Season(
-        val _id: String? = null,
-        val air_date: String? = null,
-        val episodes: List<Episode?>? = null,
-        val episode_count: Int? = null,
-        val id: Int? = null,
-        val name: String? = null,
-        val overview: String? = null,
-        val poster_path: String? = null,
-        val season_number: Int? = null,
-        val show_id: Int? = null
+        val _id: String?,
+        val air_date: String?,
+        val episodes: List<Episode>,
+        val episode_count: Int?,
+        val id: Int?,
+        val name: String?,
+        val overview: String?,
+        val poster_path: String?,
+        val season_number: Int?,
+        val show_id: Int?
 )

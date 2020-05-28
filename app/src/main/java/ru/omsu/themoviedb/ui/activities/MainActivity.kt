@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
+import ru.omsu.themoviedb.BuildConfig
 import ru.omsu.themoviedb.R
 import ru.omsu.themoviedb.ui.fragments.MoviesFragment
 import ru.omsu.themoviedb.ui.fragments.PersonsFragment
@@ -21,7 +22,9 @@ class MainActivity : AppCompatActivity() {
             R.id.nav_tv -> selectedFragment = TVFragment()
             R.id.nav_search -> selectedFragment = SearchFragment()
         }
-        assert(selectedFragment != null)
+        if (BuildConfig.DEBUG && selectedFragment == null) {
+            error("Assertion failed")
+        }
         supportFragmentManager.beginTransaction().replace(R.id.fragment_container,
                 selectedFragment!!).commit()
         true

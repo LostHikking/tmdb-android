@@ -34,7 +34,7 @@ class TVFragment : Fragment() {
 		recyclerView.layoutManager = mLayoutManager
 		recyclerView.adapter = tvShowsAdapter
 		val spinner = activity?.findViewById<Spinner>(R.id.spinner_list_type)
-		ArrayAdapter.createFromResource(activity?.baseContext, R.array.list_type_tvshows, R.layout.simple_spinner_item)
+		ArrayAdapter.createFromResource(activity?.baseContext!!, R.array.list_type_tvshows, R.layout.simple_spinner_item)
 				.also { adapter ->
 					adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 					spinner!!.adapter = adapter

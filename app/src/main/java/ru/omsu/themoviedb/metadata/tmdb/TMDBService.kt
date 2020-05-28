@@ -9,11 +9,9 @@ import retrofit2.http.Path
 import retrofit2.http.Query
 import ru.omsu.themoviedb.metadata.tmdb.movie.Collection
 import ru.omsu.themoviedb.metadata.tmdb.movie.Movie
-import ru.omsu.themoviedb.metadata.tmdb.movie.MoviePage
 import ru.omsu.themoviedb.metadata.tmdb.tvshow.Episode
 import ru.omsu.themoviedb.metadata.tmdb.tvshow.Season
 import ru.omsu.themoviedb.metadata.tmdb.tvshow.TVShow
-import ru.omsu.themoviedb.metadata.tmdb.tvshow.TVShowPage
 
 interface TMDBService {
 
@@ -21,19 +19,19 @@ interface TMDBService {
     fun getPopularMovies(@Query("api_key") api_key: String,
                          @Query("language") language: String,
                          @Query("page") page: Int,
-                         @Query("region") region: String?): Observable<MoviePage>
+                         @Query("region") region: String?): Observable<Page<Movie>>
 
     @GET("movie/top_rated")
     fun getTopRatedMovies(@Query("api_key") api_key: String,
                           @Query("language") language: String?,
                           @Query("page") page: Int,
-                          @Query("region") region: String?): Observable<MoviePage>
+                          @Query("region") region: String?): Observable<Page<Movie>>
 
     @GET("movie/upcoming")
     fun getUpcomingMovies(@Query("api_key") api_key: String,
                           @Query("language") language: String?,
                           @Query("page") page: Int,
-                          @Query("region") region: String?): Observable<MoviePage>
+                          @Query("region") region: String?): Observable<Page<Movie>>
 
     @GET("movie/{movie_id}")
     fun getMovieDetails(@Path("movie_id") movie_id: Int,
@@ -45,7 +43,7 @@ interface TMDBService {
 	                    @Query("language") language: String?,
 	                    @Query("query") query: String,
 	                    @Query("include_adult") include_adult: Boolean = true,
-	                    @Query("page") page: Int): Observable<MoviePage>
+	                    @Query("page") page: Int): Observable<Page<Movie>>
 
     @GET("movie/{movie_id}/videos")
     fun getVideosMovie(@Path("movie_id") movie_id: Int,
@@ -59,24 +57,24 @@ interface TMDBService {
     @GET("tv/popular")
     fun getPopularTV(@Query("api_key") api_key: String,
                      @Query("language") language: String,
-                     @Query("page") page: Int): Observable<TVShowPage>
+                     @Query("page") page: Int): Observable<Page<TVShow>>
 
     @GET("tv/top_rated")
     fun getTopRatedTV(@Query("api_key") api_key: String,
                       @Query("language") language: String?,
-                      @Query("page") page: Int): Observable<TVShowPage>
+                      @Query("page") page: Int): Observable<Page<TVShow>>
 
     @GET("tv/latest")
     fun getLatestTV(@Query("api_key") api_key: String,
                     @Query("language") language: String?,
-                    @Query("page") page: Int): Observable<TVShowPage>
+                    @Query("page") page: Int): Observable<Page<TVShow>>
 	
 	
 	@GET("search/tv")
 	fun getSearchTVShows(@Query("api_key") api_key: String,
 	                     @Query("language") language: String?,
 	                     @Query("query") query: String,
-	                     @Query("page") page: Int): Observable<TVShowPage>
+	                     @Query("page") page: Int): Observable<Page<TVShow>>
     
     @GET("tv/{tvshow_id}")
     fun getTVshowDetails(@Path("tvshow_id") tvshow_id: Int,
