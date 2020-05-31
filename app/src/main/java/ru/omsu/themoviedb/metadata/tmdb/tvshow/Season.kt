@@ -1,15 +1,23 @@
 package ru.omsu.themoviedb.metadata.tmdb.tvshow
 
+import com.google.gson.annotations.SerializedName
+
 
 data class Season(
+        @SerializedName("_id")
         val _id: String?,
-        val air_date: String?,
+        @SerializedName("air_date")
+        val airDate: String?,
         val episodes: List<Episode>,
-        val episode_count: Int?,
+        @SerializedName("episode_count")
+        val episodeCount: Int?,
         val id: Int?,
         val name: String?,
         val overview: String?,
-        val poster_path: String?,
-        val season_number: Int?,
-        val show_id: Int?
+        @SerializedName("poster_path")
+        val posterPath: String?,
+        @SerializedName("season_number")
+        val seasonNumber: Int?,
+        @SerializedName("show_id")
+        val showId: Int?
 )

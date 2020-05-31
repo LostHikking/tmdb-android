@@ -42,7 +42,7 @@ interface TMDBService {
 	fun getSearchMovies(@Query("api_key") api_key: String,
 	                    @Query("language") language: String?,
 	                    @Query("query") query: String,
-	                    @Query("include_adult") include_adult: Boolean = true,
+	                    @Query("include_adult") include_adult: Boolean = false,
 	                    @Query("page") page: Int): Observable<Page<Movie>>
 
     @GET("movie/{movie_id}/videos")

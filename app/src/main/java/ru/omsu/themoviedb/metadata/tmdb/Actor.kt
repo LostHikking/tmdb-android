@@ -1,12 +1,17 @@
 package ru.omsu.themoviedb.metadata.tmdb
 
+import com.google.gson.annotations.SerializedName
+
 data class Actor(
-        val cast_id: Int,
+        @SerializedName("cast_id")
+        val castId: Int,
         val character: String?,
-        val credit_id: String?,
+        @SerializedName("credit_id")
+        val creditId: String?,
         val gender: Int?,
         val id: Int?,
         val name: String?,
         val order: Int?,
-        val profile_path: String?
+        @SerializedName("profile_path")
+        val profilePath: String?
 )

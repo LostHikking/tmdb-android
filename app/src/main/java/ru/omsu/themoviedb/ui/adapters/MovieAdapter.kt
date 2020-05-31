@@ -97,7 +97,7 @@ class MovieAdapter(private val context: Context? = null) : RecyclerView.Adapter<
 						.observeOn(AndroidSchedulers.mainThread())
 						.subscribe({ moviePage ->
 							movieList.addAll(moviePage.results)
-							maxPage = moviePage.total_pages
+							maxPage = moviePage.totalPages
 							notifyDataSetChanged()
 						}, { error ->
 							error.printStackTrace()
@@ -109,7 +109,7 @@ class MovieAdapter(private val context: Context? = null) : RecyclerView.Adapter<
 						.observeOn(AndroidSchedulers.mainThread())
 						.subscribe({ moviePage ->
 							movieList.addAll(moviePage.results)
-							maxPage = moviePage.total_pages
+							maxPage = moviePage.totalPages
 							notifyDataSetChanged()
 						}, { error ->
 							error.printStackTrace()
@@ -121,7 +121,7 @@ class MovieAdapter(private val context: Context? = null) : RecyclerView.Adapter<
 						.observeOn(AndroidSchedulers.mainThread())
 						.subscribe({ result ->
 							movieList.addAll(result.results)
-							maxPage = result.total_pages
+							maxPage = result.totalPages
 							notifyDataSetChanged()
 						}, { error ->
 							error.printStackTrace()
@@ -133,7 +133,7 @@ class MovieAdapter(private val context: Context? = null) : RecyclerView.Adapter<
 						.observeOn(AndroidSchedulers.mainThread())
 						.subscribe({ result ->
 							movieList.addAll(result.results)
-							maxPage = result.total_pages
+							maxPage = result.totalPages
 							notifyDataSetChanged()
 						}, { error ->
 							error.printStackTrace()
@@ -165,13 +165,13 @@ class MovieAdapter(private val context: Context? = null) : RecyclerView.Adapter<
 		fun bind(movie: Movie) {
 			titleView.text = movie.title
 			overviewView.text = movie.overview
-			if (movie.vote_average != 0.0) {
-				ratingView.text = movie.vote_average.toString()
+			if (movie.voteAverage != 0.0) {
+				ratingView.text = movie.voteAverage.toString()
 			} else
 				ratingView.text = "-"
 			releaseDateView.text = movie.release_date
-			if (movie.poster_path != null)
-				GlideApp.with(posterView.context).load(URL_TMDB_BASE + POSTER_SIZE_W500 + movie.poster_path)
+			if (movie.posterPath != null)
+				GlideApp.with(posterView.context).load(URL_TMDB_BASE + POSTER_SIZE_W500 + movie.posterPath)
 						.diskCacheStrategy(DiskCacheStrategy.NONE)
 						.override(Target.SIZE_ORIGINAL)
 						.skipMemoryCache(true)
@@ -179,8 +179,8 @@ class MovieAdapter(private val context: Context? = null) : RecyclerView.Adapter<
 						.into(posterView)
 			else
 				GlideApp.with(posterView.context).asBitmap().load(Uri.parse(PATH_IMAGE_PERSON_NO_POSTER)).into(posterView)
-			if (movie.backdrop_path != null)
-				GlideApp.with(backgroundView.context).load(URL_TMDB_BASE + BACKDROP_SIZE_W780 + movie.backdrop_path)
+			if (movie.backdropPath != null)
+				GlideApp.with(backgroundView.context).load(URL_TMDB_BASE + BACKDROP_SIZE_W780 + movie.backdropPath)
 						.diskCacheStrategy(DiskCacheStrategy.NONE)
 						.skipMemoryCache(true)
 						.override(Target.SIZE_ORIGINAL)

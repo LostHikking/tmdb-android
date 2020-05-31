@@ -1,6 +1,5 @@
 package ru.omsu.themoviedb.ui.activities
 
-import android.annotation.SuppressLint
 import android.content.ActivityNotFoundException
 import android.content.Context
 import android.content.Intent
@@ -59,15 +58,15 @@ class ItemInfoActivity : AppCompatActivity() {
                     info_line.text = episode.air_date
                     overview.text = episode.overview
                     (item_poster.layoutParams as ConstraintLayout.LayoutParams).dimensionRatio = "16:9"
-                    if (episode.still_path != null)
-                        Glide.with(this).load(URL_TMDB_BASE + STILL_SIZE_ORIGINAL + episode.still_path)
+                    if (episode.stillPath != null)
+                        Glide.with(this).load(URL_TMDB_BASE + STILL_SIZE_ORIGINAL + episode.stillPath)
                                 .fitCenter()
                                 .transition(DrawableTransitionOptions.withCrossFade())
                                 .into(item_poster)
                     else
                         Glide.with(this).asBitmap().load(Uri.parse(PATH_IMAGE_PERSON_NO_STILL)).fitCenter().into(item_poster)
                     tmdbService
-                            .getSeasonDetails(itemID, episode.season_number!!, API_KEY, lang)
+                            .getSeasonDetails(itemID, episode.seasonNumber!!, API_KEY, lang)
                             .subscribeOn(Schedulers.io())
                             .observeOn(AndroidSchedulers.mainThread())
                             .subscribe({ season ->
@@ -77,7 +76,7 @@ class ItemInfoActivity : AppCompatActivity() {
                                     val episodeView = inflater.inflate(R.layout.card_episode_small, episodesLayout.findViewById(R.id.list_inner_layout), false)
                                     episodeView.findViewById<TextView>(R.id.title).text = season.episodes[i].name
                                     episodeView.findViewById<TextView>(R.id.release_date).text = season.episodes[i].air_date
-                                    Glide.with(this).load(URL_TMDB_BASE + STILL_SIZE_W300 + season.episodes[i].still_path)
+                                    Glide.with(this).load(URL_TMDB_BASE + STILL_SIZE_W300 + season.episodes[i].stillPath)
                                             .transition(DrawableTransitionOptions.withCrossFade())
                                             .into(episodeView.findViewById(R.id.poster))
                                     episodeView.setOnClickListener { openItem(this, itemID, ItemType.EPISODE, seasonID, season.episodes[i].episode_number) }
@@ -93,11 +92,11 @@ class ItemInfoActivity : AppCompatActivity() {
                         item_info_layout.addView(castLayout)
                         castView.findViewById<TextView>(R.id.name).text = episode.guest_stars[i].name
                         castView.findViewById<TextView>(R.id.role).text = episode.guest_stars[i].character
-                        if (episode.guest_stars[i].profile_path == null)
+                        if (episode.guest_stars[i].profilePath == null)
                             Glide.with(this).asBitmap().load(Uri.parse(PATH_IMAGE_PERSON_NO_PHOTO)).fitCenter()
                                     .into(castView.findViewById(R.id.person_image))
                         else
-                            Glide.with(this).load(URL_TMDB_BASE + PROFILE_SIZE_W185 + episode.guest_stars[i].profile_path).fitCenter()
+                            Glide.with(this).load(URL_TMDB_BASE + PROFILE_SIZE_W185 + episode.guest_stars[i].profilePath).fitCenter()
                                     .transition(DrawableTransitionOptions.withCrossFade())
                                     .into(castView.findViewById(R.id.person_image))
                         castView.setOnClickListener { openItem(this, episode.guest_stars[i].id!!, ItemType.PERSON) }
@@ -111,10 +110,10 @@ class ItemInfoActivity : AppCompatActivity() {
                         item_info_layout.addView(castLayout)
                         castView.findViewById<TextView>(R.id.name).text = episode.crew[i].name
                         castView.findViewById<TextView>(R.id.role).text = episode.crew[i].job
-                        if (episode.crew[i].profile_path == null)
+                        if (episode.crew[i].profilePath == null)
                             Glide.with(this).asBitmap().load(Uri.parse(PATH_IMAGE_PERSON_NO_PHOTO)).fitCenter().into(castView.findViewById(R.id.person_image))
                         else
-                            Glide.with(this).load(URL_TMDB_BASE + PROFILE_SIZE_W185 + episode.crew[i].profile_path).fitCenter()
+                            Glide.with(this).load(URL_TMDB_BASE + PROFILE_SIZE_W185 + episode.crew[i].profilePath).fitCenter()
                                     .transition(DrawableTransitionOptions.withCrossFade())
                                     .into(castView.findViewById(R.id.person_image))
                         castView.setOnClickListener { openItem(this, episode.crew[i].id, ItemType.PERSON) }
@@ -132,13 +131,13 @@ class ItemInfoActivity : AppCompatActivity() {
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe({ season ->
                     title_name.text = season.name
-                    info_line.text = season.air_date
-                    if (season.poster_path != null) {
-                        Glide.with(this).load(URL_TMDB_BASE + POSTER_SIZE_ORIGINAL + season.poster_path)
+                    info_line.text = season.airDate
+                    if (season.posterPath != null) {
+                        Glide.with(this).load(URL_TMDB_BASE + POSTER_SIZE_ORIGINAL + season.posterPath)
                                 .fitCenter()
                                 .transition(DrawableTransitionOptions.withCrossFade())
                                 .into(item_poster)
-                        Glide.with(this).load(URL_TMDB_BASE + POSTER_SIZE_ORIGINAL + season.poster_path)
+                        Glide.with(this).load(URL_TMDB_BASE + POSTER_SIZE_ORIGINAL + season.posterPath)
                                 .apply(RequestOptions.bitmapTransform(BlurTransformation(40, 10))).into(object : CustomTarget<Drawable>() {
                                     override fun onResourceReady(resource: Drawable, transition: Transition<in Drawable>?) {
                                         resource.alpha = 70
@@ -156,11 +155,11 @@ class ItemInfoActivity : AppCompatActivity() {
                         val episodeView = inflater.inflate(R.layout.card_episode_small, episodesLayout.findViewById(R.id.list_inner_layout), false)
                         episodeView.findViewById<TextView>(R.id.title).text = season.episodes[i].name
                         episodeView.findViewById<TextView>(R.id.release_date).text = season.episodes[i].air_date
-                        if (season.episodes[i].still_path == null)
+                        if (season.episodes[i].stillPath == null)
                             Glide.with(this).asBitmap().load(Uri.parse(PATH_IMAGE_PERSON_NO_POSTER)).fitCenter()
                                     .into(episodeView.findViewById(R.id.poster))
                         else
-                            Glide.with(this).load(URL_TMDB_BASE + STILL_SIZE_W300 + season.episodes[i].still_path)
+                            Glide.with(this).load(URL_TMDB_BASE + STILL_SIZE_W300 + season.episodes[i].stillPath)
                                     .transition(DrawableTransitionOptions.withCrossFade())
                                     .into(episodeView.findViewById(R.id.poster))
                         episodeView.setOnClickListener { openItem(this, itemID, ItemType.EPISODE, seasonNumber, season.episodes[i].episode_number) }
@@ -188,8 +187,8 @@ class ItemInfoActivity : AppCompatActivity() {
                 .subscribe({ person ->
                     title_name.text = person.name
                     overview.text = person.biography
-                    info_line.text = person.known_for_department
-                    Glide.with(this).load(URL_TMDB_BASE + PROFILE_SIZE_ORIGINAL + person.profile_path)
+                    info_line.text = person.knownForDepartment
+                    Glide.with(this).load(URL_TMDB_BASE + PROFILE_SIZE_ORIGINAL + person.profilePath)
                             .transition(DrawableTransitionOptions.withCrossFade())
                             .fitCenter()
                             .into(item_poster)
@@ -207,13 +206,13 @@ class ItemInfoActivity : AppCompatActivity() {
                 .subscribe({ tvShow ->
                     title_name.text = tvShow.name
                     overview.text = tvShow.overview
-                    info_line.text = tvShow.genres?.get(0)?.name + " | " + tvShow.origin_country[0] + " | " + tvShow.first_air_date
-                    item_rating.text = HtmlCompat.fromHtml("<b>" + tvShow.vote_average + "</b>/10", HtmlCompat.FROM_HTML_MODE_LEGACY)
-                    Glide.with(this).load(URL_TMDB_BASE + POSTER_SIZE_ORIGINAL + tvShow.poster_path)
+                    info_line.text = tvShow.genres?.get(0)?.name + " | " + tvShow.originCountry[0] + " | " + tvShow.firstAirDate
+                    item_rating.text = HtmlCompat.fromHtml("<b>" + tvShow.voteAverage + "</b>/10", HtmlCompat.FROM_HTML_MODE_LEGACY)
+                    Glide.with(this).load(URL_TMDB_BASE + POSTER_SIZE_ORIGINAL + tvShow.posterPath)
                             .transition(DrawableTransitionOptions.withCrossFade())
                             .fitCenter()
                             .into(item_poster)
-                    Glide.with(this).load(URL_TMDB_BASE + POSTER_SIZE_ORIGINAL + tvShow.poster_path)
+                    Glide.with(this).load(URL_TMDB_BASE + POSTER_SIZE_ORIGINAL + tvShow.posterPath)
                             .apply(RequestOptions.bitmapTransform(BlurTransformation(40, 10)))
                             .transition(DrawableTransitionOptions.withCrossFade())
                             .into(object : CustomTarget<Drawable>() {
@@ -230,15 +229,15 @@ class ItemInfoActivity : AppCompatActivity() {
                     for (i in tvShow.seasons.indices) {
                         val seasonView = inflater.inflate(R.layout.card_item_small, seasonLayout.findViewById(R.id.list_inner_layout), false) as LinearLayout
                         seasonView.findViewById<TextView>(R.id.title).text = tvShow.seasons[i].name
-                        seasonView.findViewById<TextView>(R.id.release_date).text = tvShow.seasons[i].air_date
-                        if (tvShow.seasons[i].poster_path != null)
-                            Glide.with(this).load(URL_TMDB_BASE + POSTER_SIZE_W300 + tvShow.seasons[i].poster_path)
+                        seasonView.findViewById<TextView>(R.id.release_date).text = tvShow.seasons[i].airDate
+                        if (tvShow.seasons[i].posterPath != null)
+                            Glide.with(this).load(URL_TMDB_BASE + POSTER_SIZE_W300 + tvShow.seasons[i].posterPath)
                                     .transition(DrawableTransitionOptions.withCrossFade())
                                     .into(seasonView.findViewById(R.id.poster))
                         else
                             Glide.with(this).asBitmap().load(Uri.parse(PATH_IMAGE_PERSON_NO_POSTER)).fitCenter()
                                     .into(seasonView.findViewById(R.id.poster))
-                        seasonView.setOnClickListener { openItem(this, tvShow.id!!, ItemType.SEASON, tvShow.seasons[i].season_number!!) }
+                        seasonView.setOnClickListener { openItem(this, tvShow.id!!, ItemType.SEASON, tvShow.seasons[i].seasonNumber!!) }
                         seasonLayout.findViewById<LinearLayout>(R.id.list_inner_layout).addView(seasonView)
                     }
                     item_info_layout.addView(seasonLayout)
@@ -286,10 +285,10 @@ class ItemInfoActivity : AppCompatActivity() {
                                     val castView = inflater.inflate(R.layout.card_person, castLayout.findViewById(R.id.list_inner_layout), false) as LinearLayout
                                     castView.findViewById<TextView>(R.id.name).text = credits.cast[i].name
                                     castView.findViewById<TextView>(R.id.role).text = credits.cast[i].character
-                                    if (credits.cast[i].profile_path == null)
+                                    if (credits.cast[i].profilePath == null)
                                         Glide.with(this).asBitmap().load(Uri.parse(PATH_IMAGE_PERSON_NO_PHOTO)).fitCenter().into(castView.findViewById(R.id.person_image))
                                     else
-                                        Glide.with(this).load(URL_TMDB_BASE + PROFILE_SIZE_W185 + credits.cast[i].profile_path).fitCenter()
+                                        Glide.with(this).load(URL_TMDB_BASE + PROFILE_SIZE_W185 + credits.cast[i].profilePath).fitCenter()
                                                 .transition(DrawableTransitionOptions.withCrossFade())
                                                 .into(castView.findViewById(R.id.person_image))
                                     castView.setOnClickListener { openItem(this, credits.cast[i].id!!, ItemType.PERSON) }
@@ -304,10 +303,10 @@ class ItemInfoActivity : AppCompatActivity() {
                                     val crewView = inflater.inflate(R.layout.card_person, crewLayout.findViewById(R.id.list_inner_layout), false) as LinearLayout
                                     crewView.findViewById<TextView>(R.id.name).text = credits.crew[i].name
                                     crewView.findViewById<TextView>(R.id.role).text = credits.crew[i].job
-                                    if (credits.crew[i].profile_path == null)
+                                    if (credits.crew[i].profilePath == null)
                                         Glide.with(this).asBitmap().load(Uri.parse(PATH_IMAGE_PERSON_NO_PHOTO)).fitCenter().into(crewView.findViewById(R.id.person_image))
                                     else
-                                        Glide.with(this).load(URL_TMDB_BASE + PROFILE_SIZE_W185 + credits.crew[i].profile_path).fitCenter()
+                                        Glide.with(this).load(URL_TMDB_BASE + PROFILE_SIZE_W185 + credits.crew[i].profilePath).fitCenter()
                                                 .transition(DrawableTransitionOptions.withCrossFade())
                                                 .into(crewView.findViewById(R.id.person_image))
                                     crewView.setOnClickListener { openItem(this, credits.crew[i].id, ItemType.PERSON) }
@@ -332,10 +331,10 @@ class ItemInfoActivity : AppCompatActivity() {
                                     val castView = inflater.inflate(R.layout.card_person, castLayout.findViewById(R.id.list_inner_layout), false) as LinearLayout
                                     castView.findViewById<TextView>(R.id.name).text = credits.cast[i].name
                                     castView.findViewById<TextView>(R.id.role).text = credits.cast[i].character
-                                    if (credits.cast[i].profile_path == null)
+                                    if (credits.cast[i].profilePath == null)
                                         Glide.with(this).asBitmap().load(Uri.parse(PATH_IMAGE_PERSON_NO_PHOTO)).fitCenter().into(castView.findViewById(R.id.person_image))
                                     else
-                                        Glide.with(this).load(URL_TMDB_BASE + PROFILE_SIZE_W185 + credits.cast[i].profile_path).fitCenter()
+                                        Glide.with(this).load(URL_TMDB_BASE + PROFILE_SIZE_W185 + credits.cast[i].profilePath).fitCenter()
                                                 .transition(DrawableTransitionOptions.withCrossFade())
                                                 .into(castView.findViewById(R.id.person_image))
                                     castView.setOnClickListener { openItem(this, credits.cast[i].id!!, ItemType.PERSON) }
@@ -350,11 +349,11 @@ class ItemInfoActivity : AppCompatActivity() {
                                     val crewView = inflater.inflate(R.layout.card_person, crewLayout.findViewById(R.id.list_inner_layout), false) as LinearLayout
                                     crewView.findViewById<TextView>(R.id.name).text = credits.crew[i].name
                                     crewView.findViewById<TextView>(R.id.role).text = credits.crew[i].job
-                                    if (credits.crew[i].profile_path == null)
+                                    if (credits.crew[i].profilePath == null)
                                         Glide.with(this).asBitmap().load(Uri.parse(PATH_IMAGE_PERSON_NO_PHOTO)).fitCenter()
                                                 .into(crewView.findViewById(R.id.person_image))
                                     else
-                                        Glide.with(this).load(URL_TMDB_BASE + PROFILE_SIZE_W185 + credits.crew[i].profile_path).fitCenter()
+                                        Glide.with(this).load(URL_TMDB_BASE + PROFILE_SIZE_W185 + credits.crew[i].profilePath).fitCenter()
                                                 .transition(DrawableTransitionOptions.withCrossFade())
                                                 .into(crewView.findViewById(R.id.person_image))
                                     crewView.setOnClickListener { openItem(this, credits.crew[i].id, ItemType.PERSON) }
@@ -377,16 +376,21 @@ class ItemInfoActivity : AppCompatActivity() {
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(
                         { movie ->
+
+                            ratingBar.visibility = View.VISIBLE
+                            ratingBar.setOnRatingBarChangeListener { ratingBar, rating, fromUser ->
+                                TODO()
+                            }
                             title_name.text = movie.title
                             overview.text = movie.overview
-                            info_line.text = movie.genres[0].name + " | " + movie.production_countries[0].iso_3166_1 + " | " + movie.release_date
-                            item_rating.text = HtmlCompat.fromHtml("<b>" + movie.vote_average + "</b>/10", HtmlCompat.FROM_HTML_MODE_LEGACY)
-                            if (movie.poster_path != null) {
-                                Glide.with(this).load(URL_TMDB_BASE + POSTER_SIZE_ORIGINAL + movie.poster_path)
+                            info_line.text = movie.genres[0].name + " | " + movie.productionCountries[0].iso31661 + " | " + movie.release_date
+                            item_rating.text = HtmlCompat.fromHtml("<b>" + movie.voteAverage + "</b>/10", HtmlCompat.FROM_HTML_MODE_LEGACY)
+                            if (movie.posterPath != null) {
+                                Glide.with(this).load(URL_TMDB_BASE + POSTER_SIZE_ORIGINAL + movie.posterPath)
                                         .transition(DrawableTransitionOptions.withCrossFade())
                                         .fitCenter()
                                         .into(item_poster)
-                                Glide.with(this).load(URL_TMDB_BASE + POSTER_SIZE_ORIGINAL + movie.poster_path)
+                                Glide.with(this).load(URL_TMDB_BASE + POSTER_SIZE_ORIGINAL + movie.posterPath)
                                         .apply(RequestOptions.bitmapTransform(BlurTransformation(40, 10)))
                                         .transition(DrawableTransitionOptions.withCrossFade())
                                         .into(object : CustomTarget<Drawable>() {
@@ -400,9 +404,9 @@ class ItemInfoActivity : AppCompatActivity() {
                                         })
                             } else
                                 Glide.with(this).asBitmap().load(Uri.parse(PATH_IMAGE_PERSON_NO_POSTER)).fitCenter().into(item_poster)
-                            if (movie.belongs_to_collection?.id != null)
+                            if (movie.belongsToCollection?.id != null)
                                 tmdbService
-                                        .getCollectionDetails(movie.belongs_to_collection.id, API_KEY, lang)
+                                        .getCollectionDetails(movie.belongsToCollection.id, API_KEY, lang)
                                         .subscribeOn(Schedulers.io())
                                         .observeOn(AndroidSchedulers.mainThread())
                                         .subscribe({ collection ->
@@ -412,11 +416,11 @@ class ItemInfoActivity : AppCompatActivity() {
                                                 val collectionView = inflater.inflate(R.layout.card_item_small, collectionLayout.findViewById(R.id.list_inner_layout), false) as LinearLayout
                                                 collectionView.findViewById<TextView>(R.id.title).text = collection.parts[i].title
                                                 collectionView.findViewById<TextView>(R.id.release_date).text = collection.parts[i].release_date
-                                                if (collection.parts[i].poster_path == null)
+                                                if (collection.parts[i].posterPath == null)
                                                     Glide.with(this).asBitmap().load(Uri.parse(PATH_IMAGE_PERSON_NO_POSTER)).fitCenter()
                                                             .into(collectionView.findViewById(R.id.poster))
                                                 else
-                                                    Glide.with(this).load(URL_TMDB_BASE + POSTER_SIZE_W300 + collection.parts[i].poster_path)
+                                                    Glide.with(this).load(URL_TMDB_BASE + POSTER_SIZE_W300 + collection.parts[i].posterPath)
                                                             .transition(DrawableTransitionOptions.withCrossFade())
                                                             .into(collectionView.findViewById(R.id.poster))
                                                 collectionView.setOnClickListener { openItem(this, collection.parts[i].id, ItemType.MOVIE) }

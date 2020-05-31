@@ -14,9 +14,9 @@ import ru.omsu.themoviedb.ui.adapters.MovieAdapter
 
 
 class MoviesFragment : Fragment() {
-	private var mSearch: MenuItem? = null
-	private var movieAdapter: MovieAdapter? = null
-	private var mSearchView: SearchView? = null
+	private lateinit var mSearch: MenuItem
+	private lateinit var movieAdapter: MovieAdapter
+	private lateinit var mSearchView: SearchView
 	
 	override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 		val view = inflater.inflate(R.layout.fragment_list, container, false)
@@ -45,13 +45,13 @@ class MoviesFragment : Fragment() {
 			override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
 				when (position) {
 					0 -> {
-						movieAdapter?.clearAndSetPopular()
+						movieAdapter.clearAndSetPopular()
 					}
 					1 -> {
-						movieAdapter?.clearAndSetTopRated()
+						movieAdapter.clearAndSetTopRated()
 					}
 					2 -> {
-						movieAdapter?.clearAndSetUpcoming()
+						movieAdapter.clearAndSetUpcoming()
 					}
 				}
 			}
@@ -61,21 +61,21 @@ class MoviesFragment : Fragment() {
 	override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
 		inflater.inflate(R.menu.menu_main, menu)
 		mSearch = menu.findItem(R.id.action_search)
-		mSearchView = mSearch!!.actionView as SearchView
-		mSearchView!!.queryHint = "Поиск по фильмам"
-		mSearch!!.setOnActionExpandListener(object : MenuItem.OnActionExpandListener {
+		mSearchView = mSearch.actionView as SearchView
+		mSearchView.queryHint = "Поиск по фильмам"
+		mSearch.setOnActionExpandListener(object : MenuItem.OnActionExpandListener {
 			override fun onMenuItemActionExpand(item: MenuItem?): Boolean {
 				return true
 			}
 			
 			override fun onMenuItemActionCollapse(item: MenuItem?): Boolean {
-				movieAdapter?.clearAndSetPopular()
+				movieAdapter.clearAndSetPopular()
 				return true
 			}
 		})
-		mSearchView!!.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+		mSearchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
 			override fun onQueryTextSubmit(query: String?): Boolean {
-				movieAdapter!!.clearAndSearch(query)
+				movieAdapter.clearAndSearch(query)
 				return true
 			}
 			
@@ -88,7 +88,7 @@ class MoviesFragment : Fragment() {
 	}
 	
 	override fun onPause() {
-		mSearch!!.collapseActionView()
+		mSearch.collapseActionView()
 		super.onPause()
 	}
 }

@@ -7,26 +7,20 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
 import ru.omsu.themoviedb.BuildConfig
 import ru.omsu.themoviedb.R
-import ru.omsu.themoviedb.ui.fragments.MoviesFragment
-import ru.omsu.themoviedb.ui.fragments.PersonsFragment
-import ru.omsu.themoviedb.ui.fragments.SearchFragment
-import ru.omsu.themoviedb.ui.fragments.TVFragment
+import ru.omsu.themoviedb.ui.fragments.*
+import java.lang.IllegalArgumentException
 
 
 class MainActivity : AppCompatActivity() {
     private val navListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
-        var selectedFragment: Fragment? = null
-        when (item.itemId) {
-            R.id.nav_movies -> selectedFragment = MoviesFragment()
-            R.id.nav_person -> selectedFragment = PersonsFragment()
-            R.id.nav_tv -> selectedFragment = TVFragment()
-            R.id.nav_search -> selectedFragment = SearchFragment()
-        }
-        if (BuildConfig.DEBUG && selectedFragment == null) {
-            error("Assertion failed")
+        val selectedFragment: Fragment = when (item.itemId) {
+            R.id.nav_movies -> MoviesFragment()
+            R.id.nav_rec -> RecommendationsFragment()
+            R.id.nav_tv -> TVFragment()
+            else -> throw IllegalArgumentException()
         }
         supportFragmentManager.beginTransaction().replace(R.id.fragment_container,
-                selectedFragment!!).commit()
+                selectedFragment).commit()
         true
     }
 
@@ -39,7 +33,7 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.setDisplayUseLogoEnabled(true)
         supportActionBar?.setDisplayShowTitleEnabled(false)
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
-        if (savedInstanceState == null) supportFragmentManager.beginTransaction().replace(R.id.fragment_container, TVFragment()).commit()
+        if (savedInstanceState == null) supportFragmentManager.beginTransaction().replace(R.id.fragment_container, MoviesFragment()).commit()
         bottomNavigationView.setOnNavigationItemSelectedListener(navListener)
     }
     

@@ -1,5 +1,6 @@
 package ru.omsu.themoviedb.metadata.tmdb.tvshow
 
+import com.google.gson.annotations.SerializedName
 import ru.omsu.themoviedb.metadata.tmdb.Crew
 import ru.omsu.themoviedb.metadata.tmdb.Genre
 import ru.omsu.themoviedb.metadata.tmdb.Network
@@ -7,32 +8,49 @@ import ru.omsu.themoviedb.metadata.tmdb.ProductionCompany
 
 
 data class TVShow(
-        val backdrop_path: String?,
-        val created_by: List<Crew>,
-        val episode_run_time: List<Int>,
-        val first_air_date: String?,
+        @SerializedName("backdrop_path")
+        val backdropPath: String?,
+        @SerializedName("created_by")
+        val createdBy: List<Crew>,
+        @SerializedName("episode_run_time")
+        val episodeRunTime: List<Int>,
+        @SerializedName("first_air_date")
+        val firstAirDate: String?,
         val genres: List<Genre?>?,
         val homepage: String?,
         val id: Int?,
-        val in_production: Boolean?,
+        @SerializedName("in_production")
+        val inProduction: Boolean?,
         val languages: List<String>,
-        val last_air_date: String?,
-        val last_episode_to_air: Episode?,
+        @SerializedName("last_air_date")
+        val lastAirDate: String?,
+        @SerializedName("last_episode_to_air")
+        val lastEpisodeToAir: Episode?,
         val name: String? = null,
         val networks: List<Network>,
-        val next_episode_to_air: Any?,
-        val number_of_episodes: Int?,
-        val number_of_seasons: Int?,
-        val origin_country: List<String>,
-        val original_language: String?,
-        val original_name: String?,
+        @SerializedName("next_episode_to_air")
+        val nextEpisodeToAir: Any?,
+        @SerializedName("number_of_episodes")
+        val numberOfEpisodes: Int?,
+        @SerializedName("number_of_seasons")
+        val numberOfSeasons: Int?,
+        @SerializedName("origin_country")
+        val originCountry: List<String>,
+        @SerializedName("original_language")
+        val originalLanguage: String?,
+        @SerializedName("original_name")
+        val originalName: String?,
         val overview: String?,
         val popularity: Double?,
-        val poster_path: String?,
-        val production_companies: List<ProductionCompany>,
+        @SerializedName("poster_path")
+        val posterPath: String?,
+        @SerializedName("production_companies")
+        val productionCompanies: List<ProductionCompany>,
         val seasons: List<Season>,
         val status: String?,
         val type: String?,
-        val vote_average: Double,
-        val vote_count: Int
+        @SerializedName("vote_average")
+        val voteAverage: Double,
+        @SerializedName("vote_count")
+        val voteCount: Int
 )
