@@ -5,24 +5,31 @@
 	<string name = "popular">Популярные</string>
 	<string name = "movies">Фильмы</string>
 	<string name = "tvshows">Сериалы</string>
-	<string name = "search">Поиск</string>
-	<string name = "people">Люди</string>
-	<string name = "collection">Коллекция</string>
-	<string name = "crew">Создатели</string>
-	<string name = "cast">В ролях</string>
-	<string name = "season">Сезоны</string>
-	<string name = "main">Главная</string>
-	<string name = "episodes_list">Список серий</string>
-	<string name = "episodes_list_other">Другие серии</string>
-	<string name="recommendations">Рекомендации</string>
-	<string-array name = "list_type_movies">
-		<item>Популярные</item>
-		<item>Лучшие</item>
-		<item>Ожидаемые</item>
-	</string-array>
-	<string-array name = "list_type_tvshows">
-		<item>Популярные</item>
-		<item>Лучшие</item>
-		<item>Последние</item>
-	</string-array>
+    <string name="search">Поиск</string>
+    <string name="people">Люди</string>
+    <string name="collection">Коллекция</string>
+    <string name="crew">Создатели</string>
+    <string name="cast">В ролях</string>
+    <string name="season">Сезоны</string>
+    <string name="main">Главная</string>
+    <string name="episodes_list">Список серий</string>
+    <string name="episodes_list_other">Другие серии</string>
+    <string name="recommendations">Рекомендации</string>
+    <string name="connect">Войти</string>
+    <string name="login">Логин</string>
+    <string name="password">Пароль</string>
+    <string-array name="list_type_movies">
+        <item>Популярные</item>
+        <item>Лучшие</item>
+        <item>Ожидаемые</item>
+    </string-array>
+    <string-array name="list_type_tvshows">
+        <item>Популярные</item>
+        <item>Лучшие</item>
+        <item>Последние</item>
+    </string-array>
+    <string-array name="list_type_recommendations">
+        <item>Рекомедации</item>
+        <item>Оценки</item>
+    </string-array>
 </resources>

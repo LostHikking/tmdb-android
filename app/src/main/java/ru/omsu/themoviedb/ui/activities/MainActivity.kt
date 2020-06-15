@@ -5,17 +5,20 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
-import ru.omsu.themoviedb.BuildConfig
 import ru.omsu.themoviedb.R
-import ru.omsu.themoviedb.ui.fragments.*
-import java.lang.IllegalArgumentException
+import ru.omsu.themoviedb.ui.fragments.LoginFragment
+import ru.omsu.themoviedb.ui.fragments.MoviesFragment
+import ru.omsu.themoviedb.ui.fragments.TVFragment
 
 
 class MainActivity : AppCompatActivity() {
     private val navListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         val selectedFragment: Fragment = when (item.itemId) {
             R.id.nav_movies -> MoviesFragment()
-            R.id.nav_rec -> RecommendationsFragment()
+            R.id.nav_rec -> {
+
+                LoginFragment()
+            }
             R.id.nav_tv -> TVFragment()
             else -> throw IllegalArgumentException()
         }

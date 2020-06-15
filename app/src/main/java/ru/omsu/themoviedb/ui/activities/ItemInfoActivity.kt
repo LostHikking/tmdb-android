@@ -6,13 +6,16 @@ import android.content.Intent
 import android.graphics.drawable.Drawable
 import android.net.Uri
 import android.os.Bundle
+import android.util.Base64
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.LinearLayout
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.text.HtmlCompat
+import androidx.preference.PreferenceManager
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.bumptech.glide.request.RequestOptions
@@ -25,11 +28,15 @@ import kotlinx.android.synthetic.main.activity_item.*
 import ru.omsu.themoviedb.*
 import ru.omsu.themoviedb.enums.ItemType
 import ru.omsu.themoviedb.metadata.tmdb.TMDBService
+import ru.omsu.themoviedb.recommendation.RecService
+import java.net.ConnectException
+import java.nio.charset.Charset
 import java.util.*
 
 
 class ItemInfoActivity : AppCompatActivity() {
     private val tmdbService: TMDBService = TMDBService.create()
+    private val recService = RecService.create()
     private var lang: String = Locale.getDefault().toString().replace("_", "-")
 
     public override fun onCreate(savedInstanceState: Bundle?) {
@@ -143,7 +150,7 @@ class ItemInfoActivity : AppCompatActivity() {
                                         resource.alpha = 70
                                         item_layout.background = resource
                                     }
-            
+
                                     override fun onLoadCleared(placeholder: Drawable?) {
                                     }
                                 })
@@ -220,7 +227,7 @@ class ItemInfoActivity : AppCompatActivity() {
                                     resource.alpha = 70
                                     item_layout.background = resource
                                 }
-            
+
                                 override fun onLoadCleared(placeholder: Drawable?) {
                                 }
                             })
@@ -369,21 +376,40 @@ class ItemInfoActivity : AppCompatActivity() {
 
     }
 
-    private fun loadMovieOnUI(movie_ID: Int, inflater: LayoutInflater) {
+    private fun loadMovieOnUI(movieId: Int, inflater: LayoutInflater) {
         tmdbService
-                .getMovieDetails(movie_ID, API_KEY, lang)
+                .getMovieDetails(movieId, API_KEY, lang)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(
                         { movie ->
+                            val sp = PreferenceManager.getDefaultSharedPreferences(this)
+                            val login = sp.getString("login", null)
+                            val password = sp.getString("password", null)
+                            if (login != null && password != null) {
+                                ratingBar.visibility = View.VISIBLE
+                                ratingBar.setOnRatingBarChangeListener { _, rating, _ ->
+                                    Thread {
+                                        try {
+                                            val response = recService.postScore((login to password).toAuthorization(), movieId.toLong(), (rating * 2).toInt()).execute()
+                                            runOnUiThread {
+                                                if (response.isSuccessful)
+                                                    Toast.makeText(this, "Успешно", Toast.LENGTH_LONG).show()
+                                                else
+                                                    Toast.makeText(this, "Произошла ошибка", Toast.LENGTH_LONG).show()
+                                            }
+                                        } catch (e: ConnectException) {
+                                            runOnUiThread {
+                                                Toast.makeText(this, "Не удаётся подключиться к серверу", Toast.LENGTH_LONG).show()
+                                            }
+                                        }
 
-                            ratingBar.visibility = View.VISIBLE
-                            ratingBar.setOnRatingBarChangeListener { ratingBar, rating, fromUser ->
-                                TODO()
+                                    }.start()
+                                }
                             }
                             title_name.text = movie.title
                             overview.text = movie.overview
-                            info_line.text = movie.genres[0].name + " | " + movie.productionCountries[0].iso31661 + " | " + movie.release_date
+                            info_line.text = movie.genres[0].name + " | " + movie.productionCountries[0].iso31661 + " | " + movie.releaseDate
                             item_rating.text = HtmlCompat.fromHtml("<b>" + movie.voteAverage + "</b>/10", HtmlCompat.FROM_HTML_MODE_LEGACY)
                             if (movie.posterPath != null) {
                                 Glide.with(this).load(URL_TMDB_BASE + POSTER_SIZE_ORIGINAL + movie.posterPath)
@@ -398,7 +424,7 @@ class ItemInfoActivity : AppCompatActivity() {
                                                 resource.alpha = 70
                                                 item_layout.background = resource
                                             }
-            
+
                                             override fun onLoadCleared(placeholder: Drawable?) {
                                             }
                                         })
@@ -415,7 +441,7 @@ class ItemInfoActivity : AppCompatActivity() {
                                             for (i in collection.parts.indices) {
                                                 val collectionView = inflater.inflate(R.layout.card_item_small, collectionLayout.findViewById(R.id.list_inner_layout), false) as LinearLayout
                                                 collectionView.findViewById<TextView>(R.id.title).text = collection.parts[i].title
-                                                collectionView.findViewById<TextView>(R.id.release_date).text = collection.parts[i].release_date
+                                                collectionView.findViewById<TextView>(R.id.release_date).text = collection.parts[i].releaseDate
                                                 if (collection.parts[i].posterPath == null)
                                                     Glide.with(this).asBitmap().load(Uri.parse(PATH_IMAGE_PERSON_NO_POSTER)).fitCenter()
                                                             .into(collectionView.findViewById(R.id.poster))
@@ -435,7 +461,7 @@ class ItemInfoActivity : AppCompatActivity() {
                             error.printStackTrace()
                         })
         tmdbService
-                .getVideosMovie(movie_ID, API_KEY, lang)
+                .getVideosMovie(movieId, API_KEY, lang)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(
@@ -457,6 +483,10 @@ class ItemInfoActivity : AppCompatActivity() {
                             error.printStackTrace()
                         }
                 )
-        loadCastCrewOnUI(movie_ID, ItemType.MOVIE, inflater)
+        loadCastCrewOnUI(movieId, ItemType.MOVIE, inflater)
+    }
+
+    private fun Pair<String, String>.toAuthorization(): String {
+        return "Basic " + Base64.encodeToString(("$first:$second").toByteArray(Charset.defaultCharset()), Base64.NO_WRAP)
     }
 }

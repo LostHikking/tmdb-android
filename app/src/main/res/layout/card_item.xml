@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android = "http://schemas.android.com/apk/res/android"
-	xmlns:app = "http://schemas.android.com/apk/res-auto"
-	android:id = "@+id/movie"
-	android:layout_width = "match_parent"
-	android:layout_height = "wrap_content">
-	
-	<androidx.constraintlayout.widget.ConstraintLayout
-		android:layout_width = "0dp"
-		android:layout_height = "0dp"
-		android:background = "@color/colorPrimary"
-		app:layout_constraintBottom_toBottomOf = "parent"
-		app:layout_constraintDimensionRatio = "H,22:9"
-		app:layout_constraintEnd_toEndOf = "parent"
-		app:layout_constraintStart_toStartOf = "parent"
-		app:layout_constraintTop_toTopOf = "parent">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/movie"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="H,22:9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 		
 		<ImageView
 			android:id = "@+id/poster"
@@ -65,16 +66,17 @@
 					android:layout_height = "36dp"
 					android:layout_weight = "1"
 					app:srcCompat = "@drawable/ic_iconmonstr_star_2"/>
-				
-				<TextView
-					android:id = "@+id/rating"
-					android:layout_width = "77dp"
-					android:layout_height = "49dp"
-					android:layout_weight = "1"
-					android:fontFamily = "@font/fontfamily"
-					android:gravity = "center"
-					android:textAlignment = "center"
-					android:textColor = "@color/colorAccent"/>
+
+                <TextView
+                    android:id="@+id/rating"
+                    android:layout_width="77dp"
+                    android:layout_height="49dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/fontfamily"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorAccent"
+                    tools:text="7" />
 				
 				<LinearLayout
 					android:layout_width = "match_parent"
