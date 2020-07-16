@@ -9,7 +9,6 @@ import androidx.core.app.ShareCompat
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
-import kotlinx.android.synthetic.main.fragment_detail_item.*
 import org.koin.android.viewmodel.ext.android.viewModel
 import org.koin.core.parameter.parametersOf
 import ru.omsu.themoviedb.R
@@ -34,21 +33,21 @@ class ItemDetailFragment : Fragment() {
         ).apply {
             viewModel = itemDetailViewModel
             lifecycleOwner = viewLifecycleOwner
-        }
-        fab.setOnClickListener {
-            val contentItem = itemDetailViewModel.contentItem.value
-            val type = when (contentItem) {
-                is Movie -> "movie"
-                is TVShow -> "tv"
-                else -> IllegalArgumentException("Wrong type")
+            fab.setOnClickListener {
+                val contentItem = itemDetailViewModel.contentItem.value
+                val type = when (contentItem) {
+                    is Movie -> "movie"
+                    is TVShow -> "tv"
+                    else -> IllegalArgumentException("Wrong type")
+                }
+                val id = contentItem?.id
+                val shareIntent = ShareCompat.IntentBuilder.from(requireActivity())
+                        .setText(getString(R.string.tmdb_url_to_item, type, id))
+                        .setType("text/plain")
+                        .createChooserIntent()
+                        .addFlags(Intent.FLAG_ACTIVITY_NEW_DOCUMENT or Intent.FLAG_ACTIVITY_MULTIPLE_TASK)
+                startActivity(shareIntent)
             }
-            val id = contentItem?.id
-            val shareIntent = ShareCompat.IntentBuilder.from(requireActivity())
-                    .setText(getString(R.string.tmdb_url_to_item, type, id))
-                    .setType("text/plain")
-                    .createChooserIntent()
-                    .addFlags(Intent.FLAG_ACTIVITY_NEW_DOCUMENT or Intent.FLAG_ACTIVITY_MULTIPLE_TASK)
-            startActivity(shareIntent)
         }
         return binding.root
     }
