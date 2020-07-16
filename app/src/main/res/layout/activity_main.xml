@@ -1,59 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android = "http://schemas.android.com/apk/res/android"
-	xmlns:app = "http://schemas.android.com/apk/res-auto"
-	xmlns:tools = "http://schemas.android.com/tools"
-	android:id = "@+id/listView"
-	android:layout_width = "match_parent"
-	android:layout_height = "match_parent"
-	android:background = "@color/black"
-	tools:context = ".ui.activities.MainActivity">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-	<com.google.android.material.appbar.AppBarLayout
-		android:id = "@+id/appBar"
-		android:layout_width = "match_parent"
-		android:layout_height = "wrap_content"
-		android:theme = "@style/AppTheme">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-		<androidx.appcompat.widget.Toolbar
-			android:id = "@+id/toolbar"
-			android:layout_width = "match_parent"
-			android:layout_height = "?attr/actionBarSize"
-			android:theme = "@style/ToolbarTheme"
-			app:contentInsetLeft = "0dp"
-			app:contentInsetStart = "0dp"
-			app:layout_scrollFlags = "scroll|enterAlways"
-			app:popupTheme = "@style/AppTheme">
-			
-			<Spinner
-				android:id = "@+id/spinner_list_type"
-				android:layout_width = "wrap_content"
-				android:layout_height = "wrap_content"
-				android:entries = "@array/list_type_movies"
-				android:popupBackground = "@color/colorAdditionalDark"
-				android:spinnerMode = "dialog"
-				android:theme = "@style/SpinnerTheme"/>
-		</androidx.appcompat.widget.Toolbar>
-	</com.google.android.material.appbar.AppBarLayout>
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/nav_host"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/nav_tmdb" />
 
-	<FrameLayout
-		android:id = "@+id/fragment_container"
-		android:layout_width = "match_parent"
-		android:layout_height = "match_parent"
-		android:layout_above = "@+id/bottom_navigation"
-		app:layout_behavior = "@string/appbar_scrolling_view_behavior"/>
+    </FrameLayout>
 
-	<com.google.android.material.bottomnavigation.BottomNavigationView
-		android:id = "@+id/bottom_navigation"
-		android:layout_width = "match_parent"
-		android:layout_height = "wrap_content"
-		android:layout_alignParentBottom = "true"
-		android:layout_gravity = "bottom"
-		android:background = "@color/colorPrimary"
-		android:theme = "@style/BottomNavBarTheme"
-		app:itemBackground = "@color/colorPrimary"
-		app:itemIconTint = "@color/colorPrimaryDark"
-		app:itemTextColor = "@color/colorPrimaryDark"
-		app:menu = "@menu/menu_bottom_navigation">
-
-	</com.google.android.material.bottomnavigation.BottomNavigationView>
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

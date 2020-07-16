@@ -1,17 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android = "http://schemas.android.com/apk/res/android"
-	xmlns:app = "http://schemas.android.com/apk/res-auto"
-	android:id = "@+id/movieList"
-	android:layout_width = "match_parent"
-	android:layout_height = "wrap_content"
-	android:orientation = "vertical"
-	app:layout_constraintBottom_toBottomOf = "parent"
-	app:layout_constraintEnd_toEndOf = "parent"
-	app:layout_constraintStart_toStartOf = "parent"
-	app:layout_constraintTop_toTopOf = "parent">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools">
 
-	<androidx.recyclerview.widget.RecyclerView
-		android:id = "@+id/list"
-		android:layout_width = "match_parent"
-		android:layout_height = "match_parent"/>
-</LinearLayout>
+	<FrameLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<androidx.recyclerview.widget.RecyclerView
+			android:id="@+id/content_list"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:clipToPadding="false"
+			app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+			tools:context=".ui.activities.MainActivity"
+			tools:listitem="@layout/card_item" />
+
+		<com.google.android.material.floatingactionbutton.FloatingActionButton
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="bottom|end"
+			android:layout_margin="16dp"
+			android:contentDescription="@string/to_the_beginning"
+			app:srcCompat="@drawable/ic_arrow_upward_black_24dp" />
+	</FrameLayout>
+</layout>

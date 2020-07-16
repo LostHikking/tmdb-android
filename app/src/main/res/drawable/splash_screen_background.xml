@@ -4,9 +4,9 @@
 	<item android:drawable = "@color/colorPrimary"/>
 
 	<item
-		android:width = "300dp"
-		android:height = "300dp"
-		android:drawable = "@drawable/ic_primary_foreground"
-		android:gravity = "center"/>
+		android:width="185.04dp"
+		android:height="133.4dp"
+		android:drawable="@drawable/ic_logo_primary_full"
+		android:gravity="center" />
 
 </layer-list>
