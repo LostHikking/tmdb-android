@@ -8,31 +8,34 @@ import kotlinx.coroutines.flow.asFlow
 import ru.omsu.themoviedb.api.tmdb.TMDBService
 import ru.omsu.themoviedb.api.tmdb.dto.ContentItem
 import ru.omsu.themoviedb.api.tmdb.dto.Page
+import ru.omsu.themoviedb.api.tmdb.dto.movie.Movie
+import ru.omsu.themoviedb.api.tmdb.dto.tvshow.TVShow
 
 @ExperimentalCoroutinesApi
 @FlowPreview
 class TMDBRepository constructor(private val service: TMDBService) {
 
 
-    private val contentListResult = ConflatedBroadcastChannel<Page<ContentItem>>()
+    private val contentMoviePageResult = ConflatedBroadcastChannel<Page<Movie>>()
+    private val contentTvShowPageResult = ConflatedBroadcastChannel<Page<TVShow>>()
     private val contentDetailResult = ConflatedBroadcastChannel<ContentItem>()
 
-    suspend fun getMoviePageStream(page: Int): Flow<Page<ContentItem>> {
+    suspend fun getMoviePageStream(page: Int): Flow<Page<Movie>> {
         requestMoviePage(page)
-        return contentListResult.asFlow()
+        return contentMoviePageResult.asFlow()
     }
 
-    suspend fun getTVShowPageStream(page: Int): Flow<Page<ContentItem>> {
+    suspend fun getTVShowPageStream(page: Int): Flow<Page<TVShow>> {
         requestTVShowPage(page)
-        return contentListResult.asFlow()
+        return contentTvShowPageResult.asFlow()
     }
 
     private suspend fun requestMoviePage(page: Int) {
-        contentListResult.offer(service.getPopularMovies(page = page) as Page<ContentItem>)
+        contentMoviePageResult.offer(service.getPopularMovies(page = page))
     }
 
     private suspend fun requestTVShowPage(page: Int) {
-        contentListResult.offer(service.getPopularTV(page = page) as Page<ContentItem>)
+        contentTvShowPageResult.offer(service.getPopularTV(page = page))
     }
 
     private suspend fun requestMovie(id: Int) {

@@ -8,7 +8,7 @@ import ru.omsu.themoviedb.viewmodels.ItemDetailViewModel
 import ru.omsu.themoviedb.viewmodels.ItemListViewModel
 
 val tmdbModule = module {
-    viewModel { params -> ItemListViewModel(get(), params[0]) }
+    viewModel { ItemListViewModel(get()) }
     viewModel { params -> ItemDetailViewModel(get(), params[0], params[1]) }
     single { TMDBRepository(get()) }
     single { TMDBService.create() }

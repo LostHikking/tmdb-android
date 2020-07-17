@@ -5,19 +5,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.observe
 import androidx.recyclerview.widget.RecyclerView
 import org.koin.android.viewmodel.ext.android.viewModel
-import org.koin.core.parameter.parametersOf
 import ru.omsu.themoviedb.adapters.ContentAdapter
 import ru.omsu.themoviedb.databinding.FragmentContentBinding
-import ru.omsu.themoviedb.enums.ItemType
 import ru.omsu.themoviedb.viewmodels.ItemListViewModel
 
 
-class ContentFragment(private val itemType: ItemType) : Fragment() {
-    val viewModel: ItemListViewModel by viewModel { parametersOf(itemType) }
-    private var currentPage = 1
+abstract class ContentFragment : Fragment() {
+    val viewModel: ItemListViewModel by viewModel()
+    protected var currentPage = 1
 
     override fun onCreateView(
             inflater: LayoutInflater,
@@ -40,14 +37,7 @@ class ContentFragment(private val itemType: ItemType) : Fragment() {
     }
 
 
-    private fun subscribeUi(adapter: ContentAdapter) {
-        viewModel.requestNextPage()
-        viewModel.repoResult.observe(viewLifecycleOwner) { result ->
-            adapter.submitList(adapter.currentList + result.results)
-        }
-    }
+    protected abstract fun subscribeUi(adapter: ContentAdapter)
 
-    private fun ItemListViewModel.requestNextPage() {
-        getContentPage(currentPage).also { currentPage += 1 }
-    }
+    protected abstract fun ItemListViewModel.requestNextPage()
 }
