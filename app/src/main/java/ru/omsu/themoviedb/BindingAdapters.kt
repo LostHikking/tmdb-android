@@ -14,8 +14,6 @@ fun bindPosterFromUrl(view: ImageView, imageUrl: String?) {
                 .override(Target.SIZE_ORIGINAL)
                 .transition(DrawableTransitionOptions.withCrossFade())
                 .into(view)
-    else
-        view.setImageResource(R.drawable.placeholder_poster)
 }
 
 @BindingAdapter("imageBackdropFromUrl")

@@ -1,0 +1,15 @@
+<resources>
+
+    <style name="Theme.TMDB" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/colorTMDBSecondary</item>
+        <item name="colorOnPrimary">@color/colorTMDBPrimary</item>
+        <item name="colorPrimaryDark">@color/colorTMDBTertiary</item>
+        <item name="colorSurface">@color/colorTMDBPrimary</item>
+        <item name="colorOnSurface">@android:color/white</item>
+        <item name="colorAccent">@color/colorTMDBTertiary</item>
+        <item name="colorSecondary">@color/colorTMDBSecondary</item>
+        <item name="android:colorBackground">@color/colorTMDBPrimary</item>
+        <item name="android:text">@android:color/white</item>
+    </style>
+</resources>
+

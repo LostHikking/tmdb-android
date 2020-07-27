@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TMDB</string>
+    <string name="upcoming">Ожидаемые</string>
+    <string name="top_rated">Лучшие</string>
+    <string name="popular">Популярные</string>
+    <string name="movies">Фильмы</string>
+    <string name="tv_shows">Сериалы</string>
+    <string name="search">Поиск</string>
+    <string name="people">Люди</string>
+    <string name="collection">Коллекция</string>
+    <string name="crew">Создатели</string>
+    <string name="cast">В ролях</string>
+    <string name="season">Сезоны</string>
+    <string name="main">Главная</string>
+    <string name="episodes_list">Список серий</string>
+    <string name="episodes_list_other">Другие серии</string>
+    <string name="recommendations">Рекомендации</string>
+    <string name="connect">Войти</string>
+    <string name="login">Логин</string>
+    <string name="password">Пароль</string>
+    <string name="backdrop_of_item">Фоновое изображение</string>
+    <string name="share">Поделиться</string>
+    <string name="poster_of_movie">Постер фильма</string>
+    <string name="to_the_beginning">В начало</string>
+    <string name="backdrop_image">Фоновое изображение</string>
+    <string name="star_image">Изображение звезды</string>
+    <string name="image_of_item">Изображение элемента</string>
+    <string name="photo_of_person">Фото человека</string>
+    <string name="trailer">Трейлер</string>
+    <string name="tmdb_url_to_item">https://www.themoviedb.org/%s/%d?language=ru-RU</string>
+</resources>
