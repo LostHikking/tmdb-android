@@ -12,7 +12,6 @@
 		android:fontFamily="@font/thin"
 		android:padding="10dp"
 		android:text="@string/collection"
-		android:textColor="@color/colorWhite"
 		android:textSize="36sp" />
 
 	<HorizontalScrollView

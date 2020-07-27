@@ -6,7 +6,7 @@
     <string name="popular">Popular</string>
     <string name="movies">Movies</string>
     <string name="tv_shows">TV Shows</string>
-    <string name="search">Search</string>
+    <string name="search">Search for movies &amp; tv shows</string>
     <string name="people">People</string>
     <string name="collection">Collection</string>
     <string name="crew">Crew</string>
@@ -28,4 +28,5 @@
     <string name="image_of_item">Image of item</string>
     <string name="photo_of_person">Photo of person</string>
     <string name="trailer">Trailer</string>
+    <string name="tmdb_url_to_item">https://www.themoviedb.org/%s/%d?language=en-US</string>
 </resources>

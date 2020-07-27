@@ -21,7 +21,6 @@
 		android:layout_gravity="center_horizontal"
 		android:fontFamily="@font/bold"
 		android:textAlignment="center"
-		android:textColor="@color/colorWhite"
 		android:textSize="12sp" />
 
 	<TextView
@@ -31,6 +30,5 @@
 		android:layout_gravity="center_horizontal"
 		android:fontFamily="@font/regular"
 		android:textAlignment="center"
-		android:textColor="@color/colorWhite"
 		android:textSize="12sp" />
 </LinearLayout>

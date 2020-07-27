@@ -25,30 +25,53 @@
             <com.google.android.material.appbar.CollapsingToolbarLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/colorWhite"
-                app:layout_scrollFlags="scroll|snap">
+                android:background="@android:color/white"
+                app:layout_scrollFlags="scroll|enterAlways">
 
                 <androidx.appcompat.widget.Toolbar
                     android:layout_width="match_parent"
                     android:layout_height="?actionBarSize"
-                    app:layout_collapseMode="parallax">
+                    app:layout_collapseMode="pin">
 
 
-                    <com.google.android.material.textfield.TextInputLayout
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="10dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="20dp"
                         android:layout_marginVertical="5dp"
-                        android:autofillHints="Search"
                         android:background="@drawable/search_box"
-                        android:elevation="5dp"
-                        android:hint="@string/search"
-                        app:startIconDrawable="@drawable/ic_baseline_search_24">
+                        android:elevation="5dp">
 
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
-                    </com.google.android.material.textfield.TextInputLayout>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:clickable="true"
+                            android:contentDescription="@string/menu_button"
+                            android:paddingHorizontal="10dp"
+                            android:src="@drawable/ic_baseline_menu_24"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:padding="5dp"
+                            android:paddingVertical="10dp"
+                            android:text="@string/search"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:contentDescription="@string/login"
+                            android:paddingHorizontal="10dp"
+                            android:src="@drawable/ic_login_24px" />
+
+                    </LinearLayout>
 
 
                 </androidx.appcompat.widget.Toolbar>
@@ -57,7 +80,9 @@
             <com.google.android.material.tabs.TabLayout
                 android:id="@+id/main_tabs"
                 android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize">
+                android:layout_height="?attr/actionBarSize"
+                app:tabIndicatorFullWidth="false"
+                app:tabTextAppearance="@style/CustomTextAppearance">
 
                 <com.google.android.material.tabs.TabItem
                     android:layout_width="match_parent"

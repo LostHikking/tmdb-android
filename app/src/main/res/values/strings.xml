@@ -5,7 +5,7 @@
     <string name="popular">Популярные</string>
     <string name="movies">Фильмы</string>
     <string name="tv_shows">Сериалы</string>
-    <string name="search">Поиск</string>
+    <string name="search">Поиск фильмов и сериалов</string>
     <string name="people">Люди</string>
     <string name="collection">Коллекция</string>
     <string name="crew">Создатели</string>
@@ -20,7 +20,7 @@
     <string name="password">Пароль</string>
     <string name="backdrop_of_item">Фоновое изображение</string>
     <string name="share">Поделиться</string>
-    <string name="tmdb_url_to_item" translatable="false">https://www.themoviedb.org/%s/%d</string>
+    <string name="tmdb_url_to_item">https://www.themoviedb.org/%s/%d</string>
     <string name="poster_of_movie">Постер фильма</string>
     <string name="to_the_beginning">В начало</string>
     <string name="backdrop_image">Фоновое изображение</string>
@@ -28,6 +28,7 @@
     <string name="image_of_item">Изображение элемента</string>
     <string name="photo_of_person">Фото человека</string>
     <string name="trailer">Трейлер</string>
+    <string name="menu_button">Menu button</string>
     <string-array name="list_type_movies">
         <item>Популярные</item>
         <item>Лучшие</item>

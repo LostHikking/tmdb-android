@@ -10,6 +10,7 @@
         <item name="colorSecondary">@color/colorTMDBSecondary</item>
         <item name="android:colorBackground">@color/colorTMDBPrimary</item>
         <item name="android:text">@android:color/white</item>
+        <item name="android:statusBarColor">@color/colorTMDBPrimary</item>
     </style>
 </resources>
 
