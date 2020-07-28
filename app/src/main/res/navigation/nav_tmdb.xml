@@ -12,7 +12,7 @@
 
     <fragment
         android:id="@+id/homeViewPagerFragment"
-        android:name="io.github.losthikking.themoviedb.fragments.HomeViewPagerFragment"
+        android:name="io.github.losthikking.themoviedb.fragments.MainViewPagerFragment"
         android:label="HomeViewPagerFragment"
         tools:layout="@layout/fragment_main">
         <action
@@ -30,6 +30,7 @@
     <fragment
         android:id="@+id/loginFragment"
         android:label="LoginFragment"
+        android:name="io.github.losthikking.themoviedb.fragments.LoginFragment"
         tools:layout="@layout/fragment_login" />
 
     <fragment

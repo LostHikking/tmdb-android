@@ -21,15 +21,20 @@ class ItemDetailFragment : Fragment() {
 
     private val args: ItemDetailFragmentArgs by navArgs()
 
-    private val itemDetailViewModel: ItemDetailViewModel by viewModel { parametersOf(args.itemId, args.itemType) }
+    private val itemDetailViewModel: ItemDetailViewModel by viewModel {
+        parametersOf(
+            args.itemId,
+            args.itemType
+        )
+    }
 
     override fun onCreateView(
-            inflater: LayoutInflater,
-            container: ViewGroup?,
-            savedInstanceState: Bundle?
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): View? {
         val binding = DataBindingUtil.inflate<FragmentDetailItemBinding>(
-                inflater, R.layout.fragment_detail_item, container, false
+            inflater, R.layout.fragment_detail_item, container, false
         ).apply {
             viewModel = itemDetailViewModel
             lifecycleOwner = viewLifecycleOwner
@@ -42,10 +47,10 @@ class ItemDetailFragment : Fragment() {
                 }
                 val id = contentItem?.id
                 val shareIntent = ShareCompat.IntentBuilder.from(requireActivity())
-                        .setText(getString(R.string.tmdb_url_to_item, type, id))
-                        .setType("text/plain")
-                        .createChooserIntent()
-                        .addFlags(Intent.FLAG_ACTIVITY_NEW_DOCUMENT or Intent.FLAG_ACTIVITY_MULTIPLE_TASK)
+                    .setText(getString(R.string.tmdb_url_to_item, type, id))
+                    .setType("text/plain")
+                    .createChooserIntent()
+                    .addFlags(Intent.FLAG_ACTIVITY_NEW_DOCUMENT or Intent.FLAG_ACTIVITY_MULTIPLE_TASK)
                 startActivity(shareIntent)
             }
         }

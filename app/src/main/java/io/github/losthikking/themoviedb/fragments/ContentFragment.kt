@@ -17,9 +17,9 @@ abstract class ContentFragment : Fragment() {
     protected var currentPage = 1
 
     override fun onCreateView(
-            inflater: LayoutInflater,
-            container: ViewGroup?,
-            savedInstanceState: Bundle?
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): View? {
         val binding = FragmentContentBinding.inflate(inflater, container, false)
         val adapter = ContentAdapter()

@@ -11,4 +11,12 @@ abstract class ContentItem {
     abstract val overview: String?
     abstract val title: String
     abstract val genres: List<Genre>
+    abstract val voteCount: Int
+    fun getPrettyRating(): String {
+        return "${getVoteAverage(5)} ($voteCount)"
+    }
+
+    fun getVoteAverage(max: Int): Float? {
+        return voteAverage?.div(10 / max)
+    }
 }
