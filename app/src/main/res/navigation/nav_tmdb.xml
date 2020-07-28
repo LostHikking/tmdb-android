@@ -6,24 +6,40 @@
     app:startDestination="@id/homeViewPagerFragment">
 
     <fragment
+        android:id="@+id/searchFragment"
+        android:label="SearchFragment"
+        tools:layout="@layout/fragment_search" />
+
+    <fragment
         android:id="@+id/homeViewPagerFragment"
-        android:name="ru.omsu.themoviedb.fragments.HomeViewPagerFragment"
+        android:name="io.github.losthikking.themoviedb.fragments.HomeViewPagerFragment"
         android:label="HomeViewPagerFragment"
         tools:layout="@layout/fragment_main">
         <action
             android:id="@+id/action_homeViewPagerFragment_to_itemDetailFragment"
             app:destination="@id/itemDetailFragment" />
+        <action
+            android:id="@+id/action_homeViewPagerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_homeViewPagerFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
 
     </fragment>
 
     <fragment
+        android:id="@+id/loginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login" />
+
+    <fragment
         android:id="@+id/itemDetailFragment"
-        android:name="ru.omsu.themoviedb.fragments.ItemDetailFragment"
+        android:name="io.github.losthikking.themoviedb.fragments.ItemDetailFragment"
         android:label="ItemDetailFragment"
         tools:layout="@layout/fragment_detail_item">
         <argument
             android:name="itemType"
-            app:argType="ru.omsu.themoviedb.enums.ItemType" />
+            app:argType="io.github.losthikking.themoviedb.enums.ItemType" />
         <argument
             android:name="itemId"
             app:argType="integer" />

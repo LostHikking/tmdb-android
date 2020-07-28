@@ -28,7 +28,13 @@
     <string name="image_of_item">Изображение элемента</string>
     <string name="photo_of_person">Фото человека</string>
     <string name="trailer">Трейлер</string>
-    <string name="menu_button">Menu button</string>
+    <string name="menu_button">Кнопка меню</string>
+    <string name="hint_username">Login</string>
+    <string name="hint_password">Password</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="button_next">Войти</string>
+    <string name="tmdb_logo">TMDB logo</string>
+    <string name="recent">Recent</string>
     <string-array name="list_type_movies">
         <item>Популярные</item>
         <item>Лучшие</item>

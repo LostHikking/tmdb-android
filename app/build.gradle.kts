@@ -13,7 +13,7 @@ android {
         dataBinding = true
     }
     defaultConfig {
-        applicationId = "ru.omsu.themoviedb"
+        applicationId = "io.github.losthikking.themoviedb"
         minSdkVersion(29)
         targetSdkVersion(30)
         versionCode = 1

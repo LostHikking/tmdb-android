@@ -27,3 +27,10 @@ allprojects {
     }
 }
 
+configure<com.diffplug.gradle.spotless.SpotlessExtension> {
+    kotlin {
+        target("**/*.kt")
+        ktlint("0.37.2")
+    }
+}
+

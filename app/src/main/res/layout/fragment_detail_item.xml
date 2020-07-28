@@ -3,17 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
-
-        <import type="ru.omsu.themoviedb.api.tmdb.dto.ContentItem" />
-
-        <variable
-            name="viewModel"
-            type="ru.omsu.themoviedb.viewmodels.ItemDetailViewModel" />
-    </data>
-
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
+        tools:context="io.github.losthikking.themoviedb.activities.MainActivity"
         android:layout_height="match_parent">
 
         <ScrollView
@@ -120,4 +112,13 @@
             android:contentDescription="@string/to_the_beginning"
             app:srcCompat="@drawable/ic_detail_share" />
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <data>
+
+        <import type="io.github.losthikking.themoviedb.api.tmdb.dto.ContentItem" />
+
+        <variable
+            name="viewModel"
+            type="io.github.losthikking.themoviedb.viewmodels.ItemDetailViewModel" />
+    </data>
 </layout>

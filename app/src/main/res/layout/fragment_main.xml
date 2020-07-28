@@ -8,12 +8,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <androidx.viewpager2.widget.ViewPager2
-            android:id="@+id/view_pager"
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragment_content_container"
+            class="io.github.losthikking.themoviedb.fragments.ContentPagerFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layout_behavior="@string/appbar_scrolling_view_behavior"
-            tools:cur="@layout/fragment_content" />
+            tools:layout="@layout/fragment_list" />
 
 
         <com.google.android.material.appbar.AppBarLayout
@@ -53,6 +54,14 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:contentDescription="@string/login"
+                            android:paddingHorizontal="10dp"
+                            android:src="@drawable/ic_login_24px" />
+
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
@@ -63,40 +72,20 @@
                             android:text="@string/search"
                             android:textSize="16sp" />
 
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:contentDescription="@string/login"
-                            android:paddingHorizontal="10dp"
-                            android:src="@drawable/ic_login_24px" />
-
                     </LinearLayout>
 
 
                 </androidx.appcompat.widget.Toolbar>
             </com.google.android.material.appbar.CollapsingToolbarLayout>
 
-            <com.google.android.material.tabs.TabLayout
-                android:id="@+id/main_tabs"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                app:tabIndicatorFullWidth="false"
-                app:tabTextAppearance="@style/CustomTextAppearance">
 
-                <com.google.android.material.tabs.TabItem
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:icon="@drawable/ic_movie"
-                    android:text="@string/movies" />
-
-                <com.google.android.material.tabs.TabItem
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:icon="@drawable/ic_tvshow"
-                    android:text="@string/tv_shows" />
-            </com.google.android.material.tabs.TabLayout>
         </com.google.android.material.appbar.AppBarLayout>
 
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:menu="@menu/menu_bottom_navigation" />
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>

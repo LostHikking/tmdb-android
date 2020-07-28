@@ -29,4 +29,5 @@
     <string name="photo_of_person">Photo of person</string>
     <string name="trailer">Trailer</string>
     <string name="tmdb_url_to_item">https://www.themoviedb.org/%s/%d?language=en-US</string>
+    <string name="menu_button">Menu button</string>
 </resources>
