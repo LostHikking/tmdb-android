@@ -47,7 +47,7 @@ class MainViewPagerFragment : Fragment() {
     }
 
     private fun FragmentManager.changeFragment(fragment: Fragment): Boolean {
-        this.beginTransaction().replace(R.id.fragment_content_container, fragment).commit()
+        beginTransaction().replace(R.id.fragment_content_container, fragment).commit()
         return true
     }
 }

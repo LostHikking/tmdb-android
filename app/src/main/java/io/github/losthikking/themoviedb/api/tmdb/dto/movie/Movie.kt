@@ -41,5 +41,7 @@ data class Movie(
     @SerializedName("vote_average")
     override val voteAverage: Float,
     @SerializedName("vote_count")
-    override val voteCount: Int
+    override val voteCount: Int,
+    @SerializedName("genre_ids")
+    override val genresIds: List<Int>
 ) : ContentItem()

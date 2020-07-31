@@ -7,7 +7,7 @@ import io.github.losthikking.themoviedb.api.tmdb.dto.tvshow.TVShow
 import io.github.losthikking.themoviedb.repositories.TMDBRepository
 
 class ItemListViewModel internal constructor(
-        private val repository: TMDBRepository
+    private val repository: TMDBRepository
 ) : ViewModel() {
     private val queryMoviePageLiveData = MutableLiveData<Int>()
     private val queryTvShowPageLiveData = MutableLiveData<Int>()

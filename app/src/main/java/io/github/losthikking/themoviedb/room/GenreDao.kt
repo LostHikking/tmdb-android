@@ -9,17 +9,17 @@ import io.github.losthikking.themoviedb.api.tmdb.dto.Genre
 @Dao
 interface GenreDao {
     @Query("SELECT * FROM genre")
-    fun getAll(): List<Genre>
+    suspend fun getAll(): List<Genre>
 
     @Query("SELECT * FROM genre WHERE id IN (:genreIds)")
-    fun loadAllByIds(genreIds: IntArray): List<Genre>
+    suspend fun loadAllByIds(genreIds: IntArray): List<Genre>
 
     @Query("SELECT * FROM genre WHERE name LIKE :name LIMIT 1")
-    fun findByName(name: String): Genre
+    suspend fun findByName(name: String): Genre
 
     @Insert
-    fun insertAll(vararg users: Genre)
+    suspend fun insertAll(vararg users: Genre)
 
     @Delete
-    fun delete(genre: Genre)
+    suspend fun delete(genre: Genre)
 }

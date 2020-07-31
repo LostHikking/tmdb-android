@@ -80,7 +80,6 @@
                     android:layout_width="77dp"
                     android:layout_height="49dp"
                     android:layout_weight="1"
-                    android:fontFamily="@font/fontfamily"
                     android:gravity="center"
                     android:text="@{contentItem.voteAverage.toString()}"
                     android:textAlignment="center"
