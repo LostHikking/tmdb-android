@@ -18,7 +18,7 @@ interface GenreDao {
     suspend fun findByName(name: String): Genre
 
     @Insert
-    suspend fun insertAll(vararg users: Genre)
+    suspend fun insertAll(genres: List<Genre>)
 
     @Delete
     suspend fun delete(genre: Genre)

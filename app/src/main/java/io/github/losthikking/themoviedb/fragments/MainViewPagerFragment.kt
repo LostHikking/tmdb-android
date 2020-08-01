@@ -25,6 +25,10 @@ class MainViewPagerFragment : Fragment() {
         val fragmentManager = parentFragmentManager
         val menuButton = binding.menuButton
         val loginButton = binding.loginButton
+        val searchButton = binding.searchButton
+        searchButton.setOnClickListener {
+            findNavController().navigate(MainViewPagerFragmentDirections.actionHomeViewPagerFragmentToSearchFragment())
+        }
         loginButton.setOnClickListener {
             findNavController().navigate(MainViewPagerFragmentDirections.actionHomeViewPagerFragmentToLoginFragment())
         }

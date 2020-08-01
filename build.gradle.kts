@@ -8,8 +8,8 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath("com.android.tools.build:gradle:4.0.1")
-        kotlin("kotlin-gradle-plugin")
+        classpath("com.android.tools.build:gradle:4.1.0")
+        kotlin("kotlin-gradle-plugin:1.4.10")
         classpath("androidx.navigation:navigation-safe-args-gradle-plugin:2.3.0")
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -17,7 +17,8 @@ buildscript {
 }
 
 plugins {
-    id("com.diffplug.gradle.spotless") version "4.3.0"
+    id("com.diffplug.spotless") version "5.6.1"
+    kotlin("jvm") version "1.4.10"
 }
 
 allprojects {
@@ -29,7 +30,7 @@ allprojects {
 
 configure<com.diffplug.gradle.spotless.SpotlessExtension> {
     kotlin {
-        target("**/*.kt")
+        target("src/*.kt")
         ktlint("0.37.2")
     }
 }

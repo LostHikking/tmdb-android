@@ -1,0 +1,2084 @@
+{
+  "adult": false,
+  "backdrop_path": "/9xNOiv6DZZjH7ABoUUDP0ZynouU.jpg",
+  "belongs_to_collection": null,
+  "budget": 75000000,
+  "genres": [
+    {
+      "id": 28,
+      "name": "Action"
+    },
+    {
+      "id": 80,
+      "name": "Crime"
+    },
+    {
+      "id": 35,
+      "name": "Comedy"
+    },
+    {
+      "id": 18,
+      "name": "Drama"
+    }
+  ],
+  "homepage": "http://www.birdsofpreymovie.net/",
+  "id": 495764,
+  "imdb_id": "tt7713068",
+  "original_language": "en",
+  "original_title": "Birds of Prey (and the Fantabulous Emancipation of One Harley Quinn)",
+  "overview": "Harley Quinn joins forces with a singer, an assassin and a police detective to help a young girl who had a hit placed on her after she stole a rare diamond from a crime lord.",
+  "popularity": 91.938,
+  "poster_path": "/h4VB6m0RwcicVEZvzftYZyKXs6K.jpg",
+  "production_companies": [
+    {
+      "id": 9993,
+      "logo_path": "/2Tc1P3Ac8M479naPp1kYT3izLS5.png",
+      "name": "DC Entertainment",
+      "origin_country": "US"
+    },
+    {
+      "id": 82968,
+      "logo_path": null,
+      "name": "LuckyChap Entertainment",
+      "origin_country": "GB"
+    },
+    {
+      "id": 103462,
+      "logo_path": null,
+      "name": "Kroll & Co Entertainment",
+      "origin_country": "US"
+    },
+    {
+      "id": 174,
+      "logo_path": "/IuAlhI9eVC9Z8UQWOIDdWRKSEJ.png",
+      "name": "Warner Bros. Pictures",
+      "origin_country": "US"
+    },
+    {
+      "id": 429,
+      "logo_path": "/2Tc1P3Ac8M479naPp1kYT3izLS5.png",
+      "name": "DC Comics",
+      "origin_country": "US"
+    },
+    {
+      "id": 128064,
+      "logo_path": null,
+      "name": "DC Films",
+      "origin_country": "US"
+    },
+    {
+      "id": 101831,
+      "logo_path": "/l6x0SkRVp9ksGgRhboZbkI9w7PM.png",
+      "name": "Clubhouse Pictures",
+      "origin_country": "US"
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "US",
+      "name": "United States of America"
+    }
+  ],
+  "release_date": "2020-02-05",
+  "revenue": 201858461,
+  "runtime": 109,
+  "spoken_languages": [
+    {
+      "iso_639_1": "zh",
+      "name": "普通话"
+    },
+    {
+      "iso_639_1": "en",
+      "name": "English"
+    }
+  ],
+  "status": "Released",
+  "tagline": "Mind Over Mayhem",
+  "title": "Birds of Prey (and the Fantabulous Emancipation of One Harley Quinn)",
+  "video": false,
+  "vote_average": 7.2,
+  "vote_count": 5252,
+  "keywords": {
+    "keywords": [
+      {
+        "id": 849,
+        "name": "dc comics"
+      },
+      {
+        "id": 9717,
+        "name": "based on comic"
+      },
+      {
+        "id": 187056,
+        "name": "woman director"
+      },
+      {
+        "id": 229266,
+        "name": "dc extended universe"
+      },
+      {
+        "id": 230992,
+        "name": "the joker"
+      },
+      {
+        "id": 255990,
+        "name": "batman"
+      },
+      {
+        "id": 258270,
+        "name": "gotham city"
+      }
+    ]
+  },
+  "videos": {
+    "results": [
+      {
+        "id": "5c4f4389c3a368049c888e52",
+        "iso_639_1": "en",
+        "iso_3166_1": "US",
+        "key": "ptLZlrE8MrQ",
+        "name": "See You Soon",
+        "site": "YouTube",
+        "size": 1080,
+        "type": "Teaser"
+      },
+      {
+        "id": "5d937ac6960331002ba75495",
+        "iso_639_1": "en",
+        "iso_3166_1": "US",
+        "key": "kGM4uYZzfu0",
+        "name": "Official Trailer 1",
+        "site": "YouTube",
+        "size": 1080,
+        "type": "Trailer"
+      },
+      {
+        "id": "5ea0aa8c01757f001ed1c56b",
+        "iso_639_1": "en",
+        "iso_3166_1": "US",
+        "key": "s1l914WkO6Y",
+        "name": "Official Trailer 1",
+        "site": "YouTube",
+        "size": 1080,
+        "type": "Trailer"
+      },
+      {
+        "id": "5e1132116f43ec00165b9cc1",
+        "iso_639_1": "en",
+        "iso_3166_1": "US",
+        "key": "cGAQNxgV8Z0",
+        "name": "BIRDS OF PREY \"Work Together\" TV Spot [HD] Margot Robbie, Mary Elizabeth Winstead, Ewan McGregor",
+        "site": "YouTube",
+        "size": 720,
+        "type": "Teaser"
+      },
+      {
+        "id": "5e175f15a9117f0016c8f277",
+        "iso_639_1": "en",
+        "iso_3166_1": "US",
+        "key": "x3HbbzHK5Mc",
+        "name": "Official Trailer 2",
+        "site": "YouTube",
+        "size": 1080,
+        "type": "Trailer"
+      },
+      {
+        "id": "5e26a370c68b6900123d2a23",
+        "iso_639_1": "en",
+        "iso_3166_1": "US",
+        "key": "vu-9EXhG3FI",
+        "name": "BIRDS OF PREY – Soundtrack Trailer",
+        "site": "YouTube",
+        "size": 1080,
+        "type": "Teaser"
+      }
+    ]
+  },
+  "credits": {
+    "cast": [
+      {
+        "cast_id": 0,
+        "character": "Harleen Quinzel / Harley Quinn",
+        "credit_id": "5a69364e0e0a260d6400960a",
+        "gender": 1,
+        "id": 234352,
+        "name": "Margot Robbie",
+        "order": 0,
+        "profile_path": "/51LnjSdszOnccBuwTTu4aUiGwDt.jpg"
+      },
+      {
+        "cast_id": 23,
+        "character": "Roman Sionis / Black Mask",
+        "credit_id": "5bdb4b080e0a2603b40143ab",
+        "gender": 2,
+        "id": 3061,
+        "name": "Ewan McGregor",
+        "order": 1,
+        "profile_path": "/aEmyadfRXTmmR7UW7OXsm5a6smS.jpg"
+      },
+      {
+        "cast_id": 11,
+        "character": "Helena Bertinelli / Huntress",
+        "credit_id": "5babd4df0e0a2664c902c365",
+        "gender": 1,
+        "id": 17628,
+        "name": "Mary Elizabeth Winstead",
+        "order": 2,
+        "profile_path": "/cBMtncBcUrKMTB8CifDG23THuCE.jpg"
+      },
+      {
+        "cast_id": 12,
+        "character": "Dinah Lance / Black Canary",
+        "credit_id": "5babd4f40e0a2664cc02bf08",
+        "gender": 1,
+        "id": 59017,
+        "name": "Jurnee Smollett",
+        "order": 3,
+        "profile_path": "/jzpxcydjOM1QlOvQD0AdfWdXJDb.jpg"
+      },
+      {
+        "cast_id": 18,
+        "character": "Detective Renee Montoya",
+        "credit_id": "5bb5649e0e0a26338e002d45",
+        "gender": 1,
+        "id": 4810,
+        "name": "Rosie Perez",
+        "order": 4,
+        "profile_path": "/1AD61lJoegfgYIOMezaYlCpbitJ.jpg"
+      },
+      {
+        "cast_id": 34,
+        "character": "Victor Zsasz",
+        "credit_id": "5c0fe276925141479e0ceb8c",
+        "gender": 2,
+        "id": 61659,
+        "name": "Chris Messina",
+        "order": 5,
+        "profile_path": "/l9DbQTK5pI6SOGpmfbADGLhdOYS.jpg"
+      },
+      {
+        "cast_id": 26,
+        "character": "Cassandra Cain",
+        "credit_id": "5becd25ac3a36812fa009db0",
+        "gender": 1,
+        "id": 2175867,
+        "name": "Ella Jay Basco",
+        "order": 6,
+        "profile_path": "/qCDNp5KPCemOl6L9jD1xTSTWybl.jpg"
+      },
+      {
+        "cast_id": 35,
+        "character": "Ellen Yee",
+        "credit_id": "5c10419792514147950e17db",
+        "gender": 1,
+        "id": 591835,
+        "name": "Ali Wong",
+        "order": 7,
+        "profile_path": "/zrzLHVEKrTqlD7o60ChfZoPA9Nn.jpg"
+      },
+      {
+        "cast_id": 36,
+        "character": "Happy",
+        "credit_id": "5c10c9f60e0a2638af100838",
+        "gender": 2,
+        "id": 92617,
+        "name": "Matthew Willig",
+        "order": 8,
+        "profile_path": "/7Zvg4vD7N48d7EyQS1NWKIuMhlf.jpg"
+      },
+      {
+        "cast_id": 37,
+        "character": "Doc",
+        "credit_id": "5c10ca089251414f2905c065",
+        "gender": 2,
+        "id": 16584,
+        "name": "Dana Lee",
+        "order": 9,
+        "profile_path": "/k9fWzIKYt2Cf3MNC1j1r7TUC2CR.jpg"
+      },
+      {
+        "cast_id": 38,
+        "character": "Patrick Erickson",
+        "credit_id": "5c10ca1a0e0a2638cc0fb759",
+        "gender": 2,
+        "id": 51579,
+        "name": "Steven Williams",
+        "order": 10,
+        "profile_path": "/okrQsLdE6hCGJ1M4p5nXPC3mJTW.jpg"
+      },
+      {
+        "cast_id": 44,
+        "character": "Stefano Galante",
+        "credit_id": "5c10cb95925141479a0f089e",
+        "gender": 2,
+        "id": 149590,
+        "name": "Robert Catrini",
+        "order": 11,
+        "profile_path": "/zmA6oHE0OXhMrasd8qG9lvYYRaI.jpg"
+      },
+      {
+        "cast_id": 70,
+        "character": "Sionis' Chauffeur",
+        "credit_id": "5e3e42729603310019eb0d34",
+        "gender": 2,
+        "id": 9452,
+        "name": "Daniel Bernhardt",
+        "order": 12,
+        "profile_path": "/3BLz32inDr1jznU6pKQmh20zfhK.jpg"
+      },
+      {
+        "cast_id": 39,
+        "character": "Mr. Keo",
+        "credit_id": "5c10ca36c3a368252d0fcf97",
+        "gender": 2,
+        "id": 60851,
+        "name": "François Chau",
+        "order": 13,
+        "profile_path": "/li7iZkdHmZkCsVVlABBu3fzTfeX.jpg"
+      },
+      {
+        "cast_id": 67,
+        "character": "Mrs. Keo",
+        "credit_id": "5e3e42160c2710001a7be935",
+        "gender": 1,
+        "id": 2532199,
+        "name": "Miyuki Matsunaga",
+        "order": 14,
+        "profile_path": "/2Z0DwO7qoCEOCFpKGEXkdb1yOtq.jpg"
+      },
+      {
+        "cast_id": 68,
+        "character": "Miss Keo",
+        "credit_id": "5e3e42259603310017eafdd2",
+        "gender": 1,
+        "id": 2219088,
+        "name": "Anna Mikami",
+        "order": 15,
+        "profile_path": "/y0y3dVmqGFSeQjfkoC0hXu0NJI5.jpg"
+      },
+      {
+        "cast_id": 64,
+        "character": "Franco Bertinelli",
+        "credit_id": "5e3e415c0c271000187ae8dc",
+        "gender": 2,
+        "id": 1236380,
+        "name": "Paul Lasa",
+        "order": 16,
+        "profile_path": "/mHEq8t1gBGpjJk3UabTErqqD5Om.jpg"
+      },
+      {
+        "cast_id": 32,
+        "character": "Maria Bertinelli",
+        "credit_id": "5c036c440e0a26486a069b7a",
+        "gender": 1,
+        "id": 175583,
+        "name": "Charlene Amoia",
+        "order": 17,
+        "profile_path": "/9bx5R73OATiAfR4vPzGXBxjD1Dt.jpg"
+      },
+      {
+        "cast_id": 52,
+        "character": "Young Helena Bertinelli",
+        "credit_id": "5c79b4b5c3a36844d819ea38",
+        "gender": 1,
+        "id": 2253839,
+        "name": "Ella Mika",
+        "order": 18,
+        "profile_path": "/vXDkEjIvFFdB3eGEBDjU7spfGBe.jpg"
+      },
+      {
+        "cast_id": 40,
+        "character": "Tim Evans",
+        "credit_id": "5c10ca4b0e0a2638af1008ad",
+        "gender": 2,
+        "id": 1633357,
+        "name": "Derek Wilson",
+        "order": 19,
+        "profile_path": "/oOvJLNW7WSuf2ZU9wLN0wK3i78a.jpg"
+      },
+      {
+        "cast_id": 63,
+        "character": "Erika",
+        "credit_id": "5e3e40fb41465c0018c93eb3",
+        "gender": 1,
+        "id": 81682,
+        "name": "Bojana Novaković",
+        "order": 20,
+        "profile_path": "/brputZXskZzzncPA4TP9ndqBe7.jpg"
+      },
+      {
+        "cast_id": 69,
+        "character": "Erika's Date",
+        "credit_id": "5e3e424198f1f1000f0f54ec",
+        "gender": 2,
+        "id": 1497866,
+        "name": "Andy Hoff",
+        "order": 21,
+        "profile_path": "/i9HJpnlNrZO20qjEVRn2VChVuCx.jpg"
+      },
+      {
+        "cast_id": 66,
+        "character": "Sal",
+        "credit_id": "5e3e420341465c0018c94113",
+        "gender": 2,
+        "id": 1497315,
+        "name": "Bruno Oliver",
+        "order": 22,
+        "profile_path": "/7XsdmC4GzGB8GhnWeWZGT1UX2Jo.jpg"
+      },
+      {
+        "cast_id": 41,
+        "character": "Officer Dargo",
+        "credit_id": "5c10ca6e0e0a2638b60f4996",
+        "gender": 2,
+        "id": 1689357,
+        "name": "Michael Masini",
+        "order": 23,
+        "profile_path": "/nP41w6OdrL82iqSv7vzkPhl6ooQ.jpg"
+      },
+      {
+        "cast_id": 42,
+        "character": "Bespectacled Secretary",
+        "credit_id": "5c10ca80925141479e0e11da",
+        "gender": 1,
+        "id": 162621,
+        "name": "Judy Kain",
+        "order": 24,
+        "profile_path": "/jilKv0EF7pzapvIyJGxxr9qDNK4.jpg"
+      },
+      {
+        "cast_id": 33,
+        "character": "Henchman",
+        "credit_id": "5c036c74c3a36865bc0ae553",
+        "gender": 2,
+        "id": 1163085,
+        "name": "David Bianchi",
+        "order": 25,
+        "profile_path": "/4QPA9DCVzwZHD796OsqrdpITn7p.jpg"
+      },
+      {
+        "cast_id": 43,
+        "character": "Tough Guy",
+        "credit_id": "5c10ca900e0a2638c70ea8eb",
+        "gender": 2,
+        "id": 2193778,
+        "name": "Rj Wayne",
+        "order": 26,
+        "profile_path": "/3oHqRGjWe9hAhRazxQniEQTj0kq.jpg"
+      },
+      {
+        "cast_id": 65,
+        "character": "Helena's Bodyguard",
+        "credit_id": "5e3e41f20c271000157b00ba",
+        "gender": 2,
+        "id": 43943,
+        "name": "Eddie Alfano",
+        "order": 27,
+        "profile_path": "/vmtPKBbaVwuSVxys5WfhUnoGty5.jpg"
+      },
+      {
+        "cast_id": 82,
+        "character": "Cell Guard",
+        "credit_id": "5e49c8752d93750015a8b66e",
+        "gender": 2,
+        "id": 158825,
+        "name": "Simon Rhee",
+        "order": 28,
+        "profile_path": "/ffic6wucnGrVdq884RguSQCCXeW.jpg"
+      },
+      {
+        "cast_id": 83,
+        "character": "Prisoner",
+        "credit_id": "5ebc6474aad9c20020252633",
+        "gender": 2,
+        "id": 1366,
+        "name": "Sala Baker",
+        "order": 29,
+        "profile_path": "/rLjJOiHjjpFkR9hySucXkSuEKQj.jpg"
+      },
+      {
+        "cast_id": 84,
+        "character": "Roman's Healer",
+        "credit_id": "5ebe195c8e2e000020138ea2",
+        "gender": 2,
+        "id": 2129997,
+        "name": "Zack Whyel",
+        "order": 30,
+        "profile_path": "/cXodJ2klZkq7GRkehHtYVs5dYYW.jpg"
+      },
+      {
+        "cast_id": 85,
+        "character": "Prisoner #1",
+        "credit_id": "5ebe19ed15a4a1001d9d2c29",
+        "gender": 2,
+        "id": 2639186,
+        "name": "Ryan Watson",
+        "order": 31,
+        "profile_path": null
+      },
+      {
+        "cast_id": 86,
+        "character": "Roller Derby Fan",
+        "credit_id": "5ebe1a0c3d3557001ddce907",
+        "gender": 0,
+        "id": 2639187,
+        "name": "Ellay Watson",
+        "order": 32,
+        "profile_path": null
+      },
+      {
+        "cast_id": 87,
+        "character": "Nun",
+        "credit_id": "5ebe1a246d675a00207adc3d",
+        "gender": 1,
+        "id": 1184768,
+        "name": "Karen Teliha",
+        "order": 33,
+        "profile_path": null
+      },
+      {
+        "cast_id": 88,
+        "character": "Gotham Detective",
+        "credit_id": "5ebe1a4b6d675a00207adc8a",
+        "gender": 0,
+        "id": 1842166,
+        "name": "Nev Smith",
+        "order": 34,
+        "profile_path": null
+      },
+      {
+        "cast_id": 89,
+        "character": "Scantily Clad Crystal",
+        "credit_id": "5ebe1a7d8e2e00002114e957",
+        "gender": 1,
+        "id": 1450383,
+        "name": "Greice Santo",
+        "order": 35,
+        "profile_path": null
+      },
+      {
+        "cast_id": 90,
+        "character": "Roman's Goon",
+        "credit_id": "5ebe1aac8e2e000020139031",
+        "gender": 2,
+        "id": 2639191,
+        "name": "Zeus Sagittarius",
+        "order": 36,
+        "profile_path": null
+      },
+      {
+        "cast_id": 91,
+        "character": "Roman's Goon",
+        "credit_id": "5ebe1ae215a4a1001e9ce982",
+        "gender": 2,
+        "id": 1482502,
+        "name": "Talon Reid",
+        "order": 37,
+        "profile_path": null
+      },
+      {
+        "cast_id": 92,
+        "character": "Gotham Detective",
+        "credit_id": "5ebe1af68e2e00001f123c91",
+        "gender": 2,
+        "id": 2573855,
+        "name": "Diezel Ramos",
+        "order": 38,
+        "profile_path": "/uoMRnPYtWbKSgTY7LdeUPblruP1.jpg"
+      },
+      {
+        "cast_id": 93,
+        "character": "Club Goer",
+        "credit_id": "5ebe1b8b6d675a00217b4314",
+        "gender": 2,
+        "id": 2074516,
+        "name": "Matthew Parry-Jones",
+        "order": 39,
+        "profile_path": null
+      },
+      {
+        "cast_id": 94,
+        "character": "Husband",
+        "credit_id": "5ebe1ba13d3557001ddcea5e",
+        "gender": 2,
+        "id": 2316690,
+        "name": "Brian Nuesi",
+        "order": 40,
+        "profile_path": "/y8WztQmIB36Cs8nAAthRhRZvCFi.jpg"
+      },
+      {
+        "cast_id": 95,
+        "character": "Girl at the bar",
+        "credit_id": "5ebe1bb715a4a1001e9ce9c5",
+        "gender": 1,
+        "id": 1317155,
+        "name": "Adinett Nsabimana",
+        "order": 41,
+        "profile_path": null
+      },
+      {
+        "cast_id": 96,
+        "character": "Roman's lift Goon",
+        "credit_id": "5ebe1bdd8e2e000020139218",
+        "gender": 2,
+        "id": 2356115,
+        "name": "Brandon Garic Notch",
+        "order": 42,
+        "profile_path": null
+      },
+      {
+        "cast_id": 97,
+        "character": "Mafiosi",
+        "credit_id": "5ebe1bf26d675a00217b43a0",
+        "gender": 2,
+        "id": 202930,
+        "name": "Anthony Molinari",
+        "order": 43,
+        "profile_path": "/m61qwEPjv8G3vmzNxaG2VDxSAmd.jpg"
+      },
+      {
+        "cast_id": 98,
+        "character": "Don",
+        "credit_id": "5ebe1c0515a4a1001c9d8148",
+        "gender": 2,
+        "id": 1809216,
+        "name": "Ego Mikitas",
+        "order": 44,
+        "profile_path": "/6bpMVYgZVbrpWiEFn2jNwaYQWv4.jpg"
+      },
+      {
+        "cast_id": 99,
+        "character": "Hot Couple",
+        "credit_id": "5ebe1c1f15a4a1001c9d8169",
+        "gender": 1,
+        "id": 1946241,
+        "name": "Jenelle McKee",
+        "order": 45,
+        "profile_path": "/yXJXb2aUvvtsqJrs9DUcZS6EB3o.jpg"
+      },
+      {
+        "cast_id": 100,
+        "character": "Mrs. Marcucci",
+        "credit_id": "5ebe1c363d3557001cde08b3",
+        "gender": 1,
+        "id": 1228825,
+        "name": "Lenora May",
+        "order": 46,
+        "profile_path": null
+      },
+      {
+        "cast_id": 101,
+        "character": "BBB Gang Member",
+        "credit_id": "5ebe1c4c3d3557001cde0909",
+        "gender": 2,
+        "id": 1939056,
+        "name": "Jeff Lipary",
+        "order": 47,
+        "profile_path": "/qaXD6CzLRSPjLCLqJ3TSzSfBeqX.jpg"
+      },
+      {
+        "cast_id": 102,
+        "character": "Roman's Goon",
+        "credit_id": "5ebe1cd615a4a1001c9d82e3",
+        "gender": 2,
+        "id": 2639199,
+        "name": "Brandon Irvin",
+        "order": 48,
+        "profile_path": null
+      },
+      {
+        "cast_id": 103,
+        "character": "Bodybuilder",
+        "credit_id": "5ebe1cfabc8abc0022c34495",
+        "gender": 2,
+        "id": 2639200,
+        "name": "Damon Hoffman",
+        "order": 49,
+        "profile_path": null
+      },
+      {
+        "cast_id": 104,
+        "character": "Thug",
+        "credit_id": "5ebe1d0f15a4a1001c9d835b",
+        "gender": 2,
+        "id": 1617172,
+        "name": "William Guirola",
+        "order": 50,
+        "profile_path": null
+      },
+      {
+        "cast_id": 105,
+        "character": "Young Goon",
+        "credit_id": "5ebe1d268e2e00001f123e64",
+        "gender": 2,
+        "id": 1720948,
+        "name": "Nico Greetham",
+        "order": 51,
+        "profile_path": null
+      },
+      {
+        "cast_id": 106,
+        "character": "Harley Super Fan",
+        "credit_id": "5ebe1d543d3557001edf7f9a",
+        "gender": 2,
+        "id": 2471239,
+        "name": "Luis Richard Gomez",
+        "order": 52,
+        "profile_path": null
+      },
+      {
+        "cast_id": 107,
+        "character": "Lords Leader",
+        "credit_id": "5ebe1d706d675a00207adfe3",
+        "gender": 2,
+        "id": 973644,
+        "name": "Shad Gaspard",
+        "order": 53,
+        "profile_path": "/NPn8XIKB9wvICevya40bvbsBNB.jpg"
+      },
+      {
+        "cast_id": 108,
+        "character": "Roman's Goon",
+        "credit_id": "5ebe1d9f076ce80021786362",
+        "gender": 2,
+        "id": 203788,
+        "name": "Julian Garcia",
+        "order": 54,
+        "profile_path": null
+      },
+      {
+        "cast_id": 109,
+        "character": "Gauntlet Cop",
+        "credit_id": "5ebe1dd18e2e00002114efe0",
+        "gender": 2,
+        "id": 18300,
+        "name": "Eddie J. Fernandez",
+        "order": 55,
+        "profile_path": "/wA9CnODxcaiLTrTnZ8wnlPIeW1R.jpg"
+      },
+      {
+        "cast_id": 110,
+        "character": "Lord of the Avenue",
+        "credit_id": "5ebe1de86d675a00207ae0b4",
+        "gender": 2,
+        "id": 2091809,
+        "name": "Mike Ferguson",
+        "order": 56,
+        "profile_path": "/fgmxWHKESApKHtu1Rar0iCVi6if.jpg"
+      },
+      {
+        "cast_id": 111,
+        "character": "Judge",
+        "credit_id": "5ebe1dfebc8abc0022c345df",
+        "gender": 2,
+        "id": 166684,
+        "name": "Gerald Downey",
+        "order": 57,
+        "profile_path": "/8yCC7RJc02xoyff3s0Jd4J9KqAR.jpg"
+      },
+      {
+        "cast_id": 112,
+        "character": "Club Goer",
+        "credit_id": "5ebe1e146d675a00217b4621",
+        "gender": 2,
+        "id": 2639202,
+        "name": "Jack Dourakos",
+        "order": 58,
+        "profile_path": null
+      },
+      {
+        "cast_id": 113,
+        "character": "Roman's Goon",
+        "credit_id": "5ebe1e296d675a00207ae10f",
+        "gender": 2,
+        "id": 2639203,
+        "name": "Sadyr Diouf",
+        "order": 59,
+        "profile_path": null
+      },
+      {
+        "cast_id": 114,
+        "character": "Club Dancer",
+        "credit_id": "5ebe1e42bc8abc0021c2c3fd",
+        "gender": 0,
+        "id": 2639204,
+        "name": "Joey Courteau",
+        "order": 60,
+        "profile_path": null
+      },
+      {
+        "cast_id": 116,
+        "character": "Officer Timm",
+        "credit_id": "5ebe1eb9076ce8001f7585df",
+        "gender": 2,
+        "id": 2178926,
+        "name": "Dan Cole",
+        "order": 62,
+        "profile_path": null
+      },
+      {
+        "cast_id": 117,
+        "character": "Roman's bodyguard",
+        "credit_id": "5ebe1fd08e2e00002114f309",
+        "gender": 2,
+        "id": 2503863,
+        "name": "Gianluca Di Medio Ceccarelli",
+        "order": 63,
+        "profile_path": null
+      },
+      {
+        "cast_id": 118,
+        "character": "Sprang Bridge Soldier",
+        "credit_id": "5ebe1fe73d3557001edf83d6",
+        "gender": 2,
+        "id": 2102720,
+        "name": "Jason Catron",
+        "order": 64,
+        "profile_path": null
+      },
+      {
+        "cast_id": 119,
+        "character": "Joe Bertinelli",
+        "credit_id": "5ebe1ffc076ce8001f758704",
+        "gender": 2,
+        "id": 1845012,
+        "name": "David Anthony Buglione",
+        "order": 65,
+        "profile_path": null
+      },
+      {
+        "cast_id": 120,
+        "character": "RR Passenger",
+        "credit_id": "5ebe201b8e2e00002114f3d7",
+        "gender": 2,
+        "id": 1209419,
+        "name": "Tim Rigby",
+        "order": 66,
+        "profile_path": "/zKNcSpDZaMtA0dAAXqsBR9FCuER.jpg"
+      },
+      {
+        "cast_id": 121,
+        "character": "Mercedes Gang",
+        "credit_id": "5ebe20498e2e00002114f467",
+        "gender": 2,
+        "id": 1172813,
+        "name": "Richard King",
+        "order": 67,
+        "profile_path": null
+      },
+      {
+        "cast_id": 122,
+        "character": "Mercedes Gang",
+        "credit_id": "5ebe2060076ce8002076bf3d",
+        "gender": 2,
+        "id": 1391327,
+        "name": "Oakley Lehman",
+        "order": 68,
+        "profile_path": "/77c3gefa5rIEKJqpudk5IqCrqPz.jpg"
+      },
+      {
+        "cast_id": 123,
+        "character": "Disgruntled man",
+        "credit_id": "5ebe207815a4a1001d9d330c",
+        "gender": 2,
+        "id": 83051,
+        "name": "Eric Michael Cole",
+        "order": 69,
+        "profile_path": "/v2eLFJQ0TOAFvGwCr2T1Y4dMOJt.jpg"
+      },
+      {
+        "cast_id": 124,
+        "character": "Mercenary",
+        "credit_id": "5ebe20f915a4a1001c9d8a0b",
+        "gender": 2,
+        "id": 1221121,
+        "name": "Dennis Keiffer",
+        "order": 70,
+        "profile_path": "/bmLkNcO8emp17vTMKaRUBHYE15j.jpg"
+      },
+      {
+        "cast_id": 125,
+        "character": "Mercenary",
+        "credit_id": "5ebe210d3d3557001cde0cfc",
+        "gender": 2,
+        "id": 1120883,
+        "name": "Sam Hargrave",
+        "order": 71,
+        "profile_path": "/yoBwA59oJtaMaWBk4wFmsMLnGNJ.jpg"
+      },
+      {
+        "cast_id": 126,
+        "character": "Mercenary",
+        "credit_id": "5ebe21238e2e00002013970e",
+        "gender": 2,
+        "id": 1272901,
+        "name": "Efka Kvaraciejus",
+        "order": 72,
+        "profile_path": "/xC12DoEHB9h3jJQ5YrJ1WSoLEWs.jpg"
+      },
+      {
+        "cast_id": 127,
+        "character": "Mercenary",
+        "credit_id": "5ebe213d15a4a1001d9d347f",
+        "gender": 2,
+        "id": 1298704,
+        "name": "Kofi Yiadom",
+        "order": 73,
+        "profile_path": null
+      },
+      {
+        "cast_id": 128,
+        "character": "Prisoner",
+        "credit_id": "5ebe215a076ce8002178699e",
+        "gender": 2,
+        "id": 1565060,
+        "name": "Bryan Sloyer",
+        "order": 74,
+        "profile_path": null
+      },
+      {
+        "cast_id": 129,
+        "character": "Prisoner",
+        "credit_id": "5ebe21796d675a001f7abfd1",
+        "gender": 0,
+        "id": 2639213,
+        "name": "Christian Womack",
+        "order": 75,
+        "profile_path": null
+      },
+      {
+        "cast_id": 130,
+        "character": "Prisoner",
+        "credit_id": "5ebe2197bc8abc0021c2c85c",
+        "gender": 2,
+        "id": 1310386,
+        "name": "Panuvat Anthony Nanakornpanom",
+        "order": 76,
+        "profile_path": "/gygeFtJuxw5SUlfvI12CbfsCVph.jpg"
+      },
+      {
+        "cast_id": 131,
+        "character": "Prisoner",
+        "credit_id": "5ebeab2f15a4a1001c9e83e1",
+        "gender": 2,
+        "id": 1717376,
+        "name": "Caleb Spillyards",
+        "order": 77,
+        "profile_path": "/5r7Q82C3g8CCIR2Eew6gc2oWSK2.jpg"
+      },
+      {
+        "cast_id": 132,
+        "character": "Prisoner",
+        "credit_id": "5ebeab503d3557001ddd6778",
+        "gender": 2,
+        "id": 1900169,
+        "name": "George Crayton",
+        "order": 78,
+        "profile_path": "/6ps7zBA3A9zOe7h6l0J7kqxMjh4.jpg"
+      },
+      {
+        "cast_id": 133,
+        "character": "Cell Guard",
+        "credit_id": "5ebeab6b9979d200212aa704",
+        "gender": 2,
+        "id": 1891942,
+        "name": "Terrence Julien",
+        "order": 79,
+        "profile_path": null
+      },
+      {
+        "cast_id": 134,
+        "character": "Dr. Aguilar",
+        "credit_id": "5ebeabbebc8abc0021c3656f",
+        "gender": 2,
+        "id": 1783,
+        "name": "K.K. Barrett",
+        "order": 80,
+        "profile_path": "/8TsblTWtRK28VXyr1EtaIfJWYWP.jpg"
+      },
+      {
+        "cast_id": 135,
+        "character": "Elderly Woman",
+        "credit_id": "5ebeabda8e2e00002115ec23",
+        "gender": 1,
+        "id": 2639653,
+        "name": "Christine Engh",
+        "order": 81,
+        "profile_path": null
+      },
+      {
+        "cast_id": 136,
+        "character": "Irate shopkeeper",
+        "credit_id": "5ebeabf43d3557001cdebf9e",
+        "gender": 2,
+        "id": 1430636,
+        "name": "Pramod Kumar",
+        "order": 82,
+        "profile_path": "/3FYE1ljXkjNoyYFMuRAThNHKv7h.jpg"
+      },
+      {
+        "cast_id": 137,
+        "character": "Smarmy Guy",
+        "credit_id": "5ebeac0d6d675a00207ba59c",
+        "gender": 2,
+        "id": 1290936,
+        "name": "Shahaub Roudbari",
+        "order": 83,
+        "profile_path": "/9wTUNMb7Aygfz6lkCBNpp2w5jpq.jpg"
+      },
+      {
+        "cast_id": 138,
+        "character": "Key Card Cop",
+        "credit_id": "5ebeac3b8e2e000020144c28",
+        "gender": 2,
+        "id": 2058295,
+        "name": "Shawn Balentine",
+        "order": 84,
+        "profile_path": null
+      },
+      {
+        "cast_id": 139,
+        "character": "Donut Cop",
+        "credit_id": "5ebeac55bc8abc0022c4667e",
+        "gender": 2,
+        "id": 37010,
+        "name": "Tim Sitarz",
+        "order": 85,
+        "profile_path": null
+      },
+      {
+        "cast_id": 140,
+        "character": "Coffee Cup Cop",
+        "credit_id": "5ebeac73bc8abc0023c2fe69",
+        "gender": 2,
+        "id": 963745,
+        "name": "Buddy Sosthand",
+        "order": 86,
+        "profile_path": null
+      },
+      {
+        "cast_id": 141,
+        "character": "Desk Sergeant",
+        "credit_id": "5ebeaca56d675a00217c559d",
+        "gender": 2,
+        "id": 1502542,
+        "name": "Chris Carnel",
+        "order": 87,
+        "profile_path": null
+      },
+      {
+        "cast_id": 142,
+        "character": "Patrol Cop",
+        "credit_id": "5ebead1c8e2e000020144d44",
+        "gender": 2,
+        "id": 1590321,
+        "name": "Jesse Bush",
+        "order": 88,
+        "profile_path": null
+      },
+      {
+        "cast_id": 143,
+        "character": "Processing Officer",
+        "credit_id": "5ebead696d675a00217c5689",
+        "gender": 2,
+        "id": 1494157,
+        "name": "Charles Carpenter",
+        "order": 89,
+        "profile_path": null
+      },
+      {
+        "cast_id": 144,
+        "character": "Desk Sergeant",
+        "credit_id": "5ebead8d9979d2001f2a92d4",
+        "gender": 2,
+        "id": 1367428,
+        "name": "Jeremy Denzlinger",
+        "order": 90,
+        "profile_path": "/cRtjlobg0LcVQp7Sa9PlqCUMf6a.jpg"
+      },
+      {
+        "cast_id": 145,
+        "character": "Roller Derby Girl",
+        "credit_id": "5ebeadaebc8abc0021c3678d",
+        "gender": 1,
+        "id": 2639668,
+        "name": "Keisha Tucker",
+        "order": 91,
+        "profile_path": null
+      },
+      {
+        "cast_id": 146,
+        "character": "Ace Chemical Police Officer",
+        "credit_id": "5ebeadeabc8abc0022c46934",
+        "gender": 2,
+        "id": 2639671,
+        "name": "James Henry Williams Jr.",
+        "order": 92,
+        "profile_path": null
+      },
+      {
+        "cast_id": 147,
+        "character": "Carlos Rossi",
+        "credit_id": "5ebeae0e8e2e0000201450cd",
+        "gender": 2,
+        "id": 51302,
+        "name": "Joe Bucaro III",
+        "order": 93,
+        "profile_path": "/gvJs1YQZRrSbkiSGAiCAugaXyzl.jpg"
+      },
+      {
+        "cast_id": 148,
+        "character": "Bitchy Teammate",
+        "credit_id": "5ebeae423d3557001cdec275",
+        "gender": 1,
+        "id": 1903040,
+        "name": "Paloma Rabinov",
+        "order": 94,
+        "profile_path": "/u6Hmg4bAOSz6KIlqASJSCdsMt0t.jpg"
+      }
+    ],
+    "crew": [
+      {
+        "credit_id": "5d15bcf550f7ca6e81144a30",
+        "department": "Art",
+        "gender": 2,
+        "id": 1783,
+        "job": "Production Design",
+        "name": "K.K. Barrett",
+        "profile_path": "/8TsblTWtRK28VXyr1EtaIfJWYWP.jpg"
+      },
+      {
+        "credit_id": "5c9811ddc3a368419f3c5e7c",
+        "department": "Production",
+        "gender": 2,
+        "id": 1783,
+        "job": "Production Designer",
+        "name": "K.K. Barrett",
+        "profile_path": "/8TsblTWtRK28VXyr1EtaIfJWYWP.jpg"
+      },
+      {
+        "credit_id": "5bd274adc3a368742b002c22",
+        "department": "Camera",
+        "gender": 2,
+        "id": 4867,
+        "job": "Director of Photography",
+        "name": "Matthew Libatique",
+        "profile_path": null
+      },
+      {
+        "credit_id": "5d95e0ae35818f0174d6d323",
+        "department": "Editing",
+        "gender": 2,
+        "id": 13227,
+        "job": "Editor",
+        "name": "Jay Cassidy",
+        "profile_path": "/f63siBS3qKfoOPZHS74r3zFhWGW.jpg"
+      },
+      {
+        "credit_id": "5de8149a7646fd0011996302",
+        "department": "Production",
+        "gender": 2,
+        "id": 19769,
+        "job": "Executive Producer",
+        "name": "David Ayer",
+        "profile_path": "/2oBT2jQbsV8IWPMr3Cm87YBJxGu.jpg"
+      },
+      {
+        "credit_id": "5b3ffc9c92514168b6000907",
+        "department": "Production",
+        "gender": 2,
+        "id": 47365,
+        "job": "Executive Producer",
+        "name": "Walter Hamada",
+        "profile_path": "/k5QwIY7m4SJJceH2GeBgDrR61Vo.jpg"
+      },
+      {
+        "credit_id": "5bf1ebfec3a36818a307592b",
+        "department": "Crew",
+        "gender": 2,
+        "id": 55081,
+        "job": "Stunt Coordinator",
+        "name": "Jonathan Eusebio",
+        "profile_path": null
+      },
+      {
+        "credit_id": "5bad93460e0a2664d704bf4f",
+        "department": "Production",
+        "gender": 0,
+        "id": 58237,
+        "job": "Executive In Charge Of Production",
+        "name": "Kelley Smith-Wait",
+        "profile_path": null
+      },
+      {
+        "credit_id": "5e4304f78c44b9001329a79d",
+        "department": "Sound",
+        "gender": 2,
+        "id": 80818,
+        "job": "ADR Mixer",
+        "name": "Mark DeSimone",
+        "profile_path": null
+      },
+      {
+        "credit_id": "5e4304d541465c0018cffc3c",
+        "department": "Sound",
+        "gender": 1,
+        "id": 85960,
+        "job": "Sound Designer",
+        "name": "Paula Fairfield",
+        "profile_path": null
+      },
+      {
+        "credit_id": "5bb5a83dc3a3681529009143",
+        "department": "Production",
+        "gender": 2,
+        "id": 94543,
+        "job": "Executive Producer",
+        "name": "Hans Ritter",
+        "profile_path": null
+      },
+      {
+        "credit_id": "5cb610de0e0a266b98ed74d7",
+        "department": "Production",
+        "gender": 1,
+        "id": 106458,
+        "job": "Location Manager",
+        "name": "Brittany Petros",
+        "profile_path": "/kYCRCX2RHn2Wvvt96qDWXYrWEYg.jpg"
+      },
+      {
+        "credit_id": "5b3ffc8b92514168d000099c",
+        "department": "Production",
+        "gender": 2,
+        "id": 211962,
+        "job": "Executive Producer",
+        "name": "Geoff Johns",
+        "profile_path": "/1hiQjkIkeFoiwvD4yIk2Dq6tnOa.jpg"
+      },
+      {
+        "credit_id": "5a69365e0e0a260d74008e4a",
+        "department": "Production",
+        "gender": 1,
+        "id": 234352,
+        "job": "Producer",
+        "name": "Margot Robbie",
+        "profile_path": "/51LnjSdszOnccBuwTTu4aUiGwDt.jpg"
+      },
+      {
+        "credit_id": "5c331a78c3a3682915ad39be",
+        "department": "Camera",
+        "gender": 1,
+        "id": 582808,
+        "job": "Still Photographer",
+        "name": "Claudette Barius",
+        "profile_path": "/B6gSRjk9mtfiMzl3EWr7ThD8Y6.jpg"
+      },
+      {
+        "credit_id": "5d95e0764813820019da8fa9",
+        "department": "Sound",
+        "gender": 2,
+        "id": 582922,
+        "job": "Original Music Composer",
+        "name": "Daniel Pemberton",
+        "profile_path": "/wRQfyEeL0oa3mvR4Hkm6sZ2R1Jc.jpg"
+      },
+      {
+        "credit_id": "5ba18514c3a368718a001525",
+        "department": "Production",
+        "gender": 2,
+        "id": 928272,
+        "job": "Casting",
+        "name": "Rich Delia",
+        "profile_path": null
+      },
+      {
+        "credit_id": "5c1103410e0a2638b80fb1dc",
+        "department": "Art",
+        "gender": 0,
+        "id": 1077115,
+        "job": "Supervising Art Director",
+        "name": "Kasra Farahani",
+        "profile_path": null
+      },
+      {
+        "credit_id": "5e4305023dd126001857cf1a",
+        "department": "Sound",
+        "gender": 0,
+        "id": 1099633,
+        "job": "Sound Effects Editor",
+        "name": "Luke Gibleon",
+        "profile_path": null
+      },
+      {
+        "credit_id": "5c5681cb0e0a2601d6d13548",
+        "department": "Costume & Make-Up",
+        "gender": 1,
+        "id": 1193620,
+        "job": "Costume Designer",
+        "name": "Erin Benach",
+        "profile_path": null
+      },
+      {
+        "credit_id": "5e4304e90c2710001a82e8ce",
+        "department": "Sound",
+        "gender": 0,
+        "id": 1352424,
+        "job": "Sound Re-Recording Mixer",
+        "name": "Brandon Proctor",
+        "profile_path": null
+      },
+      {
+        "credit_id": "5bad9309c3a3683a970518cd",
+        "department": "Sound",
+        "gender": 0,
+        "id": 1367665,
+        "job": "Boom Operator",
+        "name": "Craig Dollinger",
+        "profile_path": null
+      },
+      {
+        "credit_id": "5e43051f8c44b9001329a7b0",
+        "department": "Sound",
+        "gender": 0,
+        "id": 1377222,
+        "job": "Sound Effects Editor",
+        "name": "Michael W. Mitchell",
+        "profile_path": null
+      },
+      {
+        "credit_id": "5be72e19c3a368173d01ae16",
+        "department": "Art",
+        "gender": 0,
+        "id": 1400066,
+        "job": "Set Designer",
+        "name": "Rich Romig",
+        "profile_path": null
+      },
+      {
+        "credit_id": "5d95e0bc29c626002c86ebfb",
+        "department": "Editing",
+        "gender": 0,
+        "id": 1403403,
+        "job": "Editor",
+        "name": "Evan Schiff",
+        "profile_path": null
+      },
+      {
+        "credit_id": "5e4304c341465c0016cfc440",
+        "department": "Sound",
+        "gender": 0,
+        "id": 1407227,
+        "job": "Sound Effects Editor",
+        "name": "Phil Barrie",
+        "profile_path": null
+      },
+      {
+        "credit_id": "5e4305108c44b9001129b538",
+        "department": "Sound",
+        "gender": 0,
+        "id": 1423819,
+        "job": "Sound Effects Editor",
+        "name": "Darren Maynard",
+        "profile_path": null
+      },
+      {
+        "credit_id": "5bf1ec300e0a262661071659",
+        "department": "Crew",
+        "gender": 0,
+        "id": 1427715,
+        "job": "Fight Choreographer",
+        "name": "Jon Valera",
+        "profile_path": null
+      },
+      {
+        "credit_id": "5e4305663dd126001a57fec6",
+        "department": "Visual Effects",
+        "gender": 0,
+        "id": 1432613,
+        "job": "Visual Effects Producer",
+        "name": "Annemarie Griggs",
+        "profile_path": null
+      },
+      {
+        "credit_id": "5acbeae3c3a3687e2701ca4e",
+        "department": "Writing",
+        "gender": 1,
+        "id": 1448221,
+        "job": "Screenplay",
+        "name": "Christina Hodson",
+        "profile_path": "/dJy1DjjcuYvPQK1A0v2aG8NvhjB.jpg"
+      },
+      {
+        "credit_id": "5e43052f8c44b9001129b57c",
+        "department": "Sound",
+        "gender": 1,
+        "id": 1458578,
+        "job": "Supervising Sound Editor",
+        "name": "Katy Wood",
+        "profile_path": null
+      },
+      {
+        "credit_id": "5be72e35c3a368173d01ae3d",
+        "department": "Art",
+        "gender": 0,
+        "id": 1463379,
+        "job": "Storyboard Artist",
+        "name": "Amy Lynn Umezu",
+        "profile_path": null
+      },
+      {
+        "credit_id": "5bad932c0e0a2664df04cd10",
+        "department": "Sound",
+        "gender": 2,
+        "id": 1466245,
+        "job": "Sound Mixer",
+        "name": "Steven Morrow",
+        "profile_path": null
+      },
+      {
+        "credit_id": "5bf80aad9251415cc40e1df5",
+        "department": "Visual Effects",
+        "gender": 0,
+        "id": 1530712,
+        "job": "Special Effects Supervisor",
+        "name": "Mark Hawker",
+        "profile_path": null
+      },
+      {
+        "credit_id": "5ad622b6c3a3680c1601b661",
+        "department": "Production",
+        "gender": 2,
+        "id": 1539280,
+        "job": "Producer",
+        "name": "Bryan Unkeless",
+        "profile_path": null
+      },
+      {
+        "credit_id": "5c11032cc3a368252a102b22",
+        "department": "Art",
+        "gender": 0,
+        "id": 1683361,
+        "job": "Art Direction",
+        "name": "Julien Pougnier",
+        "profile_path": null
+      },
+      {
+        "credit_id": "5e4305848c44b9001129b652",
+        "department": "Visual Effects",
+        "gender": 0,
+        "id": 1724279,
+        "job": "Visual Effects Supervisor",
+        "name": "Kenneth Au",
+        "profile_path": null
+      },
+      {
+        "credit_id": "5ad617099251415dc3017706",
+        "department": "Directing",
+        "gender": 1,
+        "id": 1936668,
+        "job": "Director",
+        "name": "Cathy Yan",
+        "profile_path": "/H6Y2WxO59lXgfTCictR0fhQ4DA.jpg"
+      },
+      {
+        "credit_id": "5ad622990e0a2660bf018898",
+        "department": "Production",
+        "gender": 1,
+        "id": 2024551,
+        "job": "Producer",
+        "name": "Sue Kroll",
+        "profile_path": "/vyFfGYgu1sVc9HMXAD6nBUc8zW.jpg"
+      },
+      {
+        "credit_id": "5bad92f5c3a3683aaf04ad8a",
+        "department": "Costume & Make-Up",
+        "gender": 0,
+        "id": 2080037,
+        "job": "Costume Assistant",
+        "name": "Julia Saeri Lee",
+        "profile_path": null
+      },
+      {
+        "credit_id": "5bad93200e0a2664cc04f075",
+        "department": "Sound",
+        "gender": 0,
+        "id": 2136902,
+        "job": "Utility Sound",
+        "name": "Bryan Mendoza",
+        "profile_path": null
+      },
+      {
+        "credit_id": "5c12419e0e0a2632677b314d",
+        "department": "Crew",
+        "gender": 2,
+        "id": 2137119,
+        "job": "Creator",
+        "name": "Chuck Dixon",
+        "profile_path": null
+      },
+      {
+        "credit_id": "5de8151a7646fd00119964aa",
+        "department": "Writing",
+        "gender": 2,
+        "id": 2137119,
+        "job": "Comic Book",
+        "name": "Chuck Dixon",
+        "profile_path": null
+      },
+      {
+        "credit_id": "5bb5a8bf0e0a2633a3008199",
+        "department": "Production",
+        "gender": 0,
+        "id": 2141107,
+        "job": "Key Art Production Assistant",
+        "name": "Beatrice Cerezo",
+        "profile_path": null
+      },
+      {
+        "credit_id": "5bb5a8e09251410dcb007e5a",
+        "department": "Art",
+        "gender": 0,
+        "id": 2141108,
+        "job": "Art Department Coordinator",
+        "name": "Molly Hunter Flick",
+        "profile_path": null
+      },
+      {
+        "credit_id": "5c1241ae0e0a26326a7b32d7",
+        "department": "Crew",
+        "gender": 0,
+        "id": 2194455,
+        "job": "Creator",
+        "name": "Jordan B. Gorfinkel",
+        "profile_path": null
+      },
+      {
+        "credit_id": "5de815233faba0001313f148",
+        "department": "Writing",
+        "gender": 0,
+        "id": 2194455,
+        "job": "Comic Book",
+        "name": "Jordan B. Gorfinkel",
+        "profile_path": null
+      },
+      {
+        "credit_id": "5c1241c30e0a26327b7b2ef0",
+        "department": "Crew",
+        "gender": 0,
+        "id": 2194457,
+        "job": "Creator",
+        "name": "Greg Land",
+        "profile_path": null
+      },
+      {
+        "credit_id": "5de814c5a313b80012922769",
+        "department": "Production",
+        "gender": 0,
+        "id": 2475246,
+        "job": "Executive Producer",
+        "name": "Galen Vaisman",
+        "profile_path": null
+      },
+      {
+        "credit_id": "5e430557cf4a640013ea2b39",
+        "department": "Visual Effects",
+        "gender": 0,
+        "id": 2535572,
+        "job": "Visual Effects Coordinator",
+        "name": "Samira Khan",
+        "profile_path": null
+      }
+    ]
+  },
+  "images": {
+    "backdrops": [],
+    "posters": []
+  },
+  "reviews": {
+    "page": 1,
+    "results": [
+      {
+        "author": "msbreviews",
+        "content": "If you enjoy reading my Spoiler-Free reviews, please follow my blog @\r\nhttps://www.msbreviews.com\r\n\r\nSince Wonder Woman that the DCEU has not missed a beat. Even though the latter is still my favorite of the universe, I have mostly a positive opinion about Justice League, Aquaman, and Shazam! Yes, these are not the greatest comic-book movies of all-time, but I would be lying if I denied that I was entertained. Birds of Prey follows the same path: it's fun, action-heavy, and it boasts a phenomenal cast. It has some issues regarding the actual plot and a few characters, but I'll get there.\r\n\r\nFirst of all, let me get the mandatory compliments to Margot Robbie's performance out of the way. If there's a DC character better than Harley Quinn for Robbie to portray, please let me know, because I think she's absolutely perfect as a lunatic, over-the-top psychiatrist-turned-psychopath. Suicide Squad might be a total mess, but I doubt anyone denies how Robbie fits seamlessly into the Harley persona. From her looks to the way she speaks and from her physical movement to her facial expressions, there's just no better casting.\r\n\r\nShe embodies the whole film's chaotic vibe and even contributes to the (very) colorful set design. However, she's not the only one who delivers a spectacular performance. Jurnee Smollett-Bell offers a surprisingly captivating display as Dinah Lance / Black Canary. Even though Harley Quinn is the main character, I found myself caring a lot about Dinah. Her way of living suits the character's personality like a glove, and she's undoubtedly the best-written secondary character of the movie. Unfortunately, I can't say the same about the others, and this is one of my biggest issues.\r\n\r\nIt's a film packed with cliches and attempts of making the characters aware of those cliches, which is also, well, something pretty overused. What's more generic? Having the bad guy telling the hero their masterplan or having the hero stating how the bad guy is incredibly dumb by thinking of doing that? At first, I laughed, and I thought it was funny the way Christina Hodson was avoiding to write straight-up cliche characters by making everyone else aware of the way these talk or move.\r\n\r\nBut the whole \"I know you're cliche, so you can get away with saying or doing cliche things\" only works for a couple of scenes, not an entire movie. This is why I wasn't able to connect with Renee Montoya or care about her narrative at all. Mary Elizabeth Winstead is one of my favorite actresses, but she has the least screentime of the entire cast. I never criticize a film for not giving an actor/actress I like a more important role (unlike other people, I believe it would be unfair to do so). Still, I do complain if I think a particular character should have been given more screentime, which is the case of Huntress.\r\n\r\nI find her backstory way more exciting and emotionally investing than Rosie Perez's character, but sadly Huntress' personal story serves only as a not-that-surprising third act twist. There are several past-present transitions in the storytelling, most work, but some feel extremely abrupt. Nevertheless, Winstead is outstanding every single time she's on camera! Ewan Mcgregor offers a good performance as the villain, but he leads me to my other major issue: the central plot. Trivia time: a MacGuffin is an object, device, or event necessary to the narrative and the motivation of the characters, but insignificant, unimportant, or irrelevant in itself.\r\n\r\nThe thread that connects every single character is based on one of the most overused MacGuffins ever. Now, don't get me wrong: a MacGuffin is NOT a synonym of bad writing or of a bad plot! It's merely something that leads to nothing. Having in mind that Birds of Prey is a character-driven movie, a plot centered around a MacGuffin is not unusual. As long as every character works, the primary story can simply be a passenger (Quentin Tarantino's Once Upon a Time in Hollywood applies this method). However, in Birds of Prey, not every character has an interesting story...\r\n\r\nBasically, Christina Hodson's screenplay isn't exactly bad, but it isn't great too. Just like the film, it has its ups and downs, and I saved some of the ups for last because I do want to end this review on a positive note. Finally, a DCEU movie where the action isn't overwhelmed with CGI, but with detailed choreography and long takes instead! Thank you, Cathy Yan, for bringing some of the best action sequences in this universe. Even if the third act gets a little sloppy due to the amount of characters, it's still a very satisfying ending. The score beautifully accompanies the action, and the visuals are truly gorgeous to look at. The comedy bits are on-point, I laughed quite often, but my final remark goes to a topic I rarely address...\r\n\r\nBirds of Prey is a filmmaking lesson on how to produce an incredibly diverse movie without it feeling forced or unnatural. Only AFTER leaving the theater, I acknowledged the fact that the cast and characters are from various races, cultures, and have different sexual preferences. Why? Because this film doesn't waste its runtime by having its characters mention how black, white, Latinas, Chinese, gay, or whatever they are. They simply are what they are, and we all have eyes to see them. Congrats to Yan, Hodson, and everyone else who decided to treat the characters as if they're humans like every one of us.\r\n\r\nIn the end, Birds of Prey (and the ridiculously long subtitle) continues DCEU's streak of (at least) good movies since Wonder Woman came out. With a phenomenal cast led by an outstanding Margot Robbie as Harley Quinn, Cathy Yan delivers some of the best action of the entire universe in a genuinely entertaining superhero flick. A colorful, chaotic, and fun vibe is present throughout the whole runtime, as well as a pretty neat score. However, Christina Hodson's screenplay lacks creativity. The main plot revolves around the most overused MacGuffin ever, and some characters are straight-up taken from the book of cliches. It's a generic comic-book film with a formulaic narrative, but one that possesses enough fun and entertainment to overlook the typical story.\r\n\r\nRating: B-",
+        "id": "5e3df0ce98f1f100140de70c",
+        "url": "https://www.themoviedb.org/review/5e3df0ce98f1f100140de70c"
+      },
+      {
+        "author": "kmai01",
+        "content": "Pretty good Movie, I did not expect Harvey Quinn can kick ass like that. I can see some guy can be turn off this movie because all women hero team. I find it very entertaining and well made.",
+        "id": "5e483ee5676ce20015fddb51",
+        "url": "https://www.themoviedb.org/review/5e483ee5676ce20015fddb51"
+      },
+      {
+        "author": "TalisBriedis",
+        "content": "Garbage.\r\nNothing, and I REALLY MEAN NOTHING good to say about this.",
+        "id": "5e6685d2357c0000193a2151",
+        "url": "https://www.themoviedb.org/review/5e6685d2357c0000193a2151"
+      },
+      {
+        "author": "Louisa Moore - Screen Zealots",
+        "content": "I really dug “Birds of Prey (And the Fantabulous Emancipation of One Harley Quinn)” because it is unlike any movie I’ve seen before. There are the conventional-minded and flashy action scenes that accompany most superhero characters, but this is a violent, R-rated, naughty-joke, potty-mouthed comic book tour de force made for women over 25. It’s a boisterous good time for feminists and girl nerds everywhere.\r\n\r\nThe film is told from the twisted and deliciously sarcastic point of view of Harley Quinn (Margot Robbie), ex-girlfriend of the Joker. When the evil Roman Sionis (Ewan McGregor) puts out a hit on a young petty thief (Ella Jay Basco), the most nefarious villains turn Gotham City upside down looking for her. When Harley crosses paths with Huntress (Mary Elizabeth Winstead), Black Canary (Jurnee Smollett-Bell), and cop Renee Montoya (Rosie Perez), the women learn they have no choice but to team up in order to take Sionis down once and for all.\r\n\r\nThe heartbeat of the film lies in Robbie’s iconic character interpretation of Harley Quinn. She is terrific in making her naughty character with a mean streak easy to love. Harley isn’t exactly a woman you want to emulate, but it sure would be fun to hang out and be friends with her.\r\n\r\nAll of the supporting performances here really are first-rate too. McGregor chews scenery with audacious glee, and his villain is truly terrifying. With the addition of a diverse, kick-ass female supporting cast playing equally bad-ass superheros, the film takes a multicultural feminist slant that thankfully doesn’t seem forced by committee.\r\n\r\n“Birds of Prey” is the type of scrappy mayhem that gives a sparkle of excitement to the mostly bland and boring DCEU. It’s colorful and chaotic, reckless and energetic, and I am surprised that I enjoyed this movie as much as I did. This is a really, really fun spectacle that could bring new fans to the genre.",
+        "id": "5e7d5b33109dec213c02b68d",
+        "url": "https://www.themoviedb.org/review/5e7d5b33109dec213c02b68d"
+      },
+      {
+        "author": "SWITCH.",
+        "content": "'Birds of Prey' its absolute thrill ride. It's unapologetically fun and crude and violent. To quote Saoirse Ronan from 'Little Woman'... \"Women.\"\r\n- Chris dos Santos\r\n\r\nRead Chris' full article...\r\nhttps://www.maketheswitch.com.au/article/review-birds-of-prey-im-here-to-report-a-terrible-crime-dc-has-saved-cinema",
+        "id": "5e7e783190dde00013a22b50",
+        "url": "https://www.themoviedb.org/review/5e7e783190dde00013a22b50"
+      },
+      {
+        "author": "thetoerag",
+        "content": "I am afraid to say,, but after watching Suicide Squad which was pretty good.\r\nThis is a let down and I was looking forward to watching it.\r\nAfter watching this I think if there was a plot/story behind the movie, I couldn't see it it was all over the place and nothing seemed to follow.\r\nAll I can say about this movie is the Actors/Actresses were paid to be stupid and not funny, I hoped for better things and got trash.",
+        "id": "5e92333dd55e4d001317fb50",
+        "url": "https://www.themoviedb.org/review/5e92333dd55e4d001317fb50"
+      },
+      {
+        "author": "Adishake",
+        "content": "**Very refreshing and funny**, The movie is very different from like any team-up movie I've ever seen, it will make you forget that it's a superhero movie entirely it feels like it's just a crazy movie with criminal minds all over the city moving quite freely in fancy dress until one scene of Black Canary where you realise yeah you're watching a super-hero movie they gota show their powers. **It's violent and humorous and Margot Robbie's Harley Quinn is Fantastic and I really loved the Crossbow Killer**,\r\nDCEU has come up with really great works since the Justice League (ignoring the Aquaman) and if you're counting the upcoming DCEU movies then you'll see a very great future for DC with Batman, Shazam 2 and Wonder Woman sequel.",
+        "id": "5ea0427ddd2589001fd177af",
+        "url": "https://www.themoviedb.org/review/5ea0427ddd2589001fd177af"
+      },
+      {
+        "author": "Gimly",
+        "content": "If COVID-19 ushered cinemas off this mortal coil, I'm kind of strangely okay with telling people this was the last thing I ever got to see on the big screen. \r\n\r\n_Final rating:★★★★ - Very strong appeal. A personal favourite._",
+        "id": "5ec38b7f3d3557001de1e80e",
+        "url": "https://www.themoviedb.org/review/5ec38b7f3d3557001de1e80e"
+      },
+      {
+        "author": "JPV852",
+        "content": "Margot Robbie's Harley Quinn was one of the few highlights of Suicide Squad but once this one was announced, I felt indifferent and the trailers didn't do much to change that to the point I skipped this in theaters. Watching it now, I came away shrugging my shoulders. Some of the action scenes, supervised by Chad Stahelski, were okay but the pacing was all off and the actual BIRDS OF PREY, were sidelined and don't really get any memorable moments. Similarly, Ewan McGregor was alright but a weak villain.\r\n\r\nAs a fan of the Batman comic book, outside of HQ, none of these resemble their counterparts, most notably Cassandra Cain who was a great character (trained as an assassin as a little girl by her father, David Cain, before being taken in by Bruce Wayne).\r\n\r\nIDK, in the end this was a misfire and don't think it was the fault of an inexperienced director (using the same script, not sure anyone else would've made all that much better). Could be a case of being too much of a vanity project for Robbie. **2.75/5**",
+        "id": "5ec431cf18b7510020cb6010",
+        "url": "https://www.themoviedb.org/review/5ec431cf18b7510020cb6010"
+      },
+      {
+        "author": "MovieGuys",
+        "content": "Whilst many films have a message its a fine line between informing and lecturing. \r\n\r\nFor me \"Birds of Prey\" fails to appreciate this distinction. Its incessant, brittle, feminist finger wagging, is downright tiresome and quickly exhausted any sense of pleasure, I might have derived from this film. \r\n\r\nIts a shame too, as the underyling mechanics of the story could have worked well as a basic, by the numbers, action mash up. \r\n\r\nRegrettably that was not to be and whats left, is not something I would pay to see again. Which also applies to any spin offs or future efforts, in this vein. \r\n\r\n2/10.",
+        "id": "5eeaa75081da3900364db5d5",
+        "url": "https://www.themoviedb.org/review/5eeaa75081da3900364db5d5"
+      }
+    ],
+    "total_pages": 1,
+    "total_results": 10
+  },
+  "similar_movies": {
+    "page": 1,
+    "results": [
+      {
+        "id": 383498,
+        "video": false,
+        "vote_count": 11806,
+        "vote_average": 7.5,
+        "title": "Deadpool 2",
+        "release_date": "2018-05-10",
+        "original_language": "en",
+        "original_title": "Deadpool 2",
+        "genre_ids": [
+          28,
+          12,
+          35
+        ],
+        "backdrop_path": "/3P52oz9HPQWxcwHOwxtyrVV1LKi.jpg",
+        "adult": false,
+        "overview": "Wisecracking mercenary Deadpool battles the evil and powerful Cable and other bad guys to save a boy's life.",
+        "poster_path": "/to0spRl1CMDvyUbOnbb4fTk3VAd.jpg",
+        "popularity": 57.805
+      },
+      {
+        "id": 283995,
+        "video": false,
+        "vote_count": 15194,
+        "vote_average": 7.6,
+        "title": "Guardians of the Galaxy Vol. 2",
+        "release_date": "2017-04-19",
+        "original_language": "en",
+        "original_title": "Guardians of the Galaxy Vol. 2",
+        "genre_ids": [
+          28,
+          12,
+          35,
+          878
+        ],
+        "backdrop_path": "/aJn9XeesqsrSLKcHfHP4u5985hn.jpg",
+        "adult": false,
+        "overview": "The Guardians must fight to keep their newfound family together as they unravel the mysteries of Peter Quill's true parentage.",
+        "poster_path": "/y4MBh0EjBlMuOzv9axM4qJlmhzz.jpg",
+        "popularity": 51.126
+      },
+      {
+        "id": 284053,
+        "video": false,
+        "vote_count": 14317,
+        "vote_average": 7.6,
+        "title": "Thor: Ragnarok",
+        "release_date": "2017-10-25",
+        "original_language": "en",
+        "original_title": "Thor: Ragnarok",
+        "genre_ids": [
+          28,
+          12,
+          35,
+          14
+        ],
+        "backdrop_path": "/kaIfm5ryEOwYg8mLbq8HkPuM1Fo.jpg",
+        "adult": false,
+        "overview": "Thor is imprisoned on the other side of the universe and finds himself in a race against time to get back to Asgard to stop Ragnarok, the destruction of his home-world and the end of Asgardian civilization, at the hands of an all-powerful new threat, the ruthless Hela.",
+        "poster_path": "/rzRwTcFvttcN1ZpX2xv4j3tSdJu.jpg",
+        "popularity": 60.516
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/vc8bCGjdVp0UbMNLzHnHSLRbBWQ.jpg",
+        "genre_ids": [
+          28,
+          12,
+          878,
+          18
+        ],
+        "id": 315635,
+        "original_language": "en",
+        "original_title": "Spider-Man: Homecoming",
+        "overview": "Following the events of Captain America: Civil War, Peter Parker, with the help of his mentor Tony Stark, tries to balance his life as an ordinary high school student in Queens, New York City, with fighting crime as his superhero alter ego Spider-Man as a new threat, the Vulture, emerges.",
+        "poster_path": "/c24sv2weTHPsmDa7jEMN0m2P3RT.jpg",
+        "release_date": "2017-07-05",
+        "title": "Spider-Man: Homecoming",
+        "video": false,
+        "vote_average": 7.4,
+        "vote_count": 14615,
+        "popularity": 60.189
+      },
+      {
+        "id": 9480,
+        "video": false,
+        "vote_count": 3450,
+        "vote_average": 5.2,
+        "title": "Daredevil",
+        "release_date": "2003-02-14",
+        "original_language": "en",
+        "original_title": "Daredevil",
+        "genre_ids": [
+          28,
+          80,
+          14,
+          878,
+          53
+        ],
+        "backdrop_path": "/tWdpaEHntlAdKaheChiARwVNruk.jpg",
+        "adult": false,
+        "overview": "He dwells in a world of eternal night, but the blackness is filled with sounds and scents, tastes and textures that most cannot perceive. Although attorney Matt Murdock is blind, his other four senses function with superhuman sharpness. By day, Murdock represents the downtrodden. At night he is Daredevil, a masked vigilante stalking the dark streets of the city, a relentless avenger of justice.",
+        "poster_path": "/oCDBwSkntYamuw8VJIxMRCtDBmi.jpg",
+        "popularity": 26.408
+      },
+      {
+        "id": 363088,
+        "video": false,
+        "vote_count": 8682,
+        "vote_average": 7,
+        "title": "Ant-Man and the Wasp",
+        "release_date": "2018-07-04",
+        "original_language": "en",
+        "original_title": "Ant-Man and the Wasp",
+        "genre_ids": [
+          28,
+          12,
+          35,
+          878
+        ],
+        "backdrop_path": "/6P3c80EOm7BodndGBUAJHHsHKrp.jpg",
+        "adult": false,
+        "overview": "Just when his time under house arrest is about to end, Scott Lang once again puts his freedom at risk to help Hope van Dyne and Dr. Hank Pym dive into the quantum realm and try to accomplish, against time and any chance of success, a very dangerous rescue mission.",
+        "poster_path": "/eivQmS3wqzqnQWILHLc4FsEfcXP.jpg",
+        "popularity": 53.979
+      },
+      {
+        "id": 69735,
+        "video": false,
+        "vote_count": 542,
+        "vote_average": 7.2,
+        "title": "Batman: Year One",
+        "release_date": "2011-09-27",
+        "original_language": "en",
+        "original_title": "Batman: Year One",
+        "genre_ids": [
+          28,
+          12,
+          16,
+          80,
+          9648
+        ],
+        "backdrop_path": "/bNMw3onveTYU7PpLQRK0HQK8JRb.jpg",
+        "adult": false,
+        "overview": "Two men come to Gotham City: Bruce Wayne after years abroad feeding his lifelong obsession for justice and Jim Gordon after being too honest a cop with the wrong people elsewhere. After learning painful lessons about the city's corruption on its streets and police department respectively, this pair learn how to fight back their own way. With that, Gotham's evildoers from top to bottom are terrorized by the mysterious Batman and the equally heroic Gordon is assigned to catch him by comrades who both hate and fear him themselves. In the ensuing manhunt, both find much in common as the seeds of an unexpected friendship are laid with additional friends and rivals helping to start the legend.",
+        "poster_path": "/mLZRhulJcDsxZWTdfx0trtk6y07.jpg",
+        "popularity": 16.202
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/8N0OhgolMmt8lML70slyPZpE9qY.jpg",
+        "genre_ids": [
+          28,
+          53,
+          12
+        ],
+        "id": 497698,
+        "original_language": "en",
+        "original_title": "Black Widow",
+        "overview": "Natasha Romanoff, also known as Black Widow, confronts the darker parts of her ledger when a dangerous conspiracy with ties to her past arises. Pursued by a force that will stop at nothing to bring her down, Natasha must deal with her history as a spy and the broken relationships left in her wake long before she became an Avenger.",
+        "poster_path": "/uAUCHOYwFKQvSRZByP8rCgWKwT.jpg",
+        "release_date": "2020-10-28",
+        "title": "Black Widow",
+        "video": false,
+        "vote_average": 0,
+        "vote_count": 0,
+        "popularity": 29.953
+      },
+      {
+        "id": 10195,
+        "video": false,
+        "vote_count": 15180,
+        "vote_average": 6.7,
+        "title": "Thor",
+        "release_date": "2011-04-21",
+        "original_language": "en",
+        "original_title": "Thor",
+        "genre_ids": [
+          28,
+          12,
+          14
+        ],
+        "backdrop_path": "/c5tewtijj6aixi8zwwPuYJxifBA.jpg",
+        "adult": false,
+        "overview": "Against his father Odin's will, The Mighty Thor - a powerful but arrogant warrior god - recklessly reignites an ancient war. Thor is cast down to Earth and forced to live among humans as punishment. Once here, Thor learns what it takes to be a true hero when the most dangerous villain of his world sends the darkest forces of Asgard to invade Earth.",
+        "poster_path": "/prSfAi1xGrhLQNxVSUFh61xQ4Qy.jpg",
+        "popularity": 49.444
+      },
+      {
+        "id": 68721,
+        "video": false,
+        "vote_count": 16426,
+        "vote_average": 6.9,
+        "title": "Iron Man 3",
+        "release_date": "2013-04-18",
+        "original_language": "en",
+        "original_title": "Iron Man 3",
+        "genre_ids": [
+          28,
+          12,
+          878
+        ],
+        "backdrop_path": "/2ymO6kST1wwtuSlHifAoG2n2fe5.jpg",
+        "adult": false,
+        "overview": "When Tony Stark's world is torn apart by a formidable terrorist called the Mandarin, he starts an odyssey of rebuilding and retribution.",
+        "poster_path": "/qhPtAc1TKbMPqNvcdXSOn9Bn7hZ.jpg",
+        "popularity": 34.988
+      },
+      {
+        "id": 246655,
+        "video": false,
+        "vote_count": 9694,
+        "vote_average": 6.5,
+        "title": "X-Men: Apocalypse",
+        "release_date": "2016-05-18",
+        "original_language": "en",
+        "original_title": "X-Men: Apocalypse",
+        "genre_ids": [
+          28,
+          12,
+          14,
+          878
+        ],
+        "backdrop_path": "/2ex2beZ4ssMeOduLD0ILzXKCiep.jpg",
+        "adult": false,
+        "overview": "After the re-emergence of the world's first mutant, world-destroyer Apocalypse, the X-Men must unite to defeat his extinction level plan.",
+        "poster_path": "/2mtQwJKVKQrZgTz49Dizb25eOQQ.jpg",
+        "popularity": 33.717
+      },
+      {
+        "id": 299537,
+        "video": false,
+        "vote_count": 9797,
+        "vote_average": 7,
+        "title": "Captain Marvel",
+        "release_date": "2019-03-06",
+        "original_language": "en",
+        "original_title": "Captain Marvel",
+        "genre_ids": [
+          28,
+          12,
+          878
+        ],
+        "backdrop_path": "/w2PMyoyLU22YvrGK3smVM9fW1jj.jpg",
+        "adult": false,
+        "overview": "The story follows Carol Danvers as she becomes one of the universe’s most powerful heroes when Earth is caught in the middle of a galactic war between two alien races. Set in the 1990s, Captain Marvel is an all-new adventure from a previously unseen period in the history of the Marvel Cinematic Universe.",
+        "poster_path": "/AtsgWhDnHTq68L0lLsUrCnM7TjG.jpg",
+        "popularity": 62.19
+      },
+      {
+        "id": 271110,
+        "video": false,
+        "vote_count": 16543,
+        "vote_average": 7.4,
+        "title": "Captain America: Civil War",
+        "release_date": "2016-04-27",
+        "original_language": "en",
+        "original_title": "Captain America: Civil War",
+        "genre_ids": [
+          28,
+          12,
+          878
+        ],
+        "backdrop_path": "/7FWlcZq3r6525LWOcvO9kNWurN1.jpg",
+        "adult": false,
+        "overview": "Following the events of Age of Ultron, the collective governments of the world pass an act designed to regulate all superhuman activity. This polarizes opinion amongst the Avengers, causing two factions to side with Iron Man or Captain America, which causes an epic battle between former allies.",
+        "poster_path": "/rAGiXaUfPzY7CDEyNKUofk3Kw2e.jpg",
+        "popularity": 54.169
+      },
+      {
+        "id": 10138,
+        "video": false,
+        "vote_count": 14737,
+        "vote_average": 6.8,
+        "title": "Iron Man 2",
+        "release_date": "2010-04-28",
+        "original_language": "en",
+        "original_title": "Iron Man 2",
+        "genre_ids": [
+          28,
+          12,
+          878
+        ],
+        "backdrop_path": "/hCVQPB77eXBGh9abVdrWtKpKgkN.jpg",
+        "adult": false,
+        "overview": "With the world now aware of his dual life as the armored superhero Iron Man, billionaire inventor Tony Stark faces pressure from the government, the press and the public to share his technology with the military. Unwilling to let go of his invention, Stark, with Pepper Potts and James 'Rhodey' Rhodes at his side, must forge new alliances – and confront powerful enemies.",
+        "poster_path": "/6WBeq4fCfn7AN0o21W9qNcRF2l9.jpg",
+        "popularity": 33.295
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/vbY95t58MDArtyUXUIb8Fx1dCry.jpg",
+        "genre_ids": [
+          28,
+          878,
+          12
+        ],
+        "id": 1726,
+        "original_language": "en",
+        "original_title": "Iron Man",
+        "overview": "After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.",
+        "poster_path": "/78lPtwv72eTNqFW9COBYI0dWDJa.jpg",
+        "release_date": "2008-04-30",
+        "title": "Iron Man",
+        "video": false,
+        "vote_average": 7.6,
+        "vote_count": 18793,
+        "popularity": 57.248
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/iQh64TQiPoTK3yZ3duC3y0tKgy3.jpg",
+        "genre_ids": [
+          28,
+          12,
+          878
+        ],
+        "id": 1771,
+        "original_language": "en",
+        "original_title": "Captain America: The First Avenger",
+        "overview": "During World War II, Steve Rogers is a sickly man from Brooklyn who's transformed into super-soldier Captain America to aid in the war effort. Rogers must stop the Red Skull – Adolf Hitler's ruthless head of weaponry, and the leader of an organization that intends to use a mysterious device of untold powers for world domination.",
+        "poster_path": "/vSNxAJTlD0r02V9sPYpOjqDZXUK.jpg",
+        "release_date": "2011-07-22",
+        "title": "Captain America: The First Avenger",
+        "video": false,
+        "vote_average": 6.9,
+        "vote_count": 15261,
+        "popularity": 32.123
+      },
+      {
+        "id": 100402,
+        "video": false,
+        "vote_count": 13173,
+        "vote_average": 7.7,
+        "title": "Captain America: The Winter Soldier",
+        "release_date": "2014-03-20",
+        "original_language": "en",
+        "original_title": "Captain America: The Winter Soldier",
+        "genre_ids": [
+          28,
+          12,
+          878
+        ],
+        "backdrop_path": "/yHB0eNR8rvCpn0VdghEwBsXAC0N.jpg",
+        "adult": false,
+        "overview": "After the cataclysmic events in New York with The Avengers, Steve Rogers, aka Captain America is living quietly in Washington, D.C. and trying to adjust to the modern world. But when a S.H.I.E.L.D. colleague comes under attack, Steve becomes embroiled in a web of intrigue that threatens to put the world at risk. Joining forces with the Black Widow, Captain America struggles to expose the ever-widening conspiracy while fighting off professional assassins sent to silence him at every turn. When the full scope of the villainous plot is revealed, Captain America and the Black Widow enlist the help of a new ally, the Falcon. However, they soon find themselves up against an unexpected and formidable enemy—the Winter Soldier.",
+        "poster_path": "/wxwt0pLxFZwKzy7pAu8WixadwqO.jpg",
+        "popularity": 22.152
+      },
+      {
+        "id": 447365,
+        "video": false,
+        "vote_count": 0,
+        "vote_average": 0,
+        "title": "Guardians of the Galaxy Vol. 3",
+        "release_date": "2023-02-16",
+        "original_language": "en",
+        "original_title": "Guardians of the Galaxy Vol. 3",
+        "genre_ids": [
+          28,
+          12,
+          35,
+          878,
+          53
+        ],
+        "backdrop_path": "/jRSAkKG9QSu6Nc1zvI3ejmgLshe.jpg",
+        "adult": false,
+        "overview": "The third film based on Marvel's Guardians of the Galaxy.",
+        "poster_path": "/6rsLfXqlZSXa6zLfbofHVhXs8Yr.jpg",
+        "popularity": 11.42
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/cgigaTI0slw8MRZZMODaDnmAsmL.jpg",
+        "genre_ids": [
+          28,
+          12,
+          16,
+          878,
+          18
+        ],
+        "id": 65291,
+        "original_language": "en",
+        "original_title": "Green Lantern: Emerald Knights",
+        "overview": "As the home planet of the Green Lantern Corps faces a battle with an ancient enemy, Hal Jordan prepares new recruit Arisia for the coming conflict by relating stories of the first Green Lantern and several of Hal's comrades.",
+        "poster_path": "/jT9L05KLeQIhfbxqeViwbGLxT59.jpg",
+        "release_date": "2011-04-09",
+        "title": "Green Lantern: Emerald Knights",
+        "video": false,
+        "vote_average": 6.5,
+        "vote_count": 295,
+        "popularity": 15.171
+      },
+      {
+        "id": 7220,
+        "video": false,
+        "vote_count": 1747,
+        "vote_average": 6.2,
+        "title": "The Punisher",
+        "release_date": "2004-04-15",
+        "original_language": "en",
+        "original_title": "The Punisher",
+        "genre_ids": [
+          28,
+          80,
+          18
+        ],
+        "backdrop_path": "/n6vTuNlaIyEgWWMuco2U9LZk4ic.jpg",
+        "adult": false,
+        "overview": "When undercover FBI agent Frank Castle's wife and son are slaughtered, he becomes 'the Punisher' -- a ruthless vigilante willing to go to any length to avenge his family.",
+        "poster_path": "/7rmA1HwYp2GKM85BL0cVwCaosGr.jpg",
+        "popularity": 28.552
+      }
+    ],
+    "total_pages": 57,
+    "total_results": 1139
+  }
+}

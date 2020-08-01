@@ -35,6 +35,7 @@
     <string name="button_next">Войти</string>
     <string name="tmdb_logo">TMDB logo</string>
     <string name="recent">Recent</string>
+    <string name="overview">Overview</string>
     <string-array name="list_type_movies">
         <item>Популярные</item>
         <item>Лучшие</item>

@@ -4,8 +4,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.findNavController
+import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
-import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import io.github.losthikking.themoviedb.api.tmdb.dto.ContentItem
 import io.github.losthikking.themoviedb.api.tmdb.dto.movie.Movie
@@ -15,16 +15,16 @@ import io.github.losthikking.themoviedb.enums.ItemType
 import io.github.losthikking.themoviedb.fragments.MainViewPagerFragmentDirections
 
 
-class ContentAdapter :
-    ListAdapter<ContentItem, RecyclerView.ViewHolder>(ContentItemDiffCallback()) {
+class MovieAdapter(diffCallback: DiffUtil.ItemCallback<Movie>) :
+        PagingDataAdapter<Movie, RecyclerView.ViewHolder>(diffCallback) {
 
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        return ContentViewHolder(
-            CardItemMaterialBinding.inflate(
-                LayoutInflater.from(parent.context), parent, false
-            )
-        )
+    override fun onCreateViewHolder(
+            parent: ViewGroup,
+            viewType: Int
+    ): ContentViewHolder {
+        return ContentViewHolder(CardItemMaterialBinding
+                .inflate(LayoutInflater.from(parent.context), parent, false))
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
@@ -34,7 +34,7 @@ class ContentAdapter :
 
 
     class ContentViewHolder(
-        private val binding: CardItemMaterialBinding
+            private val binding: CardItemMaterialBinding
     ) : RecyclerView.ViewHolder(binding.root) {
         init {
             binding.setClickListener {
@@ -45,22 +45,22 @@ class ContentAdapter :
         }
 
         private fun navigateToContentItem(
-            contentItem: ContentItem,
-            view: View
+                contentItem: ContentItem,
+                view: View
         ) {
             val direction =
-                MainViewPagerFragmentDirections.actionHomeViewPagerFragmentToItemDetailFragment(
-                    when (contentItem) {
-                        is Movie -> ItemType.MOVIE
-                        is TVShow -> ItemType.TVSHOW
-                        else -> throw IllegalArgumentException("Can be movie or tvshow")
-                    },
-                    contentItem.id
-                )
+                    MainViewPagerFragmentDirections.actionHomeViewPagerFragmentToItemDetailFragment(
+                            when (contentItem) {
+                                is ContentItem -> ItemType.MOVIE
+                                is TVShow -> ItemType.TVSHOW
+                                else -> throw IllegalArgumentException("Can be movie or tvshow")
+                            },
+                            contentItem.id
+                    )
             view.findNavController().navigate(direction)
         }
 
-        fun bind(item: ContentItem) {
+        fun bind(item: Movie?) {
             binding.apply {
                 contentItem = item
                 executePendingBindings()
@@ -69,12 +69,12 @@ class ContentAdapter :
     }
 }
 
-private class ContentItemDiffCallback : DiffUtil.ItemCallback<ContentItem>() {
-    override fun areItemsTheSame(oldItem: ContentItem, newItem: ContentItem): Boolean {
+object MovieComparator : DiffUtil.ItemCallback<Movie>() {
+    override fun areItemsTheSame(oldItem: Movie, newItem: Movie): Boolean {
         return oldItem.id == newItem.id
     }
 
-    override fun areContentsTheSame(oldItem: ContentItem, newItem: ContentItem): Boolean {
-        return oldItem.id == newItem.id
+    override fun areContentsTheSame(oldItem: Movie, newItem: Movie): Boolean {
+        return oldItem == newItem
     }
 }
