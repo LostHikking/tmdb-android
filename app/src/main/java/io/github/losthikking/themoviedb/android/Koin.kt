@@ -13,7 +13,6 @@ val tmdbModule = module {
     viewModel { MovieViewModel(get()) }
 //    viewModel { SearchViewModel(get(), get()) }
     viewModel { params -> ItemDetailViewModel(get(), params[0], params[1]) }
-    single { get<TMDBDatabase>().genreDao() }
     single { get<TMDBDatabase>().searchQueryDao() }
     single { TMDBRepository(get()) }
     single { TMDBService.create() }

@@ -1,11 +1,7 @@
 package io.github.losthikking.themoviedb.android.api.tmdb.dto
 
-import androidx.room.ColumnInfo
-import androidx.room.Entity
-import androidx.room.PrimaryKey
 
-@Entity
 data class Genre(
-        @PrimaryKey val id: Int,
-        @ColumnInfo(name = "name") val name: String
+        val id: Int,
+        val name: String
 )

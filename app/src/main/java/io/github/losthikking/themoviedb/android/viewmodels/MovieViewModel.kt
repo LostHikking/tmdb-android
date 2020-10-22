@@ -17,7 +17,7 @@ class MovieViewModel internal constructor(
     val flow = Pager(
             PagingConfig(pageSize = 20)
     ) {
-        MovieSource(service, db)
+        MovieSource(service)
     }.flow
             .cachedIn(viewModelScope)
 }
