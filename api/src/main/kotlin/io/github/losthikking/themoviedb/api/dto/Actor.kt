@@ -1,17 +1,19 @@
 package io.github.losthikking.themoviedb.api.dto
 
-import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
+@Serializable
 data class Actor(
-        @SerializedName("cast_id")
+        @SerialName("cast_id")
         val castId: Int,
         val character: String?,
-        @SerializedName("credit_id")
+        @SerialName("credit_id")
         val creditId: String?,
         val gender: Int?,
         val id: Int?,
         val name: String?,
         val order: Int?,
-        @SerializedName("profile_path")
+        @SerialName("profile_path")
         val profilePath: String?
 )

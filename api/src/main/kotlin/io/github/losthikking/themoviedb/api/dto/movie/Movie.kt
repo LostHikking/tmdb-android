@@ -1,47 +1,51 @@
 package io.github.losthikking.themoviedb.api.dto.movie
 
-import com.google.gson.annotations.SerializedName
 import io.github.losthikking.themoviedb.api.dto.*
+import kotlinx.serialization.Contextual
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 import java.time.LocalDate
 
+@Serializable
 data class Movie(
-        val adult: Boolean?,
-        @SerializedName("backdrop_path")
-        override val backdropPath: String?,
-        @SerializedName("belongs_to_collection")
-        val belongsToCollection: Collection?,
-        val budget: Int?,
-        override val genres: List<Genre>,
-        val homepage: String?,
+        val adult: Boolean? = null,
+        @SerialName("backdrop_path")
+        override val backdropPath: String? = null,
+        @SerialName("belongs_to_collection")
+        val belongsToCollection: Collection? = null,
+        val budget: Int? = null,
+        override val genres: List<Genre> = listOf(),
+        val homepage: String? = null,
         override val id: Int,
-        @SerializedName("imdb_id")
-        val imdbId: String?,
-        @SerializedName("original_language")
-        val originalLanguage: String?,
-        @SerializedName("original_title")
-        val originalTitle: String?,
-        override val overview: String?,
-        val popularity: Double?,
-        @SerializedName("poster_path")
-        override val posterPath: String?,
-        @SerializedName("production_companies")
-        val productionCompanies: List<ProductionCompany>,
-        @SerializedName("production_countries")
-        val productionCountries: List<ProductionCountry>,
-        @SerializedName("release_date")
-        override val releaseDate: LocalDate?,
-        val revenue: Int?,
-        val runtime: Int?,
-        @SerializedName("spoken_languages")
-        val spokenLanguages: List<SpokenLanguage>,
-        val status: String?,
-        val tagline: String?,
+        @SerialName("imdb_id")
+        val imdbId: String? = null,
+        @SerialName("original_language")
+        val originalLanguage: String? = null,
+        @SerialName("original_title")
+        val originalTitle: String? = null,
+        override val overview: String? = null,
+        val popularity: Double? = null,
+        @SerialName("poster_path")
+        override val posterPath: String? = null,
+        @SerialName("production_companies")
+        val productionCompanies: List<ProductionCompany> = listOf(),
+        @SerialName("production_countries")
+        val productionCountries: List<ProductionCountry> = listOf(),
+        @SerialName("release_date")
+        @Contextual
+        override val releaseDate: LocalDate? = null,
+        val revenue: Int? = null,
+        val runtime: Int? = null,
+        @SerialName("spoken_languages")
+        val spokenLanguages: List<SpokenLanguage> = listOf(),
+        val status: String? = null,
+        val tagline: String? = null,
         override var title: String,
         val video: Boolean,
-        @SerializedName("vote_average")
+        @SerialName("vote_average")
         override val voteAverage: Float,
-        @SerializedName("vote_count")
+        @SerialName("vote_count")
         override val voteCount: Int,
-        @SerializedName("genre_ids")
-        override val genresIds: List<Int>
+        @SerialName("genre_ids")
+        override val genresIds: List<Int> = listOf()
 ) : ContentItem()

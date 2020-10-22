@@ -1,9 +1,11 @@
 package io.github.losthikking.themoviedb.api.dto
 
-import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
+@Serializable
 data class ProductionCountry(
-        @SerializedName("iso_3166_1")
+        @SerialName("iso_3166_1")
         val iso31661: String,
         val name: String
 )

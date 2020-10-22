@@ -1,12 +1,14 @@
 package io.github.losthikking.themoviedb.api.dto
 
-import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
+@Serializable
 data class Page<T>(
         val page: Int,
         val results: List<T>,
-        @SerializedName("total_pages")
+        @SerialName("total_pages")
         val totalPages: Int,
-        @SerializedName("total_results")
+        @SerialName("total_results")
         val totalResults: Int
 )

@@ -1,15 +1,16 @@
 package io.github.losthikking.themoviedb.api.dto.movie
 
-import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
-
+@Serializable
 data class Collection(
-        @SerializedName("backdrop_path")
+        @SerialName("backdrop_path")
         val backdropPath: String?,
         val id: Int,
         val name: String?,
         val overview: String?,
         val parts: List<Movie>,
-        @SerializedName("poster_path")
+        @SerialName("poster_path")
         val posterPath: String?
 )

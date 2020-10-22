@@ -1,18 +1,28 @@
 package io.github.losthikking.themoviedb.api
 
-import com.google.gson.GsonBuilder
-import com.google.gson.JsonDeserializer
+import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import io.github.losthikking.themoviedb.api.dto.*
 import io.github.losthikking.themoviedb.api.dto.movie.Collection
 import io.github.losthikking.themoviedb.api.dto.movie.Movie
 import io.github.losthikking.themoviedb.api.dto.tvshow.Episode
 import io.github.losthikking.themoviedb.api.dto.tvshow.Season
 import io.github.losthikking.themoviedb.api.dto.tvshow.TVShow
+import kotlinx.serialization.KSerializer
+import kotlinx.serialization.decodeFromString
+import kotlinx.serialization.descriptors.PrimitiveKind
+import kotlinx.serialization.descriptors.PrimitiveSerialDescriptor
+import kotlinx.serialization.descriptors.SerialDescriptor
+import kotlinx.serialization.encoding.Decoder
+import kotlinx.serialization.encoding.Encoder
+import kotlinx.serialization.json.Json
+import kotlinx.serialization.json.decodeFromJsonElement
+import kotlinx.serialization.modules.SerializersModule
+import kotlinx.serialization.modules.contextual
+import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import okhttp3.logging.HttpLoggingInterceptor.Level
 import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query
@@ -188,21 +198,31 @@ interface TMDBService {
             return Retrofit.Builder()
                     .baseUrl("https://api.themoviedb.org/3/")
                     .client(client)
-                    .addConverterFactory(
-                            GsonConverterFactory.create(
-                                    GsonBuilder()
-                                            .setPrettyPrinting()
-                                            .registerTypeAdapter(
-                                                    LocalDate::class.java,
-                                                    JsonDeserializer { json, _, _ ->
-                                                        LocalDate.parse(json.asJsonPrimitive.asString)
-                                                    })
-                                            .create()
-                            )
-                    )
+                    .addConverterFactory(Json { serializersModule = module }
+                            .asConverterFactory("application/json".toMediaType()))
                     .build()
                     .create(TMDBService::class.java)
         }
     }
 
+}
+
+private object LocalDateSerializer : KSerializer<LocalDate> {
+    override val descriptor: SerialDescriptor = PrimitiveSerialDescriptor(
+            "LocalDate",
+            PrimitiveKind.STRING
+    )
+
+    override fun serialize(encoder: Encoder, value: LocalDate) {
+        encoder.encodeString(value.toString())
+    }
+
+    override fun deserialize(decoder: Decoder): LocalDate {
+        return LocalDate.parse(decoder.decodeString())
+    }
+}
+
+
+private val module = SerializersModule {
+    contextual(LocalDateSerializer)
 }

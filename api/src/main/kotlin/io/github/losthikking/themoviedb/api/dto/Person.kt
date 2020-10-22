@@ -1,10 +1,12 @@
 package io.github.losthikking.themoviedb.api.dto
 
-import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
+@Serializable
 data class Person(
         val adult: Boolean,
-        @SerializedName("also_known_as")
+        @SerialName("also_known_as")
         val alsoKnownAs: List<String>,
         val biography: String?,
         val birthday: String?,
@@ -12,14 +14,14 @@ data class Person(
         val gender: Int?,
         val homepage: String?,
         val id: Int?,
-        @SerializedName("imdb_id")
+        @SerialName("imdb_id")
         val imdbId: String?,
-        @SerializedName("known_for_department")
+        @SerialName("known_for_department")
         val knownForDepartment: String?,
         val name: String?,
-        @SerializedName("place_of_birth")
+        @SerialName("place_of_birth")
         val placeOfBirth: String?,
         val popularity: Double?,
-        @SerializedName("profile_path")
+        @SerialName("profile_path")
         val profilePath: String?
 )

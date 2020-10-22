@@ -1,29 +1,31 @@
 package io.github.losthikking.themoviedb.api.dto.tvshow
 
-import com.google.gson.annotations.SerializedName
 import io.github.losthikking.themoviedb.api.dto.Actor
 import io.github.losthikking.themoviedb.api.dto.Crew
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
+@Serializable
 data class Episode(
-        @SerializedName("air_date")
+        @SerialName("air_date")
         val air_date: String?,
         val crew: List<Crew>,
         val episode_number: Int? = null,
-        @SerializedName("guest_stars")
+        @SerialName("guest_stars")
         val guest_stars: List<Actor>,
         val id: Int,
         val name: String?,
         val overview: String?,
-        @SerializedName("production_code")
+        @SerialName("production_code")
         val productionCode: String?,
-        @SerializedName("season_number")
+        @SerialName("season_number")
         val seasonNumber: Int?,
-        @SerializedName("show_id")
+        @SerialName("show_id")
         val showId: Int?,
-        @SerializedName("still_path")
+        @SerialName("still_path")
         val stillPath: String?,
-        @SerializedName("vote_average")
+        @SerialName("vote_average")
         val voteAverage: Double,
-        @SerializedName("vote_count")
+        @SerialName("vote_count")
         val voteCount: Int
 )

@@ -1,57 +1,60 @@
 package io.github.losthikking.themoviedb.api.dto.tvshow
 
-import com.google.gson.annotations.SerializedName
 import io.github.losthikking.themoviedb.api.dto.*
+import kotlinx.serialization.Contextual
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 import java.time.LocalDate
 
-
+@Serializable
 data class TVShow(
-        @SerializedName("backdrop_path")
-        override val backdropPath: String?,
-        @SerializedName("created_by")
+        @SerialName("backdrop_path")
+        override val backdropPath: String? = null,
+        @SerialName("created_by")
         val createdBy: List<Crew>,
-        @SerializedName("episode_run_time")
+        @SerialName("episode_run_time")
         val episodeRunTime: List<Int>,
-        @SerializedName("first_air_date")
-        override val releaseDate: LocalDate?,
+        @Contextual
+        @SerialName("first_air_date")
+        override val releaseDate: LocalDate? = null,
         override val genres: List<Genre>,
-        val homepage: String?,
+        val homepage: String? = null,
         override val id: Int,
-        @SerializedName("in_production")
-        val inProduction: Boolean?,
+        @SerialName("in_production")
+        val inProduction: Boolean? = null,
         val languages: List<String>,
-        @SerializedName("last_air_date")
-        val lastAirDate: String?,
-        @SerializedName("last_episode_to_air")
-        val lastEpisodeToAir: Episode?,
-        @SerializedName("name")
+        @SerialName("last_air_date")
+        val lastAirDate: String? = null,
+        @SerialName("last_episode_to_air")
+        val lastEpisodeToAir: Episode? = null,
+        @SerialName("name")
         override val title: String,
         val networks: List<Network>,
-        @SerializedName("next_episode_to_air")
-        val nextEpisodeToAir: Any?,
-        @SerializedName("number_of_episodes")
-        val numberOfEpisodes: Int?,
-        @SerializedName("number_of_seasons")
-        val numberOfSeasons: Int?,
-        @SerializedName("origin_country")
+        @SerialName("next_episode_to_air")
+        val nextEpisodeToAir: Episode? = null,
+        @SerialName("number_of_episodes")
+        val numberOfEpisodes: Int? = null,
+        @SerialName("number_of_seasons")
+        val numberOfSeasons: Int? = null,
+        @SerialName("origin_country")
         val originCountry: List<String>,
-        @SerializedName("original_language")
-        val originalLanguage: String?,
-        @SerializedName("original_name")
-        val originalName: String?,
-        override val overview: String?,
-        val popularity: Double?,
-        @SerializedName("poster_path")
-        override val posterPath: String?,
-        @SerializedName("production_companies")
+        @SerialName("original_language")
+        val originalLanguage: String? = null,
+        @SerialName("original_name")
+        val originalName: String? = null,
+        override val overview: String? = null,
+        val popularity: Double? = null,
+        @SerialName("poster_path")
+        override val posterPath: String? = null,
+        @SerialName("production_companies")
         val productionCompanies: List<ProductionCompany>,
         val seasons: List<Season>,
-        val status: String?,
-        val type: String?,
-        @SerializedName("vote_average")
+        val status: String? = null,
+        val type: String? = null,
+        @SerialName("vote_average")
         override val voteAverage: Float,
-        @SerializedName("vote_count")
+        @SerialName("vote_count")
         override val voteCount: Int,
-        @SerializedName("genre_ids")
+        @SerialName("genre_ids")
         override val genresIds: List<Int>
 ) : ContentItem()
