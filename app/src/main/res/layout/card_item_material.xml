@@ -96,26 +96,6 @@
                     android:textColor="?android:attr/textColorSecondary"
                     tools:text="@sample/movie_page.json/results/overview" />
 
-                <com.google.android.material.chip.ChipGroup
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:textAppearance="?attr/textAppearanceBody2"
-                    android:textColor="?android:attr/textColorSecondary"
-                    app:mapGenres="@{contentItem}"
-                    tools:text="Genre, Genre, Genre">
-
-                    <com.google.android.material.chip.Chip
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Genre" />
-
-                    <com.google.android.material.chip.Chip
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Genre" />
-                </com.google.android.material.chip.ChipGroup>
-
             </LinearLayout>
 
         </LinearLayout>

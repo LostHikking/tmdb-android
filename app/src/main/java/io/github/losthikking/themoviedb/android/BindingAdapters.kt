@@ -37,28 +37,3 @@ fun bindBackdropFromUrl(view: ImageView, imageUrl: String?) {
         view.visibility = View.GONE
     }
 }
-
-@BindingAdapter("mapGenres")
-fun mapGenres(chipGroup: ChipGroup, contentItem: ContentItem) {
-    if (contentItem.genres.isNotEmpty()) {
-        contentItem.genres.map {
-            val chip = Chip(chipGroup.context)
-            chip.text = it.name
-            chip
-        }.forEach { chipGroup.addView(it) }
-    } else {
-
-    }
-}
-
-@BindingAdapter("genres")
-fun bindGenreOnChipGroup(chipGroup: ChipGroup, genres: List<Genre>?) {
-    chipGroup.removeAllViews()
-    if (!genres.isNullOrEmpty()) {
-        genres.forEach {
-            val chip = Chip(chipGroup.context)
-            chip.text = it.name
-            chipGroup.addView(chip)
-        }
-    }
-}
