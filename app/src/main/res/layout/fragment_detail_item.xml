@@ -5,7 +5,7 @@
 
     <data>
 
-        <import type="io.github.losthikking.themoviedb.android.api.tmdb.dto.ContentItem" />
+        <import type="io.github.losthikking.themoviedb.api.dto.ContentItem" />
 
         <variable
             name="viewModel"

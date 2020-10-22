@@ -7,12 +7,13 @@ import androidx.navigation.findNavController
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import io.github.losthikking.themoviedb.android.api.tmdb.dto.ContentItem
-import io.github.losthikking.themoviedb.android.api.tmdb.dto.movie.Movie
-import io.github.losthikking.themoviedb.android.api.tmdb.dto.tvshow.TVShow
+
 import io.github.losthikking.themoviedb.databinding.CardItemMaterialBinding
 import io.github.losthikking.themoviedb.android.enums.ItemType
 import io.github.losthikking.themoviedb.android.fragments.MainViewPagerFragmentDirections
+import io.github.losthikking.themoviedb.api.dto.ContentItem
+import io.github.losthikking.themoviedb.api.dto.movie.Movie
+import io.github.losthikking.themoviedb.api.dto.tvshow.TVShow
 
 
 class MovieAdapter(diffCallback: DiffUtil.ItemCallback<Movie>) :

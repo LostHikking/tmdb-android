@@ -11,7 +11,7 @@
 
         <variable
             name="contentItem"
-            type="io.github.losthikking.themoviedb.android.api.tmdb.dto.ContentItem" />
+            type="io.github.losthikking.themoviedb.api.dto.ContentItem" />
     </data>
 
     <com.google.android.material.card.MaterialCardView

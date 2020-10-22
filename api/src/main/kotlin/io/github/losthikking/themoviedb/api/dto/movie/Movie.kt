@@ -1,7 +1,7 @@
-package io.github.losthikking.themoviedb.android.api.tmdb.dto.movie
+package io.github.losthikking.themoviedb.api.dto.movie
 
 import com.google.gson.annotations.SerializedName
-import io.github.losthikking.themoviedb.android.api.tmdb.dto.*
+import io.github.losthikking.themoviedb.api.dto.*
 import java.time.LocalDate
 
 data class Movie(

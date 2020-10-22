@@ -1,4 +1,4 @@
-package io.github.losthikking.themoviedb.android.api.tmdb.dto
+package io.github.losthikking.themoviedb.api.dto
 
 import java.time.LocalDate
 

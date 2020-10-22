@@ -1,4 +1,4 @@
-package io.github.losthikking.themoviedb.android.api.tmdb.dto.tvshow
+package io.github.losthikking.themoviedb.api.dto.tvshow
 
 import com.google.gson.annotations.SerializedName
 

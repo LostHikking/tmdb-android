@@ -5,15 +5,12 @@ import androidx.lifecycle.viewModelScope
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.cachedIn
-import io.github.losthikking.themoviedb.android.api.tmdb.TMDBService
 import io.github.losthikking.themoviedb.android.paging.MovieSource
-import io.github.losthikking.themoviedb.android.room.TMDBDatabase
-import org.koin.java.KoinJavaComponent.inject
+import io.github.losthikking.themoviedb.api.Service
 
 class MovieViewModel internal constructor(
-        private val service: TMDBService
+        private val service: Service
 ) : ViewModel() {
-    private val db by inject(TMDBDatabase::class.java)
     val flow = Pager(
             PagingConfig(pageSize = 20)
     ) {

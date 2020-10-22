@@ -7,10 +7,6 @@ import androidx.databinding.BindingAdapter
 import coil.annotation.ExperimentalCoilApi
 import coil.load
 import coil.transition.CrossfadeTransition
-import com.google.android.material.chip.Chip
-import com.google.android.material.chip.ChipGroup
-import io.github.losthikking.themoviedb.android.api.tmdb.dto.ContentItem
-import io.github.losthikking.themoviedb.android.api.tmdb.dto.Genre
 
 @ExperimentalCoilApi
 @BindingAdapter("imagePosterFromUrl")

@@ -1,8 +1,8 @@
-package io.github.losthikking.themoviedb.android.api.tmdb.dto.tvshow
+package io.github.losthikking.themoviedb.api.dto.tvshow
 
 import com.google.gson.annotations.SerializedName
-import io.github.losthikking.themoviedb.android.api.tmdb.dto.Actor
-import io.github.losthikking.themoviedb.android.api.tmdb.dto.Crew
+import io.github.losthikking.themoviedb.api.dto.Actor
+import io.github.losthikking.themoviedb.api.dto.Crew
 
 data class Episode(
         @SerializedName("air_date")

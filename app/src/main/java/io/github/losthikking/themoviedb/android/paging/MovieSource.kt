@@ -1,11 +1,11 @@
 package io.github.losthikking.themoviedb.android.paging
 
 import androidx.paging.PagingSource
-import io.github.losthikking.themoviedb.android.api.tmdb.TMDBService
-import io.github.losthikking.themoviedb.android.api.tmdb.dto.movie.Movie
+import io.github.losthikking.themoviedb.api.Service
+import io.github.losthikking.themoviedb.api.dto.movie.Movie
 
 class MovieSource(
-        private val tmdbService: TMDBService
+        private val tmdbService: Service
 ) : PagingSource<Int, Movie>() {
 
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, Movie> {
