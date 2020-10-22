@@ -5,7 +5,12 @@ plugins {
     kotlin("kapt")
     id("androidx.navigation.safeargs.kotlin")
 }
-
+configurations.all {
+    resolutionStrategy {
+        force("org.antlr:antlr4-runtime:4.7.1")
+        force("org.antlr:antlr4-tool:4.7.1")
+    }
+}
 android {
     compileSdkVersion(30)
 
@@ -34,7 +39,7 @@ android {
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_1_8.toString()
     }
-    buildToolsVersion = "30.0.1"
+    buildToolsVersion = "30.0.2"
 }
 
 
@@ -45,7 +50,7 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.9")
 
-    implementation("androidx.core:core-ktx:1.3.1")
+    implementation("androidx.core:core-ktx:1.3.2")
     implementation("androidx.room:room-runtime:2.2.5")
     implementation("androidx.room:room-ktx:2.2.5")
     implementation("androidx.fragment:fragment-ktx:1.2.5")
@@ -53,13 +58,13 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.2.0")
     implementation("androidx.lifecycle:lifecycle-extensions:2.2.0")
     implementation("androidx.viewpager2:viewpager2:1.0.0")
-    implementation("androidx.navigation:navigation-fragment-ktx:2.3.0")
-    implementation("androidx.navigation:navigation-ui-ktx:2.3.0")
-    implementation("androidx.recyclerview:recyclerview:1.2.0-alpha05")
+    implementation("androidx.navigation:navigation-fragment-ktx:2.3.1")
+    implementation("androidx.navigation:navigation-ui-ktx:2.3.1")
+    implementation("androidx.recyclerview:recyclerview:1.2.0-alpha06")
     implementation("androidx.legacy:legacy-support-v4:1.0.0")
     implementation("androidx.appcompat:appcompat:1.2.0")
-    implementation("androidx.constraintlayout:constraintlayout:2.0.1")
-    implementation("androidx.paging:paging-runtime-ktx:3.0.0-alpha06")
+    implementation("androidx.constraintlayout:constraintlayout:2.0.2")
+    implementation("androidx.paging:paging-runtime-ktx:3.0.0-alpha07")
 
     implementation("com.google.android.material:material:1.2.1")
 
@@ -71,3 +76,5 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.2")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.3.0")
 }
+
+

@@ -8,7 +8,7 @@ import io.github.losthikking.themoviedb.android.enums.ItemType
 import io.github.losthikking.themoviedb.android.repositories.TMDBRepository
 import io.github.losthikking.themoviedb.api.dto.ContentItem
 
-class ItemDetailViewModel(
+open class ItemDetailViewModel(
         private val repository: TMDBRepository,
         private val itemId: Int,
         private val itemType: ItemType

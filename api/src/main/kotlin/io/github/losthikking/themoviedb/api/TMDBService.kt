@@ -23,8 +23,8 @@ class Service(private val apiKey: String, private val language: String, private 
     private val tmdbService = TMDBService.create()
 
     suspend fun getPopularMovies(page: Int) = tmdbService.getPopularMovies(apiKey, language, region, page)
-    suspend fun getMovieDetails(id: Int) = tmdbService.getMovieDetails(apiKey, language, id)
-    suspend fun getTvShowDetails(tvShowId: Int) = tmdbService.getTVshowDetails(apiKey, language, tvShowId)
+    suspend fun getMovieDetails(id: Int) = tmdbService.getMovieDetails(id, apiKey, language)
+    suspend fun getTvShowDetails(tvShowId: Int) = tmdbService.getTVshowDetails(tvShowId, apiKey, language)
 
 }
 
@@ -55,9 +55,9 @@ interface TMDBService {
 
     @GET("movie/{movie_id}")
     suspend fun getMovieDetails(
+            @Path("movie_id") id: Int,
             @Query("api_key") apiKey: String,
-            @Query("language") language: String,
-            @Path("movie_id") id: Int
+            @Query("language") language: String
     ): Movie
 
     @GET("search/movie")
@@ -71,15 +71,15 @@ interface TMDBService {
 
     @GET("movie/{movie_id}/videos")
     suspend fun getVideosMovie(
+            @Path("movie_id") movieId: Int,
             @Query("api_key") apiKey: String,
-            @Query("language") language: String,
-            @Path("movie_id") movieId: Int
+            @Query("language") language: String
     ): Videos
 
     @GET("movie/{movie_id}/credits")
     suspend fun getCreditsMovie(
-            @Query("api_key") apiKey: String,
-            @Path("movie_id") movieId: Int
+            @Path("movie_id") movieId: Int,
+            @Query("api_key") apiKey: String
     ): Credits
 
     @GET("tv/popular")
@@ -114,52 +114,52 @@ interface TMDBService {
 
     @GET("tv/{tvshow_id}")
     suspend fun getTVshowDetails(
+            @Path("tvshow_id") tvshowId: Int,
             @Query("api_key") apiKey: String,
-            @Query("language") language: String,
-            @Path("tvshow_id") tvshowId: Int
+            @Query("language") language: String
     ): TVShow
 
     @GET("tv/{tvshow_id}/season/{season_number}")
     suspend fun getSeasonDetails(
-            @Query("api_key") apiKey: String,
-            @Query("language") language: String,
             @Path("tvshow_id") tvshowId: Int,
-            @Path("season_number") seasonNumber: Int
+            @Path("season_number") seasonNumber: Int,
+            @Query("api_key") apiKey: String,
+            @Query("language") language: String
     ): Season
 
     @GET("tv/{tvshow_id}/season/{season_number}/episode/{episode_number}")
     suspend fun getEpisodeDetails(
-            @Query("api_key") apiKey: String,
-            @Query("language") language: String,
             @Path("tvshow_id") tvshowId: Int,
             @Path("season_number") seasonNumber: Int,
-            @Path("episode_number") episodeNumber: Int
+            @Path("episode_number") episodeNumber: Int,
+            @Query("api_key") apiKey: String,
+            @Query("language") language: String
     ): Episode
 
     @GET("tv/{tvshow_id}/videos")
     suspend fun getVideosTVShow(
+            @Path("tvshow_id") tvshowId: Int,
             @Query("api_key") apiKey: String,
-            @Query("language") language: String,
-            @Path("tvshow_id") tvshowId: Int
+            @Query("language") language: String
     ): Videos
 
     @GET("person/{person_id}")
     suspend fun getPersonDetails(
+            @Path("person_id") personId: Int,
             @Query("api_key") apiKey: String,
-            @Query("language") language: String,
-            @Path("person_id") personId: Int
+            @Query("language") language: String
     ): Person
 
     @GET("tv/{tvshow_id}/credits")
     suspend fun getCreditsTVShow(
-            @Query("api_key") apiKey: String,
-            @Path("tvshow_id") tvshowId: Int
+            @Path("tvshow_id") tvshowId: Int,
+            @Query("api_key") apiKey: String
     ): Credits
 
     @GET("collection/{collection_id}")
     suspend fun getCollectionDetails(
-            @Query("api_key") apiKey: String,
             @Path("collection_id") collectionId: Int,
+            @Query("api_key") apiKey: String,
             @Query("language") language: String
     ): Collection
 

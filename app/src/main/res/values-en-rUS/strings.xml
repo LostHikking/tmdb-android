@@ -30,4 +30,11 @@
     <string name="trailer">Trailer</string>
     <string name="tmdb_url_to_item">https://www.themoviedb.org/%s/%d?language=en-US</string>
     <string name="menu_button">Menu button</string>
+    <string name="hint_username">Login</string>
+    <string name="hint_password">Password</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="button_next">Login</string>
+    <string name="tmdb_logo">TMDB logo</string>
+    <string name="recent">Recent</string>
+    <string name="overview">Overview</string>
 </resources>

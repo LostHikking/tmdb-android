@@ -52,7 +52,7 @@ class MovieAdapter(diffCallback: DiffUtil.ItemCallback<Movie>) :
             val direction =
                     MainViewPagerFragmentDirections.actionHomeViewPagerFragmentToItemDetailFragment(
                             when (contentItem) {
-                                is ContentItem -> ItemType.MOVIE
+                                is Movie -> ItemType.MOVIE
                                 is TVShow -> ItemType.TVSHOW
                                 else -> throw IllegalArgumentException("Can be movie or tvshow")
                             },
