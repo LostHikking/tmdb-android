@@ -7,13 +7,13 @@
 
     <fragment
         android:id="@+id/searchFragment"
-        android:name="io.github.losthikking.themoviedb.fragments.SearchFragment"
+        android:name="io.github.losthikking.themoviedb.android.fragments.SearchFragment"
         android:label="SearchFragment"
         tools:layout="@layout/fragment_search" />
 
     <fragment
         android:id="@+id/homeViewPagerFragment"
-        android:name="io.github.losthikking.themoviedb.fragments.MainViewPagerFragment"
+        android:name="io.github.losthikking.themoviedb.android.fragments.MainViewPagerFragment"
         android:label="HomeViewPagerFragment"
         tools:layout="@layout/fragment_main">
         <action
@@ -31,17 +31,17 @@
     <fragment
         android:id="@+id/loginFragment"
         android:label="LoginFragment"
-        android:name="io.github.losthikking.themoviedb.fragments.LoginFragment"
+        android:name="io.github.losthikking.themoviedb.android.fragments.LoginFragment"
         tools:layout="@layout/fragment_login" />
 
     <fragment
         android:id="@+id/itemDetailFragment"
-        android:name="io.github.losthikking.themoviedb.fragments.ItemDetailFragment"
+        android:name="io.github.losthikking.themoviedb.android.fragments.ItemDetailFragment"
         android:label="ItemDetailFragment"
         tools:layout="@layout/fragment_detail_item">
         <argument
             android:name="itemType"
-            app:argType="io.github.losthikking.themoviedb.enums.ItemType" />
+            app:argType="io.github.losthikking.themoviedb.android.enums.ItemType" />
         <argument
             android:name="itemId"
             app:argType="integer" />

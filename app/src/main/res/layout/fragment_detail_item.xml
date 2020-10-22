@@ -5,18 +5,18 @@
 
     <data>
 
-        <import type="io.github.losthikking.themoviedb.api.tmdb.dto.ContentItem" />
+        <import type="io.github.losthikking.themoviedb.android.api.tmdb.dto.ContentItem" />
 
         <variable
             name="viewModel"
-            type="io.github.losthikking.themoviedb.viewmodels.ItemDetailViewModel" />
+            type="io.github.losthikking.themoviedb.android.viewmodels.ItemDetailViewModel" />
     </data>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fitsSystemWindows="true"
-        tools:context="io.github.losthikking.themoviedb.activities.MainActivity">
+        tools:context="io.github.losthikking.themoviedb.android.activities.MainActivity">
 
         <com.google.android.material.appbar.AppBarLayout
             android:id="@+id/appbar"
