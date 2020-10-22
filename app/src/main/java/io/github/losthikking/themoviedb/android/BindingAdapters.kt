@@ -1,6 +1,5 @@
 package io.github.losthikking.themoviedb.android
 
-import android.util.Log
 import android.view.View
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
@@ -21,9 +20,6 @@ fun bindPosterFromUrl(view: ImageView, imageUrl: String?) {
 @ExperimentalCoilApi
 @BindingAdapter("imageBackdropFromUrl")
 fun bindBackdropFromUrl(view: ImageView, imageUrl: String?) {
-    if (imageUrl != null) {
-        Log.i("backdrop ", imageUrl)
-    }
     if (!imageUrl.isNullOrBlank()) {
         view
                 .load(URL_TMDB_BASE + BACKDROP_SIZE_W780 + imageUrl) {
