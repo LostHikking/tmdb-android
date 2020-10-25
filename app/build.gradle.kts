@@ -4,6 +4,7 @@ plugins {
     kotlin("android.extensions")
     kotlin("kapt")
     id("androidx.navigation.safeargs.kotlin")
+    id("dagger.hilt.android.plugin")
 }
 configurations.all {
     resolutionStrategy {
@@ -68,10 +69,18 @@ dependencies {
 
     implementation("com.google.android.material:material:1.2.1")
 
-    implementation("org.koin:koin-android:2.1.6")
-    implementation("org.koin:koin-android-viewmodel:2.1.6")
+    //dagger
+    implementation("com.google.dagger:dagger:2.28")
+    kapt("com.google.dagger:dagger-compiler:2.28")
+
+    //hilt
+    implementation("com.google.dagger:hilt-android:2.28-alpha")
+    kapt("com.google.dagger:hilt-android-compiler:2.28-alpha")
+    implementation("androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha02")
+    kapt("androidx.hilt:hilt-compiler:1.0.0-alpha02")
 
     implementation("io.coil-kt:coil:1.0.0")
+
     testImplementation("junit:junit:4.13.1")
     androidTestImplementation("androidx.test.ext:junit:1.1.2")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.3.0")

@@ -8,10 +8,11 @@ import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.channels.ConflatedBroadcastChannel
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.asFlow
+import javax.inject.Inject
 
 @ExperimentalCoroutinesApi
 @FlowPreview
-class TMDBRepository(
+class TMDBRepository @Inject constructor(
         private val service: Service
 ) {
     private val contentDetailResult = ConflatedBroadcastChannel<ContentItem>()

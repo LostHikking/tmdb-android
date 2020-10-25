@@ -1,5 +1,6 @@
 package io.github.losthikking.themoviedb.android.viewmodels
 
+import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.paging.Pager
@@ -8,7 +9,7 @@ import androidx.paging.cachedIn
 import io.github.losthikking.themoviedb.android.paging.MovieSource
 import io.github.losthikking.themoviedb.api.Service
 
-class MovieViewModel internal constructor(
+class MovieViewModel @ViewModelInject constructor(
         private val service: Service
 ) : ViewModel() {
     val flow = Pager(

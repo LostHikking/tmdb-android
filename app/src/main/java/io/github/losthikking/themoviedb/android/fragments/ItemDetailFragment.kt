@@ -6,23 +6,16 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.navArgs
+import androidx.fragment.app.viewModels
+import dagger.hilt.android.AndroidEntryPoint
 import io.github.losthikking.themoviedb.R
-import io.github.losthikking.themoviedb.databinding.FragmentDetailItemBinding
 import io.github.losthikking.themoviedb.android.viewmodels.ItemDetailViewModel
-import org.koin.android.viewmodel.ext.android.viewModel
-import org.koin.core.parameter.parametersOf
+import io.github.losthikking.themoviedb.databinding.FragmentDetailItemBinding
 
+@AndroidEntryPoint
 class ItemDetailFragment : Fragment() {
 
-    private val args: ItemDetailFragmentArgs by navArgs()
-
-    private val itemDetailViewModel: ItemDetailViewModel by viewModel {
-        parametersOf(
-                args.itemId,
-                args.itemType
-        )
-    }
+    private val itemDetailViewModel: ItemDetailViewModel by viewModels()
 
     override fun onCreateView(
             inflater: LayoutInflater,

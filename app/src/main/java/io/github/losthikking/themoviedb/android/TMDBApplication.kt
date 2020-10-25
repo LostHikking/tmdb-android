@@ -1,15 +1,8 @@
 package io.github.losthikking.themoviedb.android
 
 import android.app.Application
-import org.koin.android.ext.koin.androidContext
-import org.koin.core.context.startKoin
+import dagger.hilt.android.HiltAndroidApp
 
-class TMDBApplication : Application() {
-    override fun onCreate() {
-        super.onCreate()
-        startKoin {
-            androidContext(this@TMDBApplication)
-            modules(tmdbModule)
-        }
-    }
-}
+
+@HiltAndroidApp
+class TMDBApplication : Application()

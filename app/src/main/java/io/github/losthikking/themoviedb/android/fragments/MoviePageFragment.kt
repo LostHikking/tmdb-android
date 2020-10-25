@@ -5,17 +5,19 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import dagger.hilt.android.AndroidEntryPoint
 import io.github.losthikking.themoviedb.android.adapters.MovieAdapter
 import io.github.losthikking.themoviedb.android.adapters.MovieComparator
-import io.github.losthikking.themoviedb.databinding.FragmentContentBinding
 import io.github.losthikking.themoviedb.android.viewmodels.MovieViewModel
+import io.github.losthikking.themoviedb.databinding.FragmentContentBinding
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
-import org.koin.android.viewmodel.ext.android.viewModel
 
+@AndroidEntryPoint
 class MoviePageFragment : Fragment() {
-    private val viewModel: MovieViewModel by viewModel()
+    private val viewModel: MovieViewModel by viewModels()
     private lateinit var binding: FragmentContentBinding
 
     override fun onCreateView(
