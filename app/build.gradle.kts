@@ -71,7 +71,7 @@ dependencies {
     implementation("org.koin:koin-android:2.1.6")
     implementation("org.koin:koin-android-viewmodel:2.1.6")
 
-    implementation("io.coil-kt:coil:1.0.0-rc3")
+    implementation("io.coil-kt:coil:1.0.0")
     testImplementation("junit:junit:4.13.1")
     androidTestImplementation("androidx.test.ext:junit:1.1.2")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.3.0")
