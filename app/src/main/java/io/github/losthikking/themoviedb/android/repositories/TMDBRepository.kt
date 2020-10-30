@@ -1,19 +1,16 @@
 package io.github.losthikking.themoviedb.android.repositories
 
-
 import io.github.losthikking.themoviedb.api.Service
 import io.github.losthikking.themoviedb.api.dto.ContentItem
 import kotlinx.coroutines.ExperimentalCoroutinesApi
-import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.channels.ConflatedBroadcastChannel
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.asFlow
 import javax.inject.Inject
 
 @ExperimentalCoroutinesApi
-@FlowPreview
 class TMDBRepository @Inject constructor(
-        private val service: Service
+    private val service: Service
 ) {
     private val contentDetailResult = ConflatedBroadcastChannel<ContentItem>()
 
@@ -30,8 +27,8 @@ class TMDBRepository @Inject constructor(
         return contentDetailResult.asFlow()
     }
 
-    suspend fun getTVShowDetail(tvshowId: Int): Flow<ContentItem> {
-        requestTvShow(tvshowId)
+    suspend fun getTvShowDetail(tvShowId: Int): Flow<ContentItem> {
+        requestTvShow(tvShowId)
         return contentDetailResult.asFlow()
     }
 }

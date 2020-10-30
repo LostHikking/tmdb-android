@@ -2,7 +2,7 @@ package io.github.losthikking.themoviedb.android.enums
 
 enum class ItemType {
     MOVIE,
-    TVSHOW,
+    TV_SHOW,
     PERSON,
     SEASON,
     EPISODE

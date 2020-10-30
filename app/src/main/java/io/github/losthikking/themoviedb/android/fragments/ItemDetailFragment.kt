@@ -18,12 +18,12 @@ class ItemDetailFragment : Fragment() {
     private val itemDetailViewModel: ItemDetailViewModel by viewModels()
 
     override fun onCreateView(
-            inflater: LayoutInflater,
-            container: ViewGroup?,
-            savedInstanceState: Bundle?
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): View? {
         val binding = DataBindingUtil.inflate<FragmentDetailItemBinding>(
-                inflater, R.layout.fragment_detail_item, container, false
+            inflater, R.layout.fragment_detail_item, container, false
         ).apply {
             viewModel = itemDetailViewModel
             lifecycleOwner = viewLifecycleOwner
@@ -45,6 +45,4 @@ class ItemDetailFragment : Fragment() {
         }
         return binding.root
     }
-
-
 }

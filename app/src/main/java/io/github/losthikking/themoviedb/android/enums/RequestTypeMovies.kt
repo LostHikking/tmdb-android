@@ -5,5 +5,4 @@ enum class RequestTypeMovies {
     UPCOMING,
     TOP_RATED,
     SEARCH
-
 }

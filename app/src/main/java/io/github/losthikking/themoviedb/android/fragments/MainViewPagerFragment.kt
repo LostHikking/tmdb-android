@@ -9,9 +9,9 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.navigation.fragment.findNavController
 import io.github.losthikking.themoviedb.R
-import io.github.losthikking.themoviedb.databinding.FragmentMainBinding
 import io.github.losthikking.themoviedb.android.fragments.contentpagers.MovieContentPagerFragment
 import io.github.losthikking.themoviedb.android.fragments.contentpagers.TvShowContentPagerFragment
+import io.github.losthikking.themoviedb.databinding.FragmentMainBinding
 
 class MainViewPagerFragment : Fragment() {
 

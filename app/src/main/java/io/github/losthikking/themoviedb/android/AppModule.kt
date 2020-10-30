@@ -5,7 +5,7 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ApplicationComponent
 import io.github.losthikking.themoviedb.api.Service
-import java.util.*
+import java.util.Locale
 import javax.inject.Singleton
 
 @Module

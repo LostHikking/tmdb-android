@@ -5,7 +5,7 @@ import io.github.losthikking.themoviedb.api.Service
 import io.github.losthikking.themoviedb.api.dto.movie.Movie
 
 class MovieSource(
-        private val tmdbService: Service
+    private val tmdbService: Service
 ) : PagingSource<Int, Movie>() {
 
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, Movie> {

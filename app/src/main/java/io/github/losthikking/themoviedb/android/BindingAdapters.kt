@@ -12,9 +12,9 @@ import coil.transition.CrossfadeTransition
 fun bindPosterFromUrl(view: ImageView, imageUrl: String?) {
     if (!imageUrl.isNullOrBlank())
         view
-                .load(URL_TMDB_BASE + POSTER_SIZE_W500 + imageUrl) {
-                    transition(CrossfadeTransition())
-                }
+            .load(URL_TMDB_BASE + POSTER_SIZE_W500 + imageUrl) {
+                transition(CrossfadeTransition())
+            }
 }
 
 @ExperimentalCoilApi
@@ -22,9 +22,9 @@ fun bindPosterFromUrl(view: ImageView, imageUrl: String?) {
 fun bindBackdropFromUrl(view: ImageView, imageUrl: String?) {
     if (!imageUrl.isNullOrBlank()) {
         view
-                .load(URL_TMDB_BASE + BACKDROP_SIZE_W780 + imageUrl) {
-                    transition(CrossfadeTransition())
-                }
+            .load(URL_TMDB_BASE + BACKDROP_SIZE_W780 + imageUrl) {
+                transition(CrossfadeTransition())
+            }
     } else {
         view.visibility = View.GONE
     }

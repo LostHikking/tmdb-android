@@ -5,5 +5,4 @@ enum class RequestTypeTVShows {
     TOP_RATED,
     LATEST,
     SEARCH
-
 }

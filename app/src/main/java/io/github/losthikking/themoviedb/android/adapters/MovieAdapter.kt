@@ -7,25 +7,24 @@ import androidx.navigation.findNavController
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-
-import io.github.losthikking.themoviedb.databinding.CardItemMaterialBinding
 import io.github.losthikking.themoviedb.android.enums.ItemType
 import io.github.losthikking.themoviedb.android.fragments.MainViewPagerFragmentDirections
 import io.github.losthikking.themoviedb.api.dto.ContentItem
 import io.github.losthikking.themoviedb.api.dto.movie.Movie
-import io.github.losthikking.themoviedb.api.dto.tvshow.TVShow
-
+import io.github.losthikking.themoviedb.api.dto.tvshow.TvShow
+import io.github.losthikking.themoviedb.databinding.CardItemMaterialBinding
 
 class MovieAdapter(diffCallback: DiffUtil.ItemCallback<Movie>) :
-        PagingDataAdapter<Movie, RecyclerView.ViewHolder>(diffCallback) {
-
+    PagingDataAdapter<Movie, RecyclerView.ViewHolder>(diffCallback) {
 
     override fun onCreateViewHolder(
-            parent: ViewGroup,
-            viewType: Int
+        parent: ViewGroup,
+        viewType: Int
     ): ContentViewHolder {
-        return ContentViewHolder(CardItemMaterialBinding
-                .inflate(LayoutInflater.from(parent.context), parent, false))
+        return ContentViewHolder(
+            CardItemMaterialBinding
+                .inflate(LayoutInflater.from(parent.context), parent, false)
+        )
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
@@ -33,9 +32,8 @@ class MovieAdapter(diffCallback: DiffUtil.ItemCallback<Movie>) :
         (holder as ContentViewHolder).bind(contentItem)
     }
 
-
     class ContentViewHolder(
-            private val binding: CardItemMaterialBinding
+        private val binding: CardItemMaterialBinding
     ) : RecyclerView.ViewHolder(binding.root) {
         init {
             binding.setClickListener {
@@ -46,18 +44,18 @@ class MovieAdapter(diffCallback: DiffUtil.ItemCallback<Movie>) :
         }
 
         private fun navigateToContentItem(
-                contentItem: ContentItem,
-                view: View
+            contentItem: ContentItem,
+            view: View
         ) {
             val direction =
-                    MainViewPagerFragmentDirections.actionHomeViewPagerFragmentToItemDetailFragment(
-                            when (contentItem) {
-                                is Movie -> ItemType.MOVIE
-                                is TVShow -> ItemType.TVSHOW
-                                else -> throw IllegalArgumentException("Can be movie or tvshow")
-                            },
-                            contentItem.id
-                    )
+                MainViewPagerFragmentDirections.actionHomeViewPagerFragmentToItemDetailFragment(
+                    when (contentItem) {
+                        is Movie -> ItemType.MOVIE
+                        is TvShow -> ItemType.TV_SHOW
+                        else -> throw IllegalArgumentException("Can be movie or tvshow")
+                    },
+                    contentItem.id
+                )
             view.findNavController().navigate(direction)
         }
 

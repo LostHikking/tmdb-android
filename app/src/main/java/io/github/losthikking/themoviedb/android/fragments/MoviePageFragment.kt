@@ -21,9 +21,9 @@ class MoviePageFragment : Fragment() {
     private lateinit var binding: FragmentContentBinding
 
     override fun onCreateView(
-            inflater: LayoutInflater,
-            container: ViewGroup?,
-            savedInstanceState: Bundle?
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): View? {
         binding = FragmentContentBinding.inflate(inflater, container, false)
         val adapter = MovieAdapter(MovieComparator)

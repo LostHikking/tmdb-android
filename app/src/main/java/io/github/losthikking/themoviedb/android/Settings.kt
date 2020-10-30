@@ -1,6 +1,5 @@
 package io.github.losthikking.themoviedb.android
 
-
 const val API_KEY = "f0fc35f5ec87f52edeb0d917655e056f"
 const val URL_TMDB_BASE = "https://image.tmdb.org/t/p/"
 const val BACKDROP_SIZE_W300 = "w300"

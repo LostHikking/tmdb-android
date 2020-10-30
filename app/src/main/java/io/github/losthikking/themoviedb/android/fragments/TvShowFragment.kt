@@ -13,5 +13,4 @@ class TvShowFragment : Fragment() {
 //    override fun MovieViewModel.requestNextPage() {
 //        getTvShowPage(currentPage).also { currentPage += 1 }
 //    }
-
 }
