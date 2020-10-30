@@ -20,7 +20,7 @@ android {
     }
     defaultConfig {
         applicationId = "io.github.losthikking.themoviedb"
-        minSdkVersion(29)
+        minSdkVersion(26)
         targetSdkVersion(30)
         versionCode = 1
         versionName = "1.0"
