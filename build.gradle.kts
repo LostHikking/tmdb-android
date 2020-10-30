@@ -17,7 +17,7 @@ buildscript {
 }
 
 plugins {
-    id("com.diffplug.spotless") version "5.6.1"
+    id("com.diffplug.spotless") version "5.7.0"
     kotlin("jvm") version "1.4.10"
 }
 
@@ -30,8 +30,8 @@ allprojects {
 
 configure<com.diffplug.gradle.spotless.SpotlessExtension> {
     kotlin {
-        target("src/*.kt")
-        ktlint("0.37.2")
+        target("**/*.kt")
+        ktlint("0.39.0")
     }
 }
 

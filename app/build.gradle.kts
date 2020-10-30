@@ -64,18 +64,18 @@ dependencies {
     implementation("androidx.recyclerview:recyclerview:1.2.0-alpha06")
     implementation("androidx.legacy:legacy-support-v4:1.0.0")
     implementation("androidx.appcompat:appcompat:1.2.0")
-    implementation("androidx.constraintlayout:constraintlayout:2.0.2")
-    implementation("androidx.paging:paging-runtime-ktx:3.0.0-alpha07")
+    implementation("androidx.constraintlayout:constraintlayout:2.0.4")
+    implementation("androidx.paging:paging-runtime-ktx:3.0.0-alpha08")
 
     implementation("com.google.android.material:material:1.2.1")
 
     //dagger
-    implementation("com.google.dagger:dagger:2.28")
-    kapt("com.google.dagger:dagger-compiler:2.28")
+    implementation("com.google.dagger:dagger:2.29.1")
+    kapt("com.google.dagger:dagger-compiler:2.29.1")
 
     //hilt
-    implementation("com.google.dagger:hilt-android:2.28-alpha")
-    kapt("com.google.dagger:hilt-android-compiler:2.28-alpha")
+    implementation("com.google.dagger:hilt-android:2.29.1-alpha")
+    kapt("com.google.dagger:hilt-android-compiler:2.29.1-alpha")
     implementation("androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha02")
     kapt("androidx.hilt:hilt-compiler:1.0.0-alpha02")
 
