@@ -19,3 +19,10 @@ jobs:
         java-version: 1.8
     - name: Build with Gradle
       run: ./gradlew spotlessCheck assembleDebug lintDebug --stacktrace
+      
+    - name: Upload test reports
+      if: always()
+      uses: actions/upload-artifact@v2
+      with:
+        name: test-reports
+        path: ${{ github.workspace }}/app/build/reports
