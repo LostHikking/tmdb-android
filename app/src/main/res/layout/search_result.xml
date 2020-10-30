@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/search_icon_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="10dp"
@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:maxLines="1"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toEndOf="@+id/search_icon_view"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="@sample/movie.json/similar_movies/results/title" />
 

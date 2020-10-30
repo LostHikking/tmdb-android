@@ -11,7 +11,6 @@ import io.github.losthikking.themoviedb.api.dto.movie.Movie
 import io.github.losthikking.themoviedb.api.dto.tvshow.Episode
 import io.github.losthikking.themoviedb.api.dto.tvshow.Season
 import io.github.losthikking.themoviedb.api.dto.tvshow.TvShow
-import java.time.LocalDate
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.PrimitiveKind
 import kotlinx.serialization.descriptors.PrimitiveSerialDescriptor
@@ -29,6 +28,7 @@ import retrofit2.Retrofit
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query
+import java.time.LocalDate
 
 class Service(private val apiKey: String, private val language: String, private val region: String) {
 
@@ -36,7 +36,7 @@ class Service(private val apiKey: String, private val language: String, private 
 
     suspend fun getPopularMovies(page: Int) = tmdbService.getPopularMovies(apiKey, language, region, page)
     suspend fun getMovieDetails(id: Int) = tmdbService.getMovieDetails(id, apiKey, language)
-    suspend fun getTvShowDetails(tvShowId: Int) = tmdbService.getTVshowDetails(tvShowId, apiKey, language)
+    suspend fun getTvShowDetails(tvShowId: Int) = tmdbService.getTvShowDetails(tvShowId, apiKey, language)
 }
 
 interface TMDBService {
@@ -115,7 +115,7 @@ interface TMDBService {
     ): Page<TvShow>
 
     @GET("search/tv")
-    suspend fun getSearchTVShows(
+    suspend fun getSearchTvShows(
         @Query("api_key") apiKey: String,
         @Query("language") language: String,
         @Query("query") query: String,
@@ -123,7 +123,7 @@ interface TMDBService {
     ): Page<TvShow>
 
     @GET("tv/{tv_show_id}")
-    suspend fun getTVshowDetails(
+    suspend fun getTvShowDetails(
         @Path("tv_show_id") tvShowId: Int,
         @Query("api_key") apiKey: String,
         @Query("language") language: String
@@ -147,7 +147,7 @@ interface TMDBService {
     ): Episode
 
     @GET("tv/{tv_show_id}/videos")
-    suspend fun getVideosTVShow(
+    suspend fun getVideosTvShow(
         @Path("tv_show_id") tvShowId: Int,
         @Query("api_key") apiKey: String,
         @Query("language") language: String
@@ -161,7 +161,7 @@ interface TMDBService {
     ): Person
 
     @GET("tv/{tv_show_id}/credits")
-    suspend fun getCreditsTVShow(
+    suspend fun getCreditsTvShow(
         @Path("tv_show_id") tvShowId: Int,
         @Query("api_key") apiKey: String
     ): Credits
