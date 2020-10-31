@@ -30,13 +30,20 @@ import retrofit2.http.Path
 import retrofit2.http.Query
 import java.time.LocalDate
 
-class Service(private val apiKey: String, private val language: String, private val region: String) {
+class Service(
+    private val apiKey: String,
+    private val language: String,
+    private val region: String
+) {
 
     private val tmdbService = TMDBService.create()
 
-    suspend fun getPopularMovies(page: Int) = tmdbService.getPopularMovies(apiKey, language, region, page)
+    suspend fun getPopularMovies(page: Int) =
+        tmdbService.getPopularMovies(apiKey, language, region, page)
+
     suspend fun getMovieDetails(id: Int) = tmdbService.getMovieDetails(id, apiKey, language)
-    suspend fun getTvShowDetails(tvShowId: Int) = tmdbService.getTvShowDetails(tvShowId, apiKey, language)
+    suspend fun getTvShowDetails(tvShowId: Int) =
+        tmdbService.getTvShowDetails(tvShowId, apiKey, language)
 }
 
 interface TMDBService {

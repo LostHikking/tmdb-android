@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<color name="colorTMDBPrimary">#0d253f</color>
-	<color name="colorTMDBSecondary">#01b4e4</color>
-	<color name="colorTMDBTertiary">#90cea1</color>
+    <color name="colorTMDBPrimary">#0d253f</color>
+    <color name="colorTMDBSecondary">#01b4e4</color>
+    <color name="colorTMDBTertiary">#90cea1</color>
 </resources>

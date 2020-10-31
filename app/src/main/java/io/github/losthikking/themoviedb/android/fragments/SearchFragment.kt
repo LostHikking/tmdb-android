@@ -11,7 +11,11 @@ class SearchFragment : Fragment() {
     //    private val searchViewModel: SearchViewModel by viewModel()
     private lateinit var binding: FragmentSearchBinding
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         binding = FragmentSearchBinding.inflate(inflater, container, false)
         //  binding.searchBoxTextInputLayout.on
         return binding.root

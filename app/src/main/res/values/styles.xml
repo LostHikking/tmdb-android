@@ -1,9 +1,9 @@
 <resources>
 
-	<style name="Theme.TMDB" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-		<item name="fontFamily">@font/fontfamily</item>
-		<item name="android:colorPrimary">@android:color/black</item>
-		<item name="colorPrimary">@color/colorTMDBPrimary</item>
+    <style name="Theme.TMDB" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="fontFamily">@font/fontfamily</item>
+        <item name="android:colorPrimary">@android:color/black</item>
+        <item name="colorPrimary">@color/colorTMDBPrimary</item>
         <item name="colorOnPrimary">@android:color/white</item>
         <item name="colorPrimaryDark">@color/colorTMDBTertiary</item>
         <item name="colorSurface">@android:color/white</item>
@@ -30,8 +30,8 @@
         <item name="android:textAllCaps">false</item>
     </style>
 
-	<style name="TextAppearance.TMDB.Toolbar.Text" parent="TextAppearance.MaterialComponents.Headline5">
-		<item name="android:textColor">?attr/colorOnSurface</item>
-	</style>
+    <style name="TextAppearance.TMDB.Toolbar.Text" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="android:textColor">?attr/colorOnSurface</item>
+    </style>
 
 </resources>
