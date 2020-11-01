@@ -5,7 +5,6 @@ import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.asLiveData
 import androidx.lifecycle.liveData
 import io.github.losthikking.themoviedb.android.enums.ItemType
 import io.github.losthikking.themoviedb.android.repositories.TMDBRepository
