@@ -8,20 +8,18 @@ import io.github.losthikking.themoviedb.api.Service
 import io.github.losthikking.themoviedb.api.dto.ContentItem
 import io.github.losthikking.themoviedb.api.dto.movie.Movie
 import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.StateFlow
 import javax.inject.Inject
 
 class TMDBRepository @Inject constructor(
     private val service: Service
 ) {
 
-    suspend fun getMovieDetail(movieId: Int): StateFlow<ContentItem> {
-        return MutableStateFlow(service.getMovieDetails(movieId))
+    suspend fun getMovieDetail(movieId: Int): ContentItem {
+        return service.getMovieDetails(movieId)
     }
 
-    suspend fun getTvShowDetail(tvShowId: Int): StateFlow<ContentItem> {
-        return MutableStateFlow(service.getTvShowDetails(tvShowId))
+    suspend fun getTvShowDetail(tvShowId: Int): ContentItem {
+        return service.getTvShowDetails(tvShowId)
     }
 
     fun getPopularMoviesStream(): Flow<PagingData<Movie>> {

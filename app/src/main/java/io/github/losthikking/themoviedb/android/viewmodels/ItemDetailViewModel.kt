@@ -21,10 +21,10 @@ open class ItemDetailViewModel @ViewModelInject constructor(
 
     val contentItem: LiveData<ContentItem> =
         liveData {
-            emitSource(
+            emit(
                 when (itemType) {
-                    ItemType.MOVIE -> repository.getMovieDetail(itemId).asLiveData()
-                    ItemType.TV_SHOW -> repository.getTvShowDetail(itemId).asLiveData()
+                    ItemType.MOVIE -> repository.getMovieDetail(itemId)
+                    ItemType.TV_SHOW -> repository.getTvShowDetail(itemId)
                     else -> throw IllegalArgumentException("Can be MOVIE or TV_SHOW")
                 }
             )

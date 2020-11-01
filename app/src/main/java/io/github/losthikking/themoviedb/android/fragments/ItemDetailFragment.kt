@@ -27,21 +27,6 @@ class ItemDetailFragment : Fragment() {
         ).apply {
             viewModel = itemDetailViewModel
             lifecycleOwner = viewLifecycleOwner
-//            fab.setOnClickListener {
-//                val contentItem = itemDetailViewModel.contentItem.value
-//                val type = when (contentItem) {
-//                    is Movie -> "movie"
-//                    is TVShow -> "tv"
-//                    else -> IllegalArgumentException("Wrong type")
-//                }
-//                val id = contentItem?.id
-//                val shareIntent = ShareCompat.IntentBuilder.from(requireActivity())
-//                    .setText(getString(R.string.tmdb_url_to_item, type, id))
-//                    .setType("text/plain")
-//                    .createChooserIntent()
-//                    .addFlags(Intent.FLAG_ACTIVITY_NEW_DOCUMENT or Intent.FLAG_ACTIVITY_MULTIPLE_TASK)
-//                startActivity(shareIntent)
-//            }
         }
         return binding.root
     }
